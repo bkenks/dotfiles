@@ -4,22 +4,28 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Caps Lock to Hyper (⌘⌃⌥⇧) when held, Escape when tapped",
+                        "description": "Caps Lock to Hyper (⌘⌃⌥⇧)",
                         "manipulators": [
                             {
+                                "type": "basic",
                                 "from": {
                                     "key_code": "caps_lock",
-                                    "modifiers": { "optional": ["caps_lock"] }
+                                    "modifiers": {
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
                                 },
-                                "parameters": { "basic.to_if_alone_timeout_milliseconds": 250 },
                                 "to": [
                                     {
                                         "key_code": "left_shift",
-                                        "modifiers": ["left_command", "left_control", "left_option"]
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
                                     }
-                                ],
-                                "to_if_alone": [{ "key_code": "escape" }],
-                                "type": "basic"
+                                ]
                             }
                         ]
                     }
@@ -27,7 +33,9 @@
             },
             "name": "Default profile",
             "selected": true,
-            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+            "virtual_hid_keyboard": {
+                "keyboard_type_v2": "ansi"
+            }
         }
     ]
 }
