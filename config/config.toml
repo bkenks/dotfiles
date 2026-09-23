@@ -52,6 +52,7 @@ builtin = "history-watch"
 "brew:docker-compose" = "latest"
 "brew:docker-buildx" = "latest"
 "mas:6468120888" = "latest"
+"brew:tree" = "latest"
 
 [bootstrap.macos.dock]
 autohide = true
