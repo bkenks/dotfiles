@@ -14,6 +14,7 @@ oxfmt = "latest"
 gofumpt = "latest"
 shfmt = "latest"
 shellcheck = "latest"
+fd = "latest"
 
 [tools."forgejo:bkenks/lazymux"]
 version = "1.4.0"
