@@ -23,6 +23,8 @@ minimum_release_age = "0h"
 # wiped whenever the Go version changes. ~/.local/bin is on PATH via ~/.zshenv.
 GOBIN = "{{env.HOME}}/.local/bin"
 
+# Bootstrap ——————————————————————————————————————————————————————
+
 [bootstrap.services.mise-history]
 builtin = "history-watch"
 
