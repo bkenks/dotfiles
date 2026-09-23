@@ -1,6 +1,0 @@
-{
-    "pkl.lsp.java.path": "/Users/briankenkel/.local/share/mise/shims/java",
-    "debug.javascript.defaultRuntimeExecutable": {
-        "pwa-node": "/Users/briankenkel/.local/share/mise/shims/node"
-    }
-}

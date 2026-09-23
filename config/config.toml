@@ -81,4 +81,4 @@ minimum_release_age = "0h"
 GOBIN = "{{env.HOME}}/.local/bin"
 
 [history]
-exclude = ["**/*.local*", "**/*.env*", "**/*secret*"]
+exclude = ["**/*.local*", "**/*.env*", "**/*secret*", "**/.vscode/**"]
