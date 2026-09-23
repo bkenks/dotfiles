@@ -69,7 +69,7 @@ initial_key_repeat = 15
 automatic_capitalization = false
 automatic_spelling_correction = false
 
-# Dotfiles ——————————————————————————————————————————————————————————————————
+# Dotfiles ——————————————————————————————————————————————————————
 [dotfiles]
 "~/.config/git" = { mode = "track" }
 "~/.config/karabiner/karabiner.json" = { mode = "track" }
