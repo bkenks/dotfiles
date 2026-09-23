@@ -71,6 +71,7 @@ java = "temurin-25"
 rg = "latest"
 "aqua:numtide/treefmt" = "latest"
 tombi = "latest"
+oxfmt = "latest"
 
 
 [tools."forgejo:bkenks/lazymux"]
