@@ -69,6 +69,7 @@ initial_key_repeat = 15
 automatic_capitalization = false
 automatic_spelling_correction = false
 
+# Dotfiles ——————————————————————————————————————————————————————————————————
 [dotfiles]
 "~/.config/git" = { mode = "track" }
 "~/.config/karabiner/karabiner.json" = { mode = "track" }
@@ -83,8 +84,6 @@ export VISUAL="codium"
 ''' }
 "~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
 "~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
-
-# ——————————————————————————————————————————————————————————————————
 
 [history]
 exclude = ["**/*.local*", "**/*.env*", "**/*secret*", "**/.vscode/**"]
