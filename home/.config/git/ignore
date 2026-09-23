@@ -1,0 +1,12 @@
+# Mac
+**/.DS_Store
+
+# Git
+**/*worktree*
+
+# VSCode
+**/.vscode
+
+# Claude
+**/.claude
+**/CLAUDE.md
