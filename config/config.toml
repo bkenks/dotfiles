@@ -69,6 +69,7 @@ starship = "latest"
 fnox = "latest"
 java = "temurin-25"
 rg = "latest"
+"aqua:numtide/treefmt" = "latest"
 
 
 [tools."forgejo:bkenks/lazymux"]
