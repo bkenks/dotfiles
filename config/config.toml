@@ -74,6 +74,7 @@ automatic_spelling_correction = false
 "~/.config/git" = { mode = "track" }
 "~/.config/karabiner/karabiner.json" = { mode = "track" }
 "~/.config/mise" = { mode = "track" }
+"~/.local/bin/create" = { mode = "track" }
 "~/.zshrc/alias" = { block = '''
 alias c="clear"
 alias reload='exec "$SHELL" -l'
