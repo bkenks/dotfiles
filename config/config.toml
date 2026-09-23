@@ -10,7 +10,7 @@ builtin = "history-watch"
 "brew-cask:iterm2" = "latest"
 "brew-cask:claude" = "latest"
 "brew:mas" = "latest"
-"mas:1236045954" = "latest" # Canary Mail
+"mas:1236045954" = "latest"  # Canary Mail
 "brew-cask:openlogi" = "latest"
 "brew:coredns" = "latest"
 "brew-cask:lm-studio" = "latest"
@@ -51,6 +51,10 @@ automatic_spelling_correction = false
 alias c="clear"
 alias reload='exec "$SHELL" -l'
 ''' }
+"~/.zshrc/editors" = { block = '''
+export EDITOR="hx"
+export VISUAL="codium"
+''' }
 "~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
 "~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
 
@@ -68,7 +72,6 @@ rg = "latest"
 tombi = "latest"
 oxfmt = "latest"
 gofumpt = "latest"
-
 
 [tools."forgejo:bkenks/lazymux"]
 version = "1.4.0"
