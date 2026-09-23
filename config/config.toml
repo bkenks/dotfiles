@@ -24,7 +24,6 @@ minimum_release_age = "0h"
 GOBIN = "{{env.HOME}}/.local/bin"
 
 # Bootstrap ——————————————————————————————————————————————————————
-
 [bootstrap.services.mise-history]
 builtin = "history-watch"
 
