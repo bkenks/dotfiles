@@ -1,0 +1,84 @@
+[bootstrap.services.mise-history]
+builtin = "history-watch"
+
+[bootstrap.packages]
+"brew-cask:vscodium" = "latest"
+"brew-cask:zen" = "latest"
+"brew:git" = "latest"
+"brew:helix" = "latest"
+"brew-cask:1password" = "latest"
+"brew-cask:iterm2" = "latest"
+"brew-cask:claude" = "latest"
+"brew:mas" = "latest"
+"mas:1236045954" = "latest" # Canary Mail
+"brew-cask:openlogi" = "latest"
+"brew:coredns" = "latest"
+"brew-cask:lm-studio" = "latest"
+"brew:lazygit" = "latest"
+"brew-cask:font-maple-mono" = "latest"
+"brew-cask:font-maple-mono-nf" = "latest"
+"brew-cask:font-maple-mono-nf-cn" = "latest"
+"brew:colima" = "latest"
+"brew:bbrew" = "latest"
+"brew:docker" = "latest"
+"brew:docker-compose" = "latest"
+"brew:docker-buildx" = "latest"
+"mas:6468120888" = "latest"
+
+[bootstrap.macos.dock]
+autohide = true
+autohide_delay = 0
+autohide_time_modifier = 0.25
+show_recents = false
+
+[bootstrap.macos.finder]
+preferred_view_style = "list"
+sort_folders_first = true
+show_pathbar = true
+show_extensions_warning = false
+
+[bootstrap.macos.keyboard]
+key_repeat = 2
+initial_key_repeat = 15
+automatic_capitalization = false
+automatic_spelling_correction = false
+
+[dotfiles]
+"~/.config/karabiner/karabiner.json" = { mode = "track" }
+"~/.config/mise" = { mode = "track" }
+"~/.zshrc/alias" = { block = '''
+alias c="clear"
+alias reload='exec "$SHELL" -l'
+''' }
+"~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
+"~/.zshrc/vscodium" = { block = '''
+export VSCODE_GALLERY_SERVICE_URL="https://marketplace.visualstudio.com/_apis/public/gallery"
+export VSCODE_GALLERY_ITEM_URL="https://marketplace.visualstudio.com/items"
+export VSCODE_GALLERY_CACHE_URL="https://vscode.blob.core.windows.net/gallery/index"
+export VSCODE_GALLERY_CONTROL_URL=""
+'''}
+
+# ——————————————————————————————————————————————————————————————————
+
+[tools]
+1password = "latest"
+node = "latest"
+"npm:ccstatusline" = "latest"
+starship = "latest"
+fnox = "latest"
+java = "temurin-25"
+rg = "latest"
+
+
+[tools."forgejo:bkenks/lazymux"]
+version = "1.4.0"
+api_url = "https://fj.ktbcloud.com/api/v1"
+minimum_release_age = "0h"
+
+[env]
+# Keep `go install` output outside mise's versioned toolchain dir, which is
+# wiped whenever the Go version changes. ~/.local/bin is on PATH via ~/.zshenv.
+GOBIN = "{{env.HOME}}/.local/bin"
+
+[history]
+exclude = ["**/*.local*", "**/*.env*", "**/*secret*"]

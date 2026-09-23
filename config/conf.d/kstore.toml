@@ -1,0 +1,132 @@
+[tools]
+age = "1.3.1"
+
+[vars]
+kstore_config_root = "{{xdg_config_home}}/kstore"
+kstore_key = "{{vars.kstore_config_root}}/key"
+kstore_packlist = "{{vars.kstore_config_root}}/packlist"
+kstore_file = ".config/kstore"
+
+[tasks."kstore:pre-flight"]
+description = "Check that the kstore config directory and age key exist"
+run = '''
+# Ensure kstore files exist
+
+if [[ ! -d "{{vars.kstore_config_root}}" ]]; then
+    echo "INFO | no such directory: {{vars.kstore_config_root}}"
+    echo "INFO | creating it now..."
+
+    mkdir -p "{{vars.kstore_config_root}}"
+fi
+
+if [[ ! -f "{{vars.kstore_key}}" ]]; then
+    echo "INFO | no key exists, create one first." >&2
+    exit 1
+fi
+
+echo "INFO | pre-flight passed"
+'''
+
+[tasks."kstore:mint"]
+description = "Mint the age key pair kstore encrypts archives with"
+run = '''
+# Mint a new public/private key pair for age
+
+set -euo pipefail
+
+if [[ ! -d "{{vars.kstore_config_root}}" ]]; then
+    echo "INFO | no such directory: {{vars.kstore_config_root}}"
+    echo "INFO | creating it now..."
+
+    mkdir -p "{{vars.kstore_config_root}}"
+fi
+
+if [ -f "{{vars.kstore_key}}" ]; then
+    echo "ERRO | key already exists: {{vars.kstore_key}}" >&2
+    exit 1
+fi
+
+age-keygen --output {{vars.kstore_key}} && printf 'INFO | key generated successfully | out=%s\n' "{{vars.kstore_key}}"
+'''
+
+[tasks."kstore:pack"]
+description = "Pack the packlist paths into an age-encrypted archive git can track"
+depends = ["kstore:pre-flight"]
+dir = "{{ cwd }}"
+usage = '''
+flag "-o --out <out>" help="Output path" default="{{vars.kstore_file}}"
+flag "-s --stage" help="Stage the packed output, for use from a pre-commit hook"
+'''
+run = '''
+set -euo pipefail
+
+mkdir -p .config
+stamp="$usage_out.sha256"
+
+# lefthook's stage_fixed only re-stages files the commit already staged, and
+# these are artifacts the hook itself creates, so pack has to stage them.
+stage_output() {
+  [ "${usage_stage:-false}" = "true" ] || return 0
+  git add -- "$usage_out" "$stamp"
+  printf 'INFO | staged output | out=%s stamp=%s\n' "$usage_out" "$stamp"
+}
+
+# Worktrees under .claude are checkouts of the repo itself. Packing them buries
+# the real notes under a copy of the tree git already tracks, and every worktree
+# added or removed rewrites the archive.
+exclude_path='*.claude/worktrees/*'
+
+# Keep only packlist entries that actually exist
+existing="$(mktemp)"
+trap 'rm -f "$existing"' EXIT
+
+while IFS= read -r p; do
+  [ -n "$p" ] || continue
+  if [ -e "$p" ]; then
+    printf '%s\n' "$p" >> "$existing"
+  else
+    printf 'WARN | skipping missing path | path=%s\n' "$p" >&2
+  fi
+done < "{{vars.kstore_packlist}}"
+
+if [ ! -s "$existing" ]; then
+  echo "INFO | no files to pack"
+  exit 0
+fi
+
+# Generate hash of files
+digest="$(
+  while IFS= read -r p; do
+    find "$p" -type f -not -path "$exclude_path" -print0
+  done < "$existing" \
+    | sort -z \
+    | xargs -0 shasum -a 256 \
+    | shasum -a 256 \
+    | cut -d' ' -f1
+)"
+
+if [[ -f "$usage_out" && -f "$stamp" && "$(cat "$stamp")" == "$digest" ]]; then
+  printf 'INFO | unchanged, skipping pack | out=%s\n' "$usage_out"
+  stage_output
+  exit 0
+fi
+
+echo "INFO | packing files | packlist={{vars.kstore_packlist}} key={{vars.kstore_key}}"
+tar czf - --exclude "$exclude_path" -T "$existing" | age --encrypt --identity "{{vars.kstore_key}}" > "$usage_out"
+printf '%s\n' "$digest" > "$stamp"
+printf 'INFO | files packed | out=%s\n' "$usage_out"
+stage_output
+'''
+
+[tasks."kstore:unpack"]
+description = "Restore packed files from the age-encrypted kstore archive"
+depends = ["kstore:pre-flight"]
+dir = "{{ cwd }}"
+usage = 'flag "-f --file <file>" help="Archive to restore" default="{{vars.kstore_file}}"'
+run = '''
+set -euo pipefail
+
+echo "INFO | packing files | packlist={{vars.kstore_packlist}} key={{vars.kstore_key}}"
+age --decrypt --identity "{{vars.kstore_key}}" "$usage_file" | tar xzv
+echo "INFO | files unpacked"
+'''
