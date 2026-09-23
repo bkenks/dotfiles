@@ -13,6 +13,7 @@ tombi = "latest"
 oxfmt = "latest"
 gofumpt = "latest"
 shfmt = "latest"
+shellcheck = "latest"
 
 [tools."forgejo:bkenks/lazymux"]
 version = "1.4.0"
