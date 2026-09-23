@@ -9,7 +9,8 @@
     }
   ],
   "exclude": [
-    "**/*.local*"
+    "**/*.local*",
+    "**/*.env*"
   ],
   "recipients": [],
   "permissions": {
