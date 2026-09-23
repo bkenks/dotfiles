@@ -82,6 +82,8 @@ automatic_spelling_correction = false
 "~/.zshrc/alias" = { block = '''
 alias c="clear"
 alias reload='exec "$SHELL" -l'
+alias cpt='pbcopy'
+alias cpd='pwd | pbcopy'
 ''' }
 "~/.zshrc/editors" = { block = '''
 export EDITOR="hx"
