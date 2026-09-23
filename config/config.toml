@@ -52,6 +52,7 @@ alias c="clear"
 alias reload='exec "$SHELL" -l'
 ''' }
 "~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
+"~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
 
 # ——————————————————————————————————————————————————————————————————
 

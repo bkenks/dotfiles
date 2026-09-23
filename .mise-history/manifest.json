@@ -18,6 +18,12 @@
       "autosave": true,
       "encrypt": false,
       "variants": []
+    },
+    {
+      "path": "home/Library/Application Support/VSCodium/product.json",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
     }
   ],
   "exclude": [
@@ -29,6 +35,9 @@
   "recipients": [],
   "permissions": {
     "home/.config/karabiner": 448,
-    "home/.config/karabiner/karabiner.json": 384
+    "home/.config/karabiner/karabiner.json": 384,
+    "home/Library": 448,
+    "home/Library/Application Support": 448,
+    "home/Library/Application Support/VSCodium": 448
   }
 }
