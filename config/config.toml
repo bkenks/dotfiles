@@ -1,5 +1,3 @@
-[vars]
-
 [tools]
 1password = "latest"
 node = "latest"
