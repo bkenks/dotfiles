@@ -1,35 +1,5 @@
 # tombi: format.rules.table-keys-order = "ascending"
 
-[tools]
-age = "1.3.1"
-
-[vars]
-kstore_config_root = "{{xdg_config_home}}/kstore"
-kstore_key = "{{vars.kstore_config_root}}/key"
-kstore_packlist = "{{vars.kstore_config_root}}/packlist"
-kstore_file = ".config/kstore"
-
-[tasks."kstore:pre-flight"]
-description = "Check that the kstore config directory and age key exist"
-hide = true
-run = '''
-# Ensure kstore files exist
-
-if [[ ! -d "{{vars.kstore_config_root}}" ]]; then
-    echo "INFO | no such directory: {{vars.kstore_config_root}}"
-    echo "INFO | creating it now..."
-
-    mkdir -p "{{vars.kstore_config_root}}"
-fi
-
-if [[ ! -f "{{vars.kstore_key}}" ]]; then
-    echo "INFO | no key exists, create one first." >&2
-    exit 1
-fi
-
-echo "INFO | pre-flight passed"
-'''
-
 [tasks."kstore:mint"]
 hide = true
 description = "Mint the age key pair kstore encrypts archives with"
@@ -123,6 +93,27 @@ printf 'INFO | files packed | out=%s\n' "$usage_out"
 stage_output
 '''
 
+[tasks."kstore:pre-flight"]
+description = "Check that the kstore config directory and age key exist"
+hide = true
+run = '''
+# Ensure kstore files exist
+
+if [[ ! -d "{{vars.kstore_config_root}}" ]]; then
+    echo "INFO | no such directory: {{vars.kstore_config_root}}"
+    echo "INFO | creating it now..."
+
+    mkdir -p "{{vars.kstore_config_root}}"
+fi
+
+if [[ ! -f "{{vars.kstore_key}}" ]]; then
+    echo "INFO | no key exists, create one first." >&2
+    exit 1
+fi
+
+echo "INFO | pre-flight passed"
+'''
+
 [tasks."kstore:unpack"]
 hide = true
 description = "Restore packed files from the age-encrypted kstore archive"
@@ -136,3 +127,12 @@ echo "INFO | packing files | packlist={{vars.kstore_packlist}} key={{vars.kstore
 age --decrypt --identity "{{vars.kstore_key}}" "$usage_file" | tar xzv
 echo "INFO | files unpacked"
 '''
+
+[tools]
+age = "1.3.1"
+
+[vars]
+kstore_config_root = "{{xdg_config_home}}/kstore"
+kstore_key = "{{vars.kstore_config_root}}/key"
+kstore_packlist = "{{vars.kstore_config_root}}/packlist"
+kstore_file = ".config/kstore"
