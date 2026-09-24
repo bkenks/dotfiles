@@ -7,7 +7,6 @@ kstore_file = ".config/kstore"
 kstore_key = "{{vars.kstore_config_root}}/key"
 kstore_packlist = "{{vars.kstore_config_root}}/packlist"
 
-[tasks]
 [tasks."kstore:mint"]
 hide = true
 description = "Mint the age key pair kstore encrypts archives with"
