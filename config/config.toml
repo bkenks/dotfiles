@@ -15,6 +15,7 @@ gofumpt = "latest"
 shfmt = "latest"
 shellcheck = "latest"
 fd = "latest"
+watchexec = "latest"
 
 [tools."forgejo:bkenks/lazymux"]
 version = "1.4.0"
