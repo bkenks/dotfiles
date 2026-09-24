@@ -1,8 +1,6 @@
-
-
 [[schemas]]
 path = "https://mise.jdx.dev/schema/mise.json"
-include = ["mise.toml", ".mise.toml"]
+include = ["mise.toml", ".mise.toml", ""]
 
 [[schemas.overrides]]
 targets = ["*"]
