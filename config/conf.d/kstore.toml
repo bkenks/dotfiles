@@ -8,8 +8,6 @@ kstore_key = "{{vars.kstore_config_root}}/key"
 kstore_packlist = "{{vars.kstore_config_root}}/packlist"
 
 [tasks]
-# tombi: format.rules.table-keys-order = "ascending"
-
 [tasks."kstore:mint"]
 hide = true
 description = "Mint the age key pair kstore encrypts archives with"
