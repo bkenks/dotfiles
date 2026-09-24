@@ -3,9 +3,30 @@ age = "1.3.1"
 
 [vars]
 kstore_config_root = "{{xdg_config_home}}/kstore"
-kstore_file = ".config/kstore"
 kstore_key = "{{vars.kstore_config_root}}/key"
 kstore_packlist = "{{vars.kstore_config_root}}/packlist"
+kstore_file = ".config/kstore"
+
+[tasks."kstore:pre-flight"]
+description = "Check that the kstore config directory and age key exist"
+hide = true
+run = '''
+# Ensure kstore files exist
+
+if [[ ! -d "{{vars.kstore_config_root}}" ]]; then
+    echo "INFO | no such directory: {{vars.kstore_config_root}}"
+    echo "INFO | creating it now..."
+
+    mkdir -p "{{vars.kstore_config_root}}"
+fi
+
+if [[ ! -f "{{vars.kstore_key}}" ]]; then
+    echo "INFO | no key exists, create one first." >&2
+    exit 1
+fi
+
+echo "INFO | pre-flight passed"
+'''
 
 [tasks."kstore:mint"]
 hide = true
@@ -98,27 +119,6 @@ tar czf - --exclude "$exclude_path" -T "$existing" | age --encrypt --identity "{
 printf '%s\n' "$digest" > "$stamp"
 printf 'INFO | files packed | out=%s\n' "$usage_out"
 stage_output
-'''
-
-[tasks."kstore:pre-flight"]
-description = "Check that the kstore config directory and age key exist"
-hide = true
-run = '''
-# Ensure kstore files exist
-
-if [[ ! -d "{{vars.kstore_config_root}}" ]]; then
-    echo "INFO | no such directory: {{vars.kstore_config_root}}"
-    echo "INFO | creating it now..."
-
-    mkdir -p "{{vars.kstore_config_root}}"
-fi
-
-if [[ ! -f "{{vars.kstore_key}}" ]]; then
-    echo "INFO | no key exists, create one first." >&2
-    exit 1
-fi
-
-echo "INFO | pre-flight passed"
 '''
 
 [tasks."kstore:unpack"]
