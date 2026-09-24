@@ -10,27 +10,6 @@ kstore_file = ".config/kstore"
 [tasks]
 # tombi: format.rules.table-keys-order = "ascending"
 
-[tasks."kstore:pre-flight"]
-description = "Check that the kstore config directory and age key exist"
-hide = true
-run = '''
-# Ensure kstore files exist
-
-if [[ ! -d "{{vars.kstore_config_root}}" ]]; then
-    echo "INFO | no such directory: {{vars.kstore_config_root}}"
-    echo "INFO | creating it now..."
-
-    mkdir -p "{{vars.kstore_config_root}}"
-fi
-
-if [[ ! -f "{{vars.kstore_key}}" ]]; then
-    echo "INFO | no key exists, create one first." >&2
-    exit 1
-fi
-
-echo "INFO | pre-flight passed"
-'''
-
 [tasks."kstore:mint"]
 hide = true
 description = "Mint the age key pair kstore encrypts archives with"
@@ -122,6 +101,27 @@ tar czf - --exclude "$exclude_path" -T "$existing" | age --encrypt --identity "{
 printf '%s\n' "$digest" > "$stamp"
 printf 'INFO | files packed | out=%s\n' "$usage_out"
 stage_output
+'''
+
+[tasks."kstore:pre-flight"]
+description = "Check that the kstore config directory and age key exist"
+hide = true
+run = '''
+# Ensure kstore files exist
+
+if [[ ! -d "{{vars.kstore_config_root}}" ]]; then
+    echo "INFO | no such directory: {{vars.kstore_config_root}}"
+    echo "INFO | creating it now..."
+
+    mkdir -p "{{vars.kstore_config_root}}"
+fi
+
+if [[ ! -f "{{vars.kstore_key}}" ]]; then
+    echo "INFO | no key exists, create one first." >&2
+    exit 1
+fi
+
+echo "INFO | pre-flight passed"
 '''
 
 [tasks."kstore:unpack"]
