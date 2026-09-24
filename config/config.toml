@@ -55,6 +55,7 @@ builtin = "history-watch"
 "mas:6468120888" = "latest"
 "brew:tree" = "latest"
 "brew-cask:bartender" = "latest"
+"brew:gh" = "latest"
 
 [bootstrap.macos.dock]
 autohide = true
