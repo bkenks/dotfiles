@@ -52,6 +52,7 @@ age-keygen --output {{vars.kstore_key}} && printf 'INFO | key generated successf
 '''
 
 [tasks."kstore:pack"]
+hide = true
 description = "Pack the packlist paths into an age-encrypted archive git can track"
 depends = ["kstore:pre-flight"]
 dir = "{{ cwd }}"
@@ -121,6 +122,7 @@ stage_output
 '''
 
 [tasks."kstore:unpack"]
+hide = true
 description = "Restore packed files from the age-encrypted kstore archive"
 depends = ["kstore:pre-flight"]
 dir = "{{ cwd }}"
