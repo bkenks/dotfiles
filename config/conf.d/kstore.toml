@@ -29,6 +29,7 @@ echo "INFO | pre-flight passed"
 '''
 
 [tasks."kstore:mint"]
+hide = true
 description = "Mint the age key pair kstore encrypts archives with"
 run = '''
 # Mint a new public/private key pair for age
