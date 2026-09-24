@@ -9,6 +9,7 @@ kstore_file = ".config/kstore"
 
 [tasks."kstore:pre-flight"]
 description = "Check that the kstore config directory and age key exist"
+hide = true
 run = '''
 # Ensure kstore files exist
 
