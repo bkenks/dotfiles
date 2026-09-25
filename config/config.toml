@@ -28,7 +28,6 @@ watchexec              = "2.7"
 [bootstrap]
   [bootstrap.services.mise-history]
   builtin = "history-watch"
-
   [bootstrap.packages]
   "brew-cask:1password"             = "latest"
   "brew-cask:bartender"             = "latest"
