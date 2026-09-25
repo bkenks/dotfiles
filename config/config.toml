@@ -88,8 +88,8 @@ alias c="clear"
 alias reload='exec "$SHELL" -l'
 alias cpt='pbcopy'
 alias cpd='pwd | pbcopy'
-alias mboot='mise bootstrap'
-alias mbpackages='mise bootstrap packages'
+alias mb='mise bootstrap'
+alias mbp='mise bootstrap packages'
 ''' }
 "~/.zshrc/editors" = { block = '''
 export EDITOR="hx"
