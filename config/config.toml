@@ -1,26 +1,26 @@
 [tools]
 1password              = "latest"
-node                   = "latest"
-"npm:ccstatusline"     = "latest"
-starship               = "latest"
-fnox                   = "latest"
-java                   = "temurin-25"
-rg                     = "latest"
 "aqua:numtide/treefmt" = "latest"
-oxfmt                  = "latest"
-gofumpt                = "latest"
-shfmt                  = "latest"
-shellcheck             = "latest"
 fd                     = "latest"
-watchexec              = "latest"
+fnox                   = "latest"
 go                     = "1.27.1"
+gofumpt                = "latest"
+java                   = "temurin-25"
+node                   = "latest"
 "npm:@caveman-ai/cli"  = "latest"
+"npm:ccstatusline"     = "latest"
+oxfmt                  = "latest"
+rg                     = "latest"
+shellcheck             = "latest"
+shfmt                  = "latest"
+starship               = "latest"
 taplo                  = "0.10.0"
+watchexec              = "latest"
 
 [tools."forgejo:bkenks/lazymux"]
-version             = "1.4.0"
 api_url             = "https://fj.ktbcloud.com/api/v1"
 minimum_release_age = "0h"
+version             = "1.4.0"
 
 [env]
 # Keep `go install` output outside mise's versioned toolchain dir, which is
@@ -32,32 +32,32 @@ GOBIN = "{{env.HOME}}/.local/bin"
 builtin = "history-watch"
 
 [bootstrap.packages]
-"brew-cask:vscodium"              = "latest"
-"brew-cask:zen"                   = "latest"
-"brew:git"                        = "latest"
-"brew:helix"                      = "latest"
 "brew-cask:1password"             = "latest"
-"brew-cask:iterm2"                = "latest"
+"brew-cask:bartender"             = "latest"
 "brew-cask:claude"                = "latest"
-"brew:mas"                        = "latest"
-"mas:1236045954"                  = "latest" # Canary Mail
-"brew-cask:openlogi"              = "latest"
-"brew:coredns"                    = "latest"
-"brew-cask:lm-studio"             = "latest"
-"brew:lazygit"                    = "latest"
 "brew-cask:font-maple-mono"       = "latest"
 "brew-cask:font-maple-mono-nf"    = "latest"
 "brew-cask:font-maple-mono-nf-cn" = "latest"
-"brew:colima"                     = "latest"
+"brew-cask:iterm2"                = "latest"
+"brew-cask:lm-studio"             = "latest"
+"brew-cask:openlogi"              = "latest"
+"brew-cask:vscodium"              = "latest"
+"brew-cask:zen"                   = "latest"
 "brew:bbrew"                      = "latest"
+"brew:colima"                     = "latest"
+"brew:coredns"                    = "latest"
 "brew:docker"                     = "latest"
-"brew:docker-compose"             = "latest"
 "brew:docker-buildx"              = "latest"
-"mas:6468120888"                  = "latest"
-"brew:tree"                       = "latest"
-"brew-cask:bartender"             = "latest"
+"brew:docker-compose"             = "latest"
 "brew:gh"                         = "latest"
+"brew:git"                        = "latest"
+"brew:helix"                      = "latest"
+"brew:lazygit"                    = "latest"
+"brew:mas"                        = "latest"
 "brew:tea"                        = "latest"
+"brew:tree"                       = "latest"
+"mas:1236045954"                  = "latest" # Canary Mail
+"mas:6468120888"                  = "latest"
 
 [bootstrap.macos.dock]
 autohide               = true
@@ -67,15 +67,15 @@ show_recents           = false
 
 [bootstrap.macos.finder]
 preferred_view_style    = "list"
-sort_folders_first      = true
-show_pathbar            = true
 show_extensions_warning = false
+show_pathbar            = true
+sort_folders_first      = true
 
 [bootstrap.macos.keyboard]
-key_repeat                    = 2
-initial_key_repeat            = 15
 automatic_capitalization      = false
 automatic_spelling_correction = false
+initial_key_repeat            = 15
+key_repeat                    = 2
 
 # Dotfiles ——————————————————————————————————————————————————————
 [dotfiles]
