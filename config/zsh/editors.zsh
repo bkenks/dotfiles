@@ -9,9 +9,7 @@ export EDITOR="hx"
 export VISUAL="codium"
 
 commandExists() {
-  local arg_command=$1
-
-  command -v "$arg_command" >/dev/null 2>&1
+  command -v "$1" >/dev/null 2>&1
 }
 
 if commandExists "$pager"; then
