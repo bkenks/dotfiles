@@ -108,9 +108,5 @@ add-zsh-hook precmd _prompt_add_gap
 GOBIN = "{{env.HOME}}/.local/bin"
 
 
-[vars]
-pathMiseZsh = "{{config_root}}/zsh"
-
-
 [history]
 exclude = ["**/*.local*", "**/*.env*", "**/*secret*", "**/.vscode/**"]
