@@ -28,3 +28,6 @@ GOBIN = "{{env.HOME}}/.local/bin"
 
 [history]
 exclude = ["**/*.local*", "**/*.env*", "**/*secret*", "**/.vscode/**"]
+
+[dotfiles]
+"~/.config/mise/treefmt.toml" = { mode = "track" }
