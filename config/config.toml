@@ -28,5 +28,3 @@ GOBIN = "{{env.HOME}}/.local/bin"
 
 [history]
 exclude = ["**/*.local*", "**/*.env*", "**/*secret*", "**/.vscode/**"]
-
-[dotfiles]
