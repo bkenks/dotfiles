@@ -1,18 +1,18 @@
 [formatting]
-  align_entries = true
-  indent_tables = true
-  reorder_keys  = true
+align_entries = true
+indent_tables = true
+reorder_keys  = true
 
 [[rule]]
-  name = "mise"
+name = "mise"
 
-  include = [
-    "**/mise/config.toml",
-    "**/mise/conf.d/*.toml",
-    "**/mise.toml",
-    "**/.mise.toml",
-    "**/mise.*.toml",        # mise.local.toml, mise.dev.toml, etc.
-  ]
+include = [
+  "**/mise/config.toml",
+  "**/mise/conf.d/*.toml",
+  "**/mise.toml",
+  "**/.mise.toml",
+  "**/mise.*.toml",        # mise.local.toml, mise.dev.toml, etc.
+]
 
   [rule.schema]
-    url = "https://mise.jdx.dev/schema/mise.json"
+  url = "https://mise.jdx.dev/schema/mise.json"
