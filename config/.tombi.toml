@@ -1,7 +1,0 @@
-[[schemas]]
-path = "https://mise.jdx.dev/schema/mise.json"
-include = ["mise.toml", ".mise.toml"]
-
-[[schemas.overrides]]
-targets = ["*"]
-format.rules.table-keys-order = "ascending"
