@@ -1,6 +1,7 @@
 [tools]
 1password              = "2.39"
 "aqua:numtide/treefmt" = "2.6"
+copier                 = "latest"
 fd                     = "10.5"
 fnox                   = "1.35"
 go                     = "1.27"
@@ -15,9 +16,8 @@ shellcheck             = "0.11"
 shfmt                  = "3.14"
 starship               = "1.26"
 taplo                  = "0.10"
+uv                     = "0.12.17"
 watchexec              = "2.7"
-uv = "0.12.17"
-copier = "latest"
 
   [tools."forgejo:bkenks/lazymux"]
   api_url             = "https://fj.ktbcloud.com/api/v1"
@@ -41,6 +41,7 @@ builtin = "history-watch"
 "brew-cask:iterm2"                = "latest"
 "brew-cask:keyclu"                = "latest"
 "brew-cask:lm-studio"             = "latest"
+"brew-cask:macshot"               = "latest"
 "brew-cask:openlogi"              = "latest"
 "brew-cask:vscodium"              = "latest"
 "brew-cask:zen"                   = "latest"
@@ -61,7 +62,6 @@ builtin = "history-watch"
 "brew:tree"                       = "latest"
 "mas:1236045954"                  = "latest" # Canary Mail
 "mas:6468120888"                  = "latest"
-"brew-cask:macshot" = "latest"
 
 
 [bootstrap.macos.dock]
@@ -103,6 +103,8 @@ alias md='mise dotfiles'
 
 alias mb='mise bootstrap'
 alias mbp='mise bootstrap packages'
+
+alias lx='lazymux'
 ''' }
 "~/.zshrc/editors" = { block = '''
 export EDITOR="hx"
