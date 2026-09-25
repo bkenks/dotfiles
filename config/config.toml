@@ -1,7 +1,7 @@
 # :schema https://mise.jdx.dev/schema/mise.json
 
 [vars]
-pathMiseZsh = "{{config_root}}/zsh"
+pathMiseZsh = "{{config_root}}/.config/mise/zsh"
 
 [tools]
 1password              = "2.39"
