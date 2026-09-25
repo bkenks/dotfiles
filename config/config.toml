@@ -85,7 +85,7 @@ watchexec              = "2.7"
 "~/.config/karabiner/karabiner.json" = { mode = "track" }
 "~/.config/mise" = { mode = "track" }
 "~/.config/starship.toml" = { mode = "track" }
-"~/.zshrc/alias" = { template = "tera", block = '{{read_file(path="{{vars.pathMiseZsh}}")}}' }
+"~/.zshrc/alias" = { template = "tera", block = '{{ read_file(path=vars.pathMiseZsh ~ "/alias.zsh") }}' }
 "~/.zshrc/editors" = { block = '''
 export EDITOR="hx"
 export VISUAL="codium"
