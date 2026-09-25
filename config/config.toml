@@ -31,10 +31,3 @@ pathMiseDotfilesConfig  = "{{config_root}}/conf.d/dotfiles.toml"
 
 [history]
 exclude = ["**/*.local*", "**/*.env*", "**/*secret*", "**/.vscode/**"]
-
-[tasks."dot:add"]
-description = "Track a dotfile with mise"
-dir         = "{{ config_root }}/conf.d"
-usage       = 'arg "<path>" help="Path of directory or file to track"'
-
-run = "mise dotfiles add -p {{vars.pathMiseDotfilesConfig}} --mode track ${usage_path}"
