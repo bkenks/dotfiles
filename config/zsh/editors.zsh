@@ -1,3 +1,5 @@
+local pager 
+
 export EDITOR="hx"
 export VISUAL="codium"
 
