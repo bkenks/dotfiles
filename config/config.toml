@@ -26,8 +26,8 @@ watchexec              = "2.7"
 GOBIN = "{{env.HOME}}/.local/bin"
 
 [vars]
-pathMiseBootstrapConfig = "{{xdg_config_home}}/mise/conf.d/bootstrap.toml"
-pathMiseDotfilesConfig  = "{{xdg_config_home}}/mise/conf.d/dotfiles.toml"
+pathMiseBootstrapConfig = "{{config_root}}/conf.d/bootstrap.toml"
+pathMiseDotfilesConfig  = "{{config_root}}/conf.d/dotfiles.toml"
 
 [history]
 exclude = ["**/*.local*", "**/*.env*", "**/*secret*", "**/.vscode/**"]
