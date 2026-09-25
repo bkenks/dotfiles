@@ -28,6 +28,7 @@ watchexec              = "2.7"
 [bootstrap]
   [bootstrap.services.mise-history]
   builtin = "history-watch"
+
   [bootstrap.packages]
   "brew-cask:1password"             = "latest"
   "brew-cask:bartender"             = "latest"
@@ -59,16 +60,19 @@ watchexec              = "2.7"
   "brew:tree"                       = "latest"
   "mas:1236045954"                  = "latest" # Canary Mail
   "mas:6468120888"                  = "latest"
+
   [bootstrap.macos.dock]
   autohide               = true
   autohide_delay         = 0
   autohide_time_modifier = 0.25
   show_recents           = false
+
   [bootstrap.macos.finder]
   preferred_view_style    = "list"
   show_extensions_warning = false
   show_pathbar            = true
   sort_folders_first      = true
+
   [bootstrap.macos.keyboard]
   automatic_capitalization      = false
   automatic_spelling_correction = false
