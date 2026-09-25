@@ -99,15 +99,6 @@ alias mbp='mise bootstrap packages'
 export EDITOR="hx"
 export VISUAL="codium"
 ''' }
-"~/.zshrc/mise-reload" = { block = '''
-functions[_mise_activated]=$functions[mise]
-mise() {
-  _mise_activated "$@" || return
-  if [[ $1 == dot* && $2 == apply && " $* " != *" --dry-run "* ]]; then
-    exec "$SHELL" -l
-  fi
-}
-''' }
 "~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
 "~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
 
