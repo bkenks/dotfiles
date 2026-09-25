@@ -61,7 +61,6 @@ watchexec              = "2.7"
   "mas:1236045954"                  = "latest" # Canary Mail
   "mas:6468120888"                  = "latest"
 
-
   [bootstrap.macos.dock]
   autohide               = true
   autohide_delay         = 0
