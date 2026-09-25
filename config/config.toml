@@ -30,59 +30,61 @@ watchexec              = "2.7"
 # Keep `go install` output outside mise's versioned toolchain dir, which is
 # wiped whenever the Go version changes. ~/.local/bin is on PATH via ~/.zshenv.
 GOBIN = "{{env.HOME}}/.local/bin"
-[bootstrap.services.mise-history]
-builtin = "history-watch"
 
-[bootstrap.packages]
-"brew-cask:1password"             = "latest"
-"brew-cask:bartender"             = "latest"
-"brew-cask:claude"                = "latest"
-"brew-cask:font-maple-mono"       = "latest"
-"brew-cask:font-maple-mono-nf"    = "latest"
-"brew-cask:font-maple-mono-nf-cn" = "latest"
-"brew-cask:iterm2"                = "latest"
-"brew-cask:keyclu"                = "latest"
-"brew-cask:lm-studio"             = "latest"
-"brew-cask:macshot"               = "latest"
-"brew-cask:openlogi"              = "latest"
-"brew-cask:vscodium"              = "latest"
-"brew-cask:zen"                   = "latest"
-"brew:bbrew"                      = "latest"
-"brew:colima"                     = "latest"
-"brew:coredns"                    = "latest"
-"brew:docker"                     = "latest"
-"brew:docker-buildx"              = "latest"
-"brew:docker-compose"             = "latest"
-"brew:gh"                         = "latest"
-"brew:git"                        = "latest"
-"brew:helix"                      = "latest"
-"brew:lazygit"                    = "latest"
-"brew:mas"                        = "latest"
-"brew:mole"                       = "latest"
-"brew:ov"                         = "latest"
-"brew:tea"                        = "latest"
-"brew:tree"                       = "latest"
-"mas:1236045954"                  = "latest" # Canary Mail
-"mas:6468120888"                  = "latest"
+[bootstrap]
+  [bootstrap.services.mise-history]
+  builtin = "history-watch"
+
+  [bootstrap.packages]
+  "brew-cask:1password"             = "latest"
+  "brew-cask:bartender"             = "latest"
+  "brew-cask:claude"                = "latest"
+  "brew-cask:font-maple-mono"       = "latest"
+  "brew-cask:font-maple-mono-nf"    = "latest"
+  "brew-cask:font-maple-mono-nf-cn" = "latest"
+  "brew-cask:iterm2"                = "latest"
+  "brew-cask:keyclu"                = "latest"
+  "brew-cask:lm-studio"             = "latest"
+  "brew-cask:macshot"               = "latest"
+  "brew-cask:openlogi"              = "latest"
+  "brew-cask:vscodium"              = "latest"
+  "brew-cask:zen"                   = "latest"
+  "brew:bbrew"                      = "latest"
+  "brew:colima"                     = "latest"
+  "brew:coredns"                    = "latest"
+  "brew:docker"                     = "latest"
+  "brew:docker-buildx"              = "latest"
+  "brew:docker-compose"             = "latest"
+  "brew:gh"                         = "latest"
+  "brew:git"                        = "latest"
+  "brew:helix"                      = "latest"
+  "brew:lazygit"                    = "latest"
+  "brew:mas"                        = "latest"
+  "brew:mole"                       = "latest"
+  "brew:ov"                         = "latest"
+  "brew:tea"                        = "latest"
+  "brew:tree"                       = "latest"
+  "mas:1236045954"                  = "latest" # Canary Mail
+  "mas:6468120888"                  = "latest"
 
 
-[bootstrap.macos.dock]
-autohide               = true
-autohide_delay         = 0
-autohide_time_modifier = 0.25
-show_recents           = false
+  [bootstrap.macos.dock]
+  autohide               = true
+  autohide_delay         = 0
+  autohide_time_modifier = 0.25
+  show_recents           = false
 
-[bootstrap.macos.finder]
-preferred_view_style    = "list"
-show_extensions_warning = false
-show_pathbar            = true
-sort_folders_first      = true
+  [bootstrap.macos.finder]
+  preferred_view_style    = "list"
+  show_extensions_warning = false
+  show_pathbar            = true
+  sort_folders_first      = true
 
-[bootstrap.macos.keyboard]
-automatic_capitalization      = false
-automatic_spelling_correction = false
-initial_key_repeat            = 15
-key_repeat                    = 2
+  [bootstrap.macos.keyboard]
+  automatic_capitalization      = false
+  automatic_spelling_correction = false
+  initial_key_repeat            = 15
+  key_repeat                    = 2
 
 # Dotfiles ——————————————————————————————————————————————————————
 [dotfiles]
