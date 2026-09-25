@@ -12,6 +12,6 @@ if command -v ov >/dev/null 2>&1; then
   # echo "ov is installed"
   export PAGER=$pager
 else
-  echo "ov not found. falling back to $pager_fallback"
+  echo "$pager not found. falling back to $pager_fallback"
   export PAGER=$pager_fallback
 fi
