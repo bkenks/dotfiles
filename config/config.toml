@@ -61,6 +61,7 @@ builtin = "history-watch"
 "brew:tree"                       = "latest"
 "mas:1236045954"                  = "latest" # Canary Mail
 "mas:6468120888"                  = "latest"
+"brew-cask:macshot" = "latest"
 
 
 [bootstrap.macos.dock]
