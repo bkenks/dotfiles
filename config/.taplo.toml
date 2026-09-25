@@ -3,7 +3,6 @@ align_entries = true
 reorder_keys  = true
 
 [[rule]]
-name = "mise"
 include = [
   "**/mise/config.toml",
   "**/mise/conf.d/*.toml",
@@ -11,6 +10,7 @@ include = [
   "**/.mise.toml",
   "**/mise.*.toml",        # mise.local.toml, mise.dev.toml, etc.
 ]
+name = "mise"
 
 [rule.schema]
 url = "https://mise.jdx.dev/schema/mise.json"
