@@ -94,6 +94,7 @@ alias mr='mise run'
 alias mi='mise install'
 alias mb='mise bootstrap'
 alias mbp='mise bootstrap packages'
+alias md='mise dotfiles'
 ''' }
 "~/.zshrc/editors" = { block = '''
 export EDITOR="hx"
