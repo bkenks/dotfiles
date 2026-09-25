@@ -84,24 +84,7 @@ watchexec              = "2.7"
 "~/.config/karabiner/karabiner.json" = { mode = "track" }
 "~/.config/mise" = { mode = "track" }
 "~/.config/starship.toml" = { mode = "track" }
-"~/.zshrc/alias" = { block = '''
-alias reload='exec "$SHELL" -l'
-
-alias c="clear"
-alias cpt='pbcopy'
-alias cpd='pwd | pbcopy'
-
-alias m='mise'
-alias mu='mise use'
-alias mr='mise run'
-alias mi='mise install'
-alias md='mise dotfiles'
-
-alias mb='mise bootstrap'
-alias mbp='mise bootstrap packages'
-
-alias lx='~/.local/bin/lazymux'
-''' }
+"~/.zshrc/alias" = { block = '{{read_file(path="{{config_root}}")}}' }
 "~/.zshrc/editors" = { block = '''
 export EDITOR="hx"
 export VISUAL="codium"
@@ -126,8 +109,7 @@ GOBIN = "{{env.HOME}}/.local/bin"
 
 
 [vars]
-pathMiseBootstrapConfig = "{{config_root}}/conf.d/bootstrap.toml"
-pathMiseDotfilesConfig  = "{{config_root}}/conf.d/dotfiles.toml"
+pathMiseZsh = "{{config_root}}/zsh"
 
 
 [history]
