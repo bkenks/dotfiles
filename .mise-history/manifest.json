@@ -20,6 +20,12 @@
       "variants": []
     },
     {
+      "path": "home/.config/starship.toml",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/Library/Application Support/VSCodium/product.json",
       "autosave": true,
       "encrypt": false,
