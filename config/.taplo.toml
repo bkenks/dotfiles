@@ -14,5 +14,6 @@
     "**/.mise.toml",
     "**/mise.*.toml",        # mise.local.toml, mise.dev.toml, etc.
   ]
+
   [rule.schema]
     url = "https://mise.jdx.dev/schema/mise.json"
