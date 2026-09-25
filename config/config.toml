@@ -1,5 +1,8 @@
 # :schema https://mise.jdx.dev/schema/mise.json
 
+[vars]
+pathMiseZsh = "{{config_root}}/zsh"
+
 [tools]
 1password              = "2.39"
 "aqua:numtide/treefmt" = "2.6"
