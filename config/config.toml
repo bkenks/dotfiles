@@ -1,100 +1,100 @@
 [tools]
-1password              = "latest"
-"aqua:numtide/treefmt" = "latest"
-fd                     = "latest"
-fnox                   = "latest"
-go                     = "1.27.1"
-gofumpt                = "latest"
-java                   = "temurin-25"
-node                   = "latest"
-"npm:@caveman-ai/cli"  = "latest"
-"npm:ccstatusline"     = "latest"
-oxfmt                  = "latest"
-rg                     = "latest"
-shellcheck             = "latest"
-shfmt                  = "latest"
-starship               = "latest"
-taplo                  = "0.10.0"
-watchexec              = "latest"
+  1password              = "latest"
+  "aqua:numtide/treefmt" = "latest"
+  fd                     = "latest"
+  fnox                   = "latest"
+  go                     = "1.27.1"
+  gofumpt                = "latest"
+  java                   = "temurin-25"
+  node                   = "latest"
+  "npm:@caveman-ai/cli"  = "latest"
+  "npm:ccstatusline"     = "latest"
+  oxfmt                  = "latest"
+  rg                     = "latest"
+  shellcheck             = "latest"
+  shfmt                  = "latest"
+  starship               = "latest"
+  taplo                  = "0.10.0"
+  watchexec              = "latest"
 
   [tools."forgejo:bkenks/lazymux"]
-  api_url             = "https://fj.ktbcloud.com/api/v1"
-  minimum_release_age = "0h"
-  version             = "1.4.0"
+    api_url             = "https://fj.ktbcloud.com/api/v1"
+    minimum_release_age = "0h"
+    version             = "1.4.0"
 
 [env]
-# Keep `go install` output outside mise's versioned toolchain dir, which is
-# wiped whenever the Go version changes. ~/.local/bin is on PATH via ~/.zshenv.
-GOBIN = "{{env.HOME}}/.local/bin"
+  # Keep `go install` output outside mise's versioned toolchain dir, which is
+  # wiped whenever the Go version changes. ~/.local/bin is on PATH via ~/.zshenv.
+  GOBIN = "{{env.HOME}}/.local/bin"
 
 # Bootstrap ——————————————————————————————————————————————————————
 [bootstrap.services.mise-history]
-builtin = "history-watch"
+  builtin = "history-watch"
 
 [bootstrap.packages]
-"brew-cask:1password"             = "latest"
-"brew-cask:bartender"             = "latest"
-"brew-cask:claude"                = "latest"
-"brew-cask:font-maple-mono"       = "latest"
-"brew-cask:font-maple-mono-nf"    = "latest"
-"brew-cask:font-maple-mono-nf-cn" = "latest"
-"brew-cask:iterm2"                = "latest"
-"brew-cask:lm-studio"             = "latest"
-"brew-cask:openlogi"              = "latest"
-"brew-cask:vscodium"              = "latest"
-"brew-cask:zen"                   = "latest"
-"brew:bbrew"                      = "latest"
-"brew:colima"                     = "latest"
-"brew:coredns"                    = "latest"
-"brew:docker"                     = "latest"
-"brew:docker-buildx"              = "latest"
-"brew:docker-compose"             = "latest"
-"brew:gh"                         = "latest"
-"brew:git"                        = "latest"
-"brew:helix"                      = "latest"
-"brew:lazygit"                    = "latest"
-"brew:mas"                        = "latest"
-"brew:tea"                        = "latest"
-"brew:tree"                       = "latest"
-"mas:1236045954"                  = "latest" # Canary Mail
-"mas:6468120888"                  = "latest"
+  "brew-cask:1password"             = "latest"
+  "brew-cask:bartender"             = "latest"
+  "brew-cask:claude"                = "latest"
+  "brew-cask:font-maple-mono"       = "latest"
+  "brew-cask:font-maple-mono-nf"    = "latest"
+  "brew-cask:font-maple-mono-nf-cn" = "latest"
+  "brew-cask:iterm2"                = "latest"
+  "brew-cask:lm-studio"             = "latest"
+  "brew-cask:openlogi"              = "latest"
+  "brew-cask:vscodium"              = "latest"
+  "brew-cask:zen"                   = "latest"
+  "brew:bbrew"                      = "latest"
+  "brew:colima"                     = "latest"
+  "brew:coredns"                    = "latest"
+  "brew:docker"                     = "latest"
+  "brew:docker-buildx"              = "latest"
+  "brew:docker-compose"             = "latest"
+  "brew:gh"                         = "latest"
+  "brew:git"                        = "latest"
+  "brew:helix"                      = "latest"
+  "brew:lazygit"                    = "latest"
+  "brew:mas"                        = "latest"
+  "brew:tea"                        = "latest"
+  "brew:tree"                       = "latest"
+  "mas:1236045954"                  = "latest" # Canary Mail
+  "mas:6468120888"                  = "latest"
 
 [bootstrap.macos.dock]
-autohide               = true
-autohide_delay         = 0
-autohide_time_modifier = 0.25
-show_recents           = false
+  autohide               = true
+  autohide_delay         = 0
+  autohide_time_modifier = 0.25
+  show_recents           = false
 
 [bootstrap.macos.finder]
-preferred_view_style    = "list"
-show_extensions_warning = false
-show_pathbar            = true
-sort_folders_first      = true
+  preferred_view_style    = "list"
+  show_extensions_warning = false
+  show_pathbar            = true
+  sort_folders_first      = true
 
 [bootstrap.macos.keyboard]
-automatic_capitalization      = false
-automatic_spelling_correction = false
-initial_key_repeat            = 15
-key_repeat                    = 2
+  automatic_capitalization      = false
+  automatic_spelling_correction = false
+  initial_key_repeat            = 15
+  key_repeat                    = 2
 
 # Dotfiles ——————————————————————————————————————————————————————
 [dotfiles]
-"~/.config/git" = { mode = "track" }
-"~/.config/karabiner/karabiner.json" = { mode = "track" }
-"~/.config/mise" = { mode = "track" }
-"~/.zshrc/alias" = { block = '''
+  "~/.config/git" = { mode = "track" }
+  "~/.config/karabiner/karabiner.json" = { mode = "track" }
+  "~/.config/mise" = { mode = "track" }
+  "~/.zshrc/alias" = { block = '''
 alias c="clear"
 alias reload='exec "$SHELL" -l'
 alias cpt='pbcopy'
 alias cpd='pwd | pbcopy'
 alias bootpkg=''
 ''' }
-"~/.zshrc/editors" = { block = '''
+  "~/.zshrc/editors" = { block = '''
 export EDITOR="hx"
 export VISUAL="codium"
 ''' }
-"~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
-"~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
+  "~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
+  "~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
 
 [history]
-exclude = ["**/*.local*", "**/*.env*", "**/*secret*", "**/.vscode/**"]
+  exclude = ["**/*.local*", "**/*.env*", "**/*secret*", "**/.vscode/**"]
