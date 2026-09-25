@@ -1,2 +1,5 @@
 [formatting]
 align_entries = true
+
+[schema]
+path = "https://mise.jdx.dev/schema/mise.json"
