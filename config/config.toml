@@ -25,5 +25,8 @@ watchexec              = "2.7"
 # wiped whenever the Go version changes. ~/.local/bin is on PATH via ~/.zshenv.
 GOBIN = "{{env.HOME}}/.local/bin"
 
+[vars]
+pathMiseBootstrapConfig = "{{ config_root }}/conf.d/bootstrap.toml"
+
 [history]
 exclude = ["**/*.local*", "**/*.env*", "**/*secret*", "**/.vscode/**"]
