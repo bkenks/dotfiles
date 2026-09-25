@@ -26,8 +26,6 @@ watchexec              = "2.7"
 # Keep `go install` output outside mise's versioned toolchain dir, which is
 # wiped whenever the Go version changes. ~/.local/bin is on PATH via ~/.zshenv.
 GOBIN = "{{env.HOME}}/.local/bin"
-
-[bootstrap]
   [bootstrap.services.mise-history]
   builtin = "history-watch"
 
@@ -58,6 +56,7 @@ GOBIN = "{{env.HOME}}/.local/bin"
   "brew:tree"                       = "latest"
   "mas:1236045954"                  = "latest" # Canary Mail
   "mas:6468120888"                  = "latest"
+"brew:ov" = "latest"
 
 
   [bootstrap.macos.dock]
