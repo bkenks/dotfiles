@@ -1,3 +1,6 @@
+# treefmt replaces the usage of any and all formatters and configuration of them within IDEs
+# the treefmt extension is set as the default formatter, and it uses this config to orchestrate formatters
+
 [formatter.toml]
 command = "taplo"
 options = ["format"]
