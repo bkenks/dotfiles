@@ -8,12 +8,6 @@
       "variants": []
     },
     {
-      "path": "config/treefmt.toml",
-      "autosave": true,
-      "encrypt": false,
-      "variants": []
-    },
-    {
       "path": "home/.config/git",
       "autosave": true,
       "encrypt": false,
