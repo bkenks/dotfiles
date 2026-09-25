@@ -75,8 +75,8 @@ GOBIN = "{{env.HOME}}/.local/bin"
   [bootstrap.macos.keyboard]
   automatic_capitalization      = false
   automatic_spelling_correction = false
-  initial_key_repeat            = 15.0
-  key_repeat                    = 2.0
+  initial_key_repeat            = 15
+  key_repeat                    = 2
 
 # Dotfiles ——————————————————————————————————————————————————————
 [dotfiles]
