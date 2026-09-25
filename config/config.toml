@@ -1,9 +1,8 @@
 # :schema https://mise.jdx.dev/schema/mise.json
-
 [tools]
 1password              = "2.39"
 "aqua:numtide/treefmt" = "2.6"
-copier                 = "latest"
+copier                 = "9.18"
 fd                     = "10.5"
 fnox                   = "1.35"
 go                     = "1.27"
