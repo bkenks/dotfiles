@@ -92,7 +92,8 @@ alias c="clear"
 alias cpt='pbcopy'
 alias cpd='pwd | pbcopy'
 
-alias mu="mise use"
+alias m='mise'
+alias mu='mise use'
 alias mr='mise run'
 alias mi='mise install'
 alias md='mise dotfiles'
