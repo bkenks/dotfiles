@@ -15,6 +15,7 @@ shellcheck = "latest"
 fd = "latest"
 watchexec = "latest"
 go = "1.27.1"
+"npm:@caveman-ai/cli" = "latest"
 
 [tools."forgejo:bkenks/lazymux"]
 version = "1.4.0"
