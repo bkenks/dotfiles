@@ -30,3 +30,6 @@ pathMiseBootstrapConfig = "{{ config_root }}/conf.d/bootstrap.toml"
 
 [history]
 exclude = ["**/*.local*", "**/*.env*", "**/*secret*", "**/.vscode/**"]
+
+[tasks."dot:add"]
+run = "mise dotfiles add -p {{vars.pathMiseBootstrapConfig}}"
