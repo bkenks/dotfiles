@@ -8,6 +8,12 @@ editor_all_fallback="vi"
 export EDITOR="hx"
 export VISUAL="codium"
 
+commandExists() {
+  local arg_command=$1
+
+  command -v "$arg_command" >/dev/null 2>&1
+}
+
 if commandExists "$pager"; then
   # echo "ov is installed"
   export PAGER=$pager
@@ -15,9 +21,3 @@ else
   echo "$pager not found. falling back to $pager_fallback"
   export PAGER=$pager_fallback
 fi
-
-commandExists() {
-  local arg_command=$1
-
-  command -v "$arg_command" >/dev/null 2>&1
-}
