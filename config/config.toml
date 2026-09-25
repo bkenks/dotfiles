@@ -90,15 +90,7 @@ watchexec              = "2.7"
 export EDITOR="hx"
 export VISUAL="codium"
 ''' }
-"~/.zshrc/prompt-gap" = { block = '''
-_prompt_should_add_gap=0
-_prompt_add_gap() {
-  (( _prompt_should_add_gap )) && print
-  _prompt_should_add_gap=1
-}
-autoload -Uz add-zsh-hook
-add-zsh-hook precmd _prompt_add_gap
-''' }
+"~/.zshrc/prompt-gap" = { template = "tera", block = '{{ read_file(path=vars.pathMiseZsh ~ "/prompt-gap.zsh") }}' }
 "~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
 "~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
 
