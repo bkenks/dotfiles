@@ -17,10 +17,10 @@ starship               = "latest"
 taplo                  = "0.10.0"
 watchexec              = "latest"
 
-[tools."forgejo:bkenks/lazymux"]
-api_url             = "https://fj.ktbcloud.com/api/v1"
-minimum_release_age = "0h"
-version             = "1.4.0"
+  [tools."forgejo:bkenks/lazymux"]
+  api_url             = "https://fj.ktbcloud.com/api/v1"
+  minimum_release_age = "0h"
+  version             = "1.4.0"
 
 [env]
 # Keep `go install` output outside mise's versioned toolchain dir, which is
