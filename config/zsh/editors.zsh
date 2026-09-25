@@ -1,5 +1,9 @@
 export EDITOR="hx"
 export VISUAL="codium"
 
-
-export PAGER="ov"
+if command -v ov >/dev/null 2>&1; then
+  # echo "ov is installed"
+  export PAGER="ov"
+else
+  echo "ov not found"
+fi
