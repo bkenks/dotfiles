@@ -75,8 +75,8 @@ GOBIN = "{{env.HOME}}/.local/bin"
   [bootstrap.macos.keyboard]
   automatic_capitalization      = false
   automatic_spelling_correction = false
-  initial_key_repeat            = 15
-  key_repeat                    = 2
+  initial_key_repeat            = 15.0
+  key_repeat                    = 2.0
 
 # Dotfiles ——————————————————————————————————————————————————————
 [dotfiles]
@@ -88,7 +88,7 @@ alias c="clear"
 alias reload='exec "$SHELL" -l'
 alias cpt='pbcopy'
 alias cpd='pwd | pbcopy'
-alias bootpkg=''
+alias bootpkg='mise bootstrap package'
 ''' }
 "~/.zshrc/editors" = { block = '''
 export EDITOR="hx"
