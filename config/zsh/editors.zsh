@@ -9,4 +9,5 @@ if command -v ov >/dev/null 2>&1; then
   export PAGER="ov"
 else
   echo "ov not found"
+  export PAGER="$pager_fallback"
 fi
