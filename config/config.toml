@@ -37,6 +37,7 @@ builtin = "history-watch"
 "brew-cask:font-maple-mono-nf"    = "latest"
 "brew-cask:font-maple-mono-nf-cn" = "latest"
 "brew-cask:iterm2"                = "latest"
+"brew-cask:keyclu"                = "latest"
 "brew-cask:lm-studio"             = "latest"
 "brew-cask:openlogi"              = "latest"
 "brew-cask:vscodium"              = "latest"
@@ -52,13 +53,12 @@ builtin = "history-watch"
 "brew:helix"                      = "latest"
 "brew:lazygit"                    = "latest"
 "brew:mas"                        = "latest"
+"brew:mole"                       = "latest"
 "brew:ov"                         = "latest"
 "brew:tea"                        = "latest"
 "brew:tree"                       = "latest"
 "mas:1236045954"                  = "latest" # Canary Mail
 "mas:6468120888"                  = "latest"
-"brew:mole" = "latest"
-"brew-cask:keyclu" = "latest"
 
 
 [bootstrap.macos.dock]
