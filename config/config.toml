@@ -14,7 +14,7 @@ rg                     = "15"
 shellcheck             = "0.11"
 shfmt                  = "3.14"
 starship               = "1.26"
-taplo                  = "0.10.0"
+taplo                  = "0.10"
 watchexec              = "2.7"
 
   [tools."forgejo:bkenks/lazymux"]
