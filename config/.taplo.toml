@@ -2,6 +2,7 @@
 align_entries = true
 
 [[rule]]
+name = "mise"
 include = [
   "**/mise/config.toml",
   "**/mise/conf.d/*.toml",
