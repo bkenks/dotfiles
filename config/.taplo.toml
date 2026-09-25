@@ -3,4 +3,10 @@ align_entries = true
 
 [schema]
 path = "https://mise.jdx.dev/schema/mise.json"
-include = 
+include = [
+  "**/mise/config.toml",
+  "**/mise/conf.d/*.toml",
+  "**/mise.toml",
+  "**/.mise.toml",
+  "**/mise.*.toml",        # mise.local.toml, mise.dev.toml, etc.
+]
