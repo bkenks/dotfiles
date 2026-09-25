@@ -15,7 +15,7 @@ shellcheck             = "0.11"
 shfmt                  = "3.14"
 starship               = "1.26"
 taplo                  = "0.10.0"
-watchexec              = "latest"
+watchexec              = "2.7"
 
   [tools."forgejo:bkenks/lazymux"]
   api_url             = "https://fj.ktbcloud.com/api/v1"
