@@ -17,6 +17,7 @@ starship               = "1.26"
 taplo                  = "0.10"
 watchexec              = "2.7"
 uv = "0.12.17"
+copier = "latest"
 
   [tools."forgejo:bkenks/lazymux"]
   api_url             = "https://fj.ktbcloud.com/api/v1"
