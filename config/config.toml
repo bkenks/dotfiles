@@ -16,6 +16,7 @@ fd = "latest"
 watchexec = "latest"
 go = "1.27.1"
 "npm:@caveman-ai/cli" = "latest"
+taplo = "0.10.0"
 
 [tools."forgejo:bkenks/lazymux"]
 version = "1.4.0"
