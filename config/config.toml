@@ -26,7 +26,7 @@ watchexec              = "2.7"
 GOBIN = "{{env.HOME}}/.local/bin"
 
 [vars]
-pathMiseBootstrapConfig = "{{ config_root }}/conf.d/bootstrap.toml"
+pathMiseBootstrapConfig = "{{config_root}}/conf.d/bootstrap.toml"
 
 [history]
 exclude = ["**/*.local*", "**/*.env*", "**/*secret*", "**/.vscode/**"]
