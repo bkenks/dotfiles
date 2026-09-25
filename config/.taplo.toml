@@ -1,8 +1,7 @@
 [formatting]
 align_entries = true
 
-[schema]
-path = "https://mise.jdx.dev/schema/mise.json"
+[[rule]]
 include = [
   "**/mise/config.toml",
   "**/mise/conf.d/*.toml",
@@ -10,3 +9,6 @@ include = [
   "**/.mise.toml",
   "**/mise.*.toml",        # mise.local.toml, mise.dev.toml, etc.
 ]
+
+[rule.schema]
+url = "https://mise.jdx.dev/schema/mise.json"
