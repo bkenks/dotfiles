@@ -36,4 +36,15 @@ exclude = ["**/*.local*", "**/*.env*", "**/*secret*", "**/.vscode/**"]
 description = "Track a dotfile with mise"
 usage       = 'arg "<path>" help="Path of directory or file to track"'
 
-run = "mise dotfiles add -p {{vars.pathMiseDotfilesConfig}} --mode track ${usage_path}"
+run = '''
+case "$usage_path" in
+  "$HOME"/*) target="~${usage_path#"$HOME"}" ;;
+  *) echo "error: $usage_path is not under $HOME" >&2; exit 1 ;;
+esac
+if grep -qF "\"$target\" =" "{{vars.pathMiseDotfilesConfig}}"; then
+  echo "already declared: $target"
+else
+  printf '"%s" = { mode = "track" }\n' "$target" >> "{{vars.pathMiseDotfilesConfig}}"
+fi
+mise dotfiles save "$usage_path"
+'''
