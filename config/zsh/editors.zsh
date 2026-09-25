@@ -1,4 +1,5 @@
-local pager 
+pager="ov"
+pager_fallback="less"
 
 export EDITOR="hx"
 export VISUAL="codium"
