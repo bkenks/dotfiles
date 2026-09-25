@@ -34,6 +34,7 @@
   ],
   "recipients": [],
   "permissions": {
+    "config/treefmt.toml": 384,
     "home/.config/karabiner": 448,
     "home/.config/karabiner/karabiner.json": 384,
     "home/Library": 448,
