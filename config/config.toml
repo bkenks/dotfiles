@@ -33,4 +33,4 @@ pathMiseDotfilesConfig  = "{{config_root}}/conf.d/dotfiles.toml"
 exclude = ["**/*.local*", "**/*.env*", "**/*secret*", "**/.vscode/**"]
 
 [tasks."dot:add"]
-run = "mise dotfiles add -p {{vars.pathMiseBootstrapConfig}}"
+run = "mise dotfiles add -p {{vars.pathMiseDotfilesConfig}} --mode track ${usage_file_path}"
