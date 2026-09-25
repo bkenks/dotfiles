@@ -27,6 +27,7 @@ GOBIN = "{{env.HOME}}/.local/bin"
 
 [vars]
 pathMiseBootstrapConfig = "{{config_root}}/conf.d/bootstrap.toml"
+pathMiseDotfilesConfig  = "{{config_root}}/conf.d/dotfiles.toml"
 
 [history]
 exclude = ["**/*.local*", "**/*.env*", "**/*secret*", "**/.vscode/**"]
