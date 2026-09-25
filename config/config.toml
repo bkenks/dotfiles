@@ -84,8 +84,9 @@ GOBIN = "{{env.HOME}}/.local/bin"
 "~/.config/karabiner/karabiner.json" = { mode = "track" }
 "~/.config/mise" = { mode = "track" }
 "~/.zshrc/alias" = { block = '''
-alias c="clear"
 alias reload='exec "$SHELL" -l'
+
+alias c="clear"
 alias cpt='pbcopy'
 alias cpd='pwd | pbcopy'
 
