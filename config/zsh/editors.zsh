@@ -1,6 +1,10 @@
 pager="ov"
 pager_fallback="less"
 
+editor="hx"
+visual="codium"
+editor_all_fallback="vi"
+
 export EDITOR="hx"
 export VISUAL="codium"
 
