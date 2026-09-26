@@ -96,6 +96,15 @@ export VISUAL="codium"
 ''' }
 "~/.zshrc/prompt-gap" = { template = "tera", block = '{{ read_file(path=vars.pathMiseZsh ~ "/prompt-gap.zsh") }}' }
 "~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
+"~/.zshrc/yazi" = { block = '''
+function y() {
+	local tmp cwd; tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd" || builtin true
+	command rm -f -- "$tmp"
+}
+''' }
 "~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
 
 
