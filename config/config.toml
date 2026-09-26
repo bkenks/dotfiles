@@ -27,6 +27,7 @@ starship               = "1.26"
 taplo                  = "0.10"
 uv                     = "0.12.17"
 watchexec              = "2.7"
+yazi                   = "26"
 
 
 [bootstrap]
