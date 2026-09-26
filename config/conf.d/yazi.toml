@@ -1,5 +1,6 @@
 [tools]
 fd     = "10.5"
+ffmpeg = "9"
 fzf    = "0.74"
 resvg  = "0.48"
 rg     = "15"
