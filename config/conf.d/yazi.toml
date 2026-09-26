@@ -1,12 +1,23 @@
 [tools]
-7zip        = "26"
-fd          = "10.5"
-ffmpeg      = "9"
-fzf         = "0.74"
+7zip = "26"
+fd = "10.5"
+ffmpeg = "9"
+fzf = "0.74"
 imagemagick = "7"
-jq          = "1.8"
-poppler     = "26"
-resvg       = "0.48"
-rg          = "15"
-yazi        = { version = "26", depends = ["fd"] }
-zoxide      = "0.10"
+jq = "1.8"
+poppler = "26"
+resvg = "0.48"
+rg = "15"
+yazi = { version = "26", depends = [
+  "fd",
+  "7zip",
+  "ffmpeg",
+  "fzf",
+  "imagemagick",
+  "jq",
+  "poppler",
+  "resvg",
+  "rg",
+  "zoxide",
+] }
+zoxide = "0.10"
