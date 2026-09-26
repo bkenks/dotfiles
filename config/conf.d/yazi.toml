@@ -1,3 +1,4 @@
 [tools]
 fd   = "10.5"
+rg   = "15"
 yazi = { version = "26", depends = ["fd"] }
