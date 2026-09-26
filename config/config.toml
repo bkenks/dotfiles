@@ -2,6 +2,7 @@
 
 [vars]
 pathMiseZsh = "{{config_root}}/.config/mise/zsh"
+
 [tool_alias]
 lazymux = "forgejo:bkenks/lazymux"
 
