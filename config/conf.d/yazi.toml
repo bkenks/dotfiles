@@ -1,6 +1,7 @@
 [tools]
 fd     = "10.5"
 fzf    = "0.74"
+resvg  = "0.48"
 rg     = "15"
 yazi   = { version = "26", depends = ["fd"] }
 zoxide = "0.10"
