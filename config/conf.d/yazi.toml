@@ -1,4 +1,6 @@
 [tools]
-fd   = "10.5"
-rg   = "15"
-yazi = { version = "26", depends = ["fd"] }
+fd     = "10.5"
+fzf    = "0.74"
+rg     = "15"
+yazi   = { version = "26", depends = ["fd"] }
+zoxide = "0.10"
