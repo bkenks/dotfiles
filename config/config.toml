@@ -12,7 +12,7 @@ gitkeeper = "forgejo:bkenks/gitkeeper"
 copier                 = "9.18"
 fd                     = "10.5"
 fnox                   = "1.35"
-gitkeeper              = { version = "latest", api_url = "https://fj.ktbcloud.com/api/v1", bin = "lazymux", minimum_release_age = "0h" }
+gitkeeper              = { version = "latest", api_url = "https://fj.ktbcloud.com/api/v1", bin = "gitkeeper", minimum_release_age = "0h" }
 go                     = "1.27"
 gofumpt                = "0.12"
 java                   = "temurin-25"
