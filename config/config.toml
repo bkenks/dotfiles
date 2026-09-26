@@ -2,6 +2,8 @@
 
 [vars]
 pathMiseZsh = "{{config_root}}/.config/mise/zsh"
+[tool_alias]
+lazymux = "forgejo:bkenks/lazymux"
 
 [tools]
 1password              = "2.39"
@@ -9,10 +11,10 @@ pathMiseZsh = "{{config_root}}/.config/mise/zsh"
 copier                 = "9.18"
 fd                     = "10.5"
 fnox                   = "1.35"
-"forgejo:bkenks/lazymux" = { version = "latest", api_url = "https://fj.ktbcloud.com/api/v1", bin = "lazymux", minimum_release_age = "0h" }
 go                     = "1.27"
 gofumpt                = "0.12"
 java                   = "temurin-25"
+lazymux                = { version = "latest", api_url = "https://fj.ktbcloud.com/api/v1", bin = "lazymux", minimum_release_age = "0h" }
 node                   = "26"
 "npm:@caveman-ai/cli"  = "1.3"
 "npm:ccstatusline"     = "2.2"
