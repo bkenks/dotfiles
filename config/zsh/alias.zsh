@@ -13,4 +13,4 @@ alias md='mise dotfiles'
 alias mb='mise bootstrap'
 alias mbp='mise bootstrap packages'
 
-alias lx='~/.local/bin/lazymux'
+alias lx='lazymux'
