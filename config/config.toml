@@ -84,6 +84,7 @@ watchexec              = "2.7"
 
 
 [dotfiles]
+"~/.config/ccstatusline" = { mode = "track" }
 "~/.config/git" = { mode = "track" }
 "~/.config/karabiner/karabiner.json" = { mode = "track" }
 "~/.config/mise" = { mode = "track" }
