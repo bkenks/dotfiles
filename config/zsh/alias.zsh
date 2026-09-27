@@ -15,3 +15,5 @@ alias mb='mise bootstrap'
 alias mbp='mise bootstrap packages'
 
 alias gk='gitkeeper'
+
+alias ca='claude agents'
