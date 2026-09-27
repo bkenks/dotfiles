@@ -13,5 +13,6 @@ alias mlov='mise list | ov --alternate-rows'
 
 alias mb='mise bootstrap'
 alias mbp='mise bootstrap packages'
+alias mtdig='for l in ~/.local/state/mise/tracked-configs/*; do rg -n node "$(readlink "$l")" /dev/null; done'
 
 alias gk='gitkeeper'
