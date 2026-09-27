@@ -27,9 +27,6 @@ starship               = "1.26"
 taplo                  = "0.10"
 uv                     = "0.12.17"
 watchexec              = "2.7"
-
-
-[bootstrap]
   [bootstrap.services.mise-history]
   builtin = "history-watch"
 
@@ -64,6 +61,7 @@ watchexec              = "2.7"
   "brew:tree"                       = "latest"
   "mas:1236045954"                  = "latest" # Canary Mail
   "mas:6468120888"                  = "latest"
+"brew:anomalyco/tap/opencode-v2" = "latest"
 
   [bootstrap.macos.dock]
   autohide               = true
