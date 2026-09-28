@@ -63,6 +63,7 @@ watchexec              = "2.7"
   "mas:1236045954"                  = "latest" # Canary Mail
   "mas:6468120888"                  = "latest"
 "brew:anomalyco/tap/opencode-v2" = "latest"
+"brew:b2-tools" = "latest"
 
   [bootstrap.macos.dock]
   autohide               = true
