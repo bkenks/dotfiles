@@ -122,7 +122,7 @@ exclude = [
   "**/*.env*",
   "**/*secret*",
   "**/.vscode/**",
-  "**/age.txt",
+  "**/*age.txt",
   "**/*fnox.local.toml",
   "**/*local.toml*",
 ]
