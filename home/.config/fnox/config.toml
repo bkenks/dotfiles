@@ -24,7 +24,9 @@ default_provider = "onepass"
   provider = "onepass"
   value    = "op://credentials/github.pat.personal/token"
 
-  # [secrets.B2_APPLICATION_KEY_ID]
-  # provider = "onepass"
-  # [secrets.B2_APPLICATION_KEY]
-  # provider = "onepass"
+  [secrets.B2_APPLICATION_KEY_ID]
+  provider = "onepass"
+  value    = "op://credentials/backblaze.b2.masterappkey/key_id"
+  [secrets.B2_APPLICATION_KEY]
+  provider = "onepass"
+  value    = "op://credentials/backblaze.b2.masterappkey/credential"
