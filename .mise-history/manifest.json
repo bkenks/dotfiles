@@ -44,7 +44,8 @@
     "**/*secret*",
     "**/.vscode/**",
     "**/age.txt",
-    "**/*fnox.local.toml"
+    "**/*fnox.local.toml",
+    "**/*local.toml*"
   ],
   "recipients": [],
   "permissions": {
