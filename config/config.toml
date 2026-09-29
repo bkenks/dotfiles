@@ -127,3 +127,6 @@ exclude = [
   "**/*age.txt",
   "**/*fnox.local.toml",
 ]
+
+[settings]
+disable_update_warning = true
