@@ -1,0 +1,25 @@
+#:schema https://fnox.jdx.dev/schema.json
+
+default_provider = "onepass"
+
+# —————————————————————————————————————————————————
+[providers]
+  [providers.cache]
+  type = "age"
+
+  key_file = "~/.config/fnox/age.txt" # private key
+  recipients = [ # public key
+    "age1w8xkpnudhum95ethf94jkqkslgmk544pn0mh87egcnqwp37ztc3qrj6kcs",
+  ]
+
+
+  [providers.onepass]
+  account = "ktbsoft.1password.com"
+  type    = "1password"
+
+
+# ——————————————————————————————————————————————————————————————————————————————————————————————————
+[secrets]
+  [secrets.GITHUB_TOKEN]
+  provider = "onepass"
+  value    = "op://credentials/github.pat.personal/token"

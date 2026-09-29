@@ -86,6 +86,7 @@ key_repeat                    = 2
 
 [dotfiles]
 "~/.config/ccstatusline" = { mode = "track" }
+"~/.config/fnox" = { mode = "track", exclude = ["age.txt"] }
 "~/.config/git" = { mode = "track" }
 "~/.config/karabiner/karabiner.json" = { mode = "track" }
 "~/.config/mise" = { mode = "track" }
