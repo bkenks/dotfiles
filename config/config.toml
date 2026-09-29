@@ -129,4 +129,4 @@ exclude = [
 ]
 
 [settings]
-disable_update_warning = true
+disable_update_warning = false
