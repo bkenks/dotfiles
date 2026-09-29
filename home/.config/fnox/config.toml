@@ -23,3 +23,5 @@ default_provider = "onepass"
   [secrets.GITHUB_TOKEN]
   provider = "onepass"
   value    = "op://credentials/github.pat.personal/token"
+
+  [secrets.B2_APPLICATION_KEY_ID]
