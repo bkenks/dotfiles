@@ -117,4 +117,10 @@ GOBIN = "{{env.HOME}}/.local/bin"
 
 
 [history]
-exclude = ["**/*.local*", "**/*.env*", "**/*secret*", "**/.vscode/**"]
+exclude = [
+  "**/*.local*",
+  "**/*.env*",
+  "**/*secret*",
+  "**/.vscode/**",
+  "**/age.txt",
+]
