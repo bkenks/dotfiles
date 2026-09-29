@@ -23,13 +23,16 @@ default_provider = "onepass"
   [secrets.GITHUB_TOKEN]
   provider = "onepass"
   value    = "op://credentials/github.pat.personal/token"
+sync = { provider = "cache", value = "fnox-age-batch-v1:YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBEdGdxa21maCtNSFM2eldGcjRuNUw0azhFME1HN0F5MEVERFQ5NU00dlVZCjI2Y3dnWjY1VWdjd3k0UWRJQjErclBydmhGT3R5dnBsS3VyY0lpOVkxN2cKLT4gOi1ncmVhc2UgRzIzdHQgbWVWeyUhQCBsTV44Y1NfCkRaOXFyRTNLeE9wSzVaTGRFRkd1M2hpd29GNXdvbFFoaVJxM1ZPTXZUMU43aUtWUHgydWkKLS0tIGVmY1VGTnUwTGZ0U3ZZWjNGODE2UW1qZ2lRa0VnQVZmOW5Jams4RVd3V3cKUdkLLBwy8mglhkbpR1kqBsKGliMuY7cVBIlMoWPw/8SLGhw4aWKs12l1u0DuWKCLitWc7yTsE+5Kpo4cklmSs2ZKYbkCU8gZMI9Ttw==:662SHrVivkDEv0xiZ22wn8BSUfrd4YQmFFs1ponl6tOcuEvcuXKiia+tZtZkZiqCZxxhDY9TlsjwIertwfERcx7QMHM=" }
 
   # ── Backblaze B2 ──────────────────────
   [secrets.B2_APPLICATION_KEY_ID]
   provider = "onepass"
   value    = "op://credentials/backblaze.b2.masterappkey/key_id"
+sync = { provider = "cache", value = "fnox-age-batch-v1:YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBEdGdxa21maCtNSFM2eldGcjRuNUw0azhFME1HN0F5MEVERFQ5NU00dlVZCjI2Y3dnWjY1VWdjd3k0UWRJQjErclBydmhGT3R5dnBsS3VyY0lpOVkxN2cKLT4gOi1ncmVhc2UgRzIzdHQgbWVWeyUhQCBsTV44Y1NfCkRaOXFyRTNLeE9wSzVaTGRFRkd1M2hpd29GNXdvbFFoaVJxM1ZPTXZUMU43aUtWUHgydWkKLS0tIGVmY1VGTnUwTGZ0U3ZZWjNGODE2UW1qZ2lRa0VnQVZmOW5Jams4RVd3V3cKUdkLLBwy8mglhkbpR1kqBsKGliMuY7cVBIlMoWPw/8SLGhw4aWKs12l1u0DuWKCLitWc7yTsE+5Kpo4cklmSs2ZKYbkCU8gZMI9Ttw==:7Vf+ONjSopD8xhM3n2H87bFZzk8jWKbvfY/tKVFF3x7mq0/ypLtIBg==" }
 
   [secrets.B2_APPLICATION_KEY]
   provider = "onepass"
   value    = "op://credentials/backblaze.b2.masterappkey/credential"
+sync = { provider = "cache", value = "fnox-age-batch-v1:YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBEdGdxa21maCtNSFM2eldGcjRuNUw0azhFME1HN0F5MEVERFQ5NU00dlVZCjI2Y3dnWjY1VWdjd3k0UWRJQjErclBydmhGT3R5dnBsS3VyY0lpOVkxN2cKLT4gOi1ncmVhc2UgRzIzdHQgbWVWeyUhQCBsTV44Y1NfCkRaOXFyRTNLeE9wSzVaTGRFRkd1M2hpd29GNXdvbFFoaVJxM1ZPTXZUMU43aUtWUHgydWkKLS0tIGVmY1VGTnUwTGZ0U3ZZWjNGODE2UW1qZ2lRa0VnQVZmOW5Jams4RVd3V3cKUdkLLBwy8mglhkbpR1kqBsKGliMuY7cVBIlMoWPw/8SLGhw4aWKs12l1u0DuWKCLitWc7yTsE+5Kpo4cklmSs2ZKYbkCU8gZMI9Ttw==:JyrWVtgp3X46+PnWQmraip5gDxRnTnYuawbraZdgycfR+EsnzgG/IVj8gFV4EWHJIBfhbrQ8XWniRT8mpnTkeaZnxMosuQ==" }
   # ── end Backblaze B2 ──────────────────
