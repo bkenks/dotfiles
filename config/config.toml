@@ -124,5 +124,4 @@ exclude = [
   "**/.vscode/**",
   "**/*age.txt",
   "**/*fnox.local.toml",
-  "**/*local.toml*",
 ]
