@@ -87,12 +87,14 @@ key_repeat                    = 2
 
 
 [dotfiles]
-"~/.config/ccstatusline" = { mode = "track" }
-"~/.config/fnox" = { mode = "track", exclude = ["age.txt"] }
-"~/.config/git" = { mode = "track" }
-"~/.config/karabiner/karabiner.json" = { mode = "track" }
-"~/.config/mise" = { mode = "track" }
-"~/.config/starship.toml" = { mode = "track" }
+"~/.config/ccstatusline"                              = { mode = "track" }
+"~/.config/fnox"                                      = { mode = "track", exclude = ["age.txt"] }
+"~/.config/git"                                       = { mode = "track" }
+"~/.config/karabiner/karabiner.json"                  = { mode = "track" }
+"~/.config/mise"                                      = { mode = "track" }
+"~/.config/starship.toml"                             = { mode = "track" }
+"~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
+
 "~/.zshrc/alias" = { template = "tera", block = '{{ read_file(path=vars.pathMiseZsh ~ "/alias.zsh") }}' }
 "~/.zshrc/direnv" = { block = 'eval "$(direnv hook zsh)"' }
 "~/.zshrc/editors" = { block = '''
@@ -111,7 +113,6 @@ function y() {
 	command rm -f -- "$tmp"
 }
 ''' }
-"~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
 
 
 [env]
