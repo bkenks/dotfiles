@@ -10,6 +10,7 @@ gitkeeper = "forgejo:bkenks/gitkeeper"
 1password                     = "2.39"
 "aqua:numtide/treefmt"        = "2.6"
 copier                        = "9.18"
+direnv = "2.37.1"
 fd                            = "10.5"
 fnox                          = "1.35"
 gitkeeper                     = { version = "latest", api_url = "https://fj.ktbcloud.com/api/v1", bin = "gitkeeper", minimum_release_age = "0h" }
