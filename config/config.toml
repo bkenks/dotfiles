@@ -10,7 +10,7 @@ gitkeeper = "forgejo:bkenks/gitkeeper"
 1password                     = "2.39"
 "aqua:numtide/treefmt"        = "2.6"
 copier                        = "9.18"
-direnv = "2.37.1"
+direnv                        = "2.37.1"
 fd                            = "10.5"
 fnox                          = "1.35"
 gitkeeper                     = { version = "latest", api_url = "https://fj.ktbcloud.com/api/v1", bin = "gitkeeper", minimum_release_age = "0h" }
@@ -57,6 +57,7 @@ builtin = "history-watch"
 "brew:gh"                         = "latest"
 "brew:git"                        = "latest"
 "brew:helix"                      = "latest"
+"brew:lazydocker"                 = "latest"
 "brew:lazygit"                    = "latest"
 "brew:mas"                        = "latest"
 "brew:mole"                       = "latest"
@@ -65,7 +66,6 @@ builtin = "history-watch"
 "brew:tree"                       = "latest"
 "mas:1236045954"                  = "latest" # Canary Mail
 "mas:6468120888"                  = "latest"
-"brew:lazydocker" = "latest"
 
 [bootstrap.macos.dock]
 autohide               = true
@@ -94,6 +94,7 @@ key_repeat                    = 2
 "~/.config/mise" = { mode = "track" }
 "~/.config/starship.toml" = { mode = "track" }
 "~/.zshrc/alias" = { template = "tera", block = '{{ read_file(path=vars.pathMiseZsh ~ "/alias.zsh") }}' }
+"~/.zshrc/direnv" = { block = 'eval "$(direnv hook zsh)"' }
 "~/.zshrc/editors" = { block = '''
 export EDITOR="hx"
 export VISUAL="codium"
