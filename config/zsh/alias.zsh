@@ -18,4 +18,4 @@ alias gk='gitkeeper'
 
 alias ca='claude agents'
 
-alias hosts='SUDO_EDITOR=hx sudo -e /etc/hosts'
+alias hosts='SUDO_EDITOR="codium --wait" sudo -e /etc/hosts'
