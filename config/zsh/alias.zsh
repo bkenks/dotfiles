@@ -17,3 +17,5 @@ alias mbp='mise bootstrap packages'
 alias gk='gitkeeper'
 
 alias ca='claude agents'
+
+alias hosts='SUDO_EDITOR=hx sudo -e /etc/hosts'
