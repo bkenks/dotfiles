@@ -79,7 +79,7 @@ exclude_path='*.claude/worktrees/*'
 existing="$(mktemp)"
 trap 'rm -f "$existing"' EXIT
 
-while IFS= read -r p; do
+while IFS= read -r p || [ -n "$p" ]; do
   [ -n "$p" ] || continue
   if [ -e "$p" ]; then
     printf '%s\n' "$p" >> "$existing"
