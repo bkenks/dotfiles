@@ -106,7 +106,6 @@ export EDITOR="hx"
 export VISUAL="codium"
 ''' }
 "~/.zshrc/fnox" = { block = 'eval "$(fnox activate zsh)"' }
-"~/.zshrc/prompt-gap" = { template = "tera", block = '{{ read_file(path=vars.pathMiseZsh ~ "/prompt-gap.zsh") }}' }
 "~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
 "~/.zshrc/yazi" = { block = '''
 function y() {
