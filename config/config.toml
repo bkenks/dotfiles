@@ -10,7 +10,7 @@ gitkeeper = "forgejo:bkenks/gitkeeper"
 1password                     = "2.39"
 "aqua:numtide/treefmt"        = "2.6"
 copier                        = "9.18"
-cue = "0.17.1"
+cue                           = "0.17.1"
 direnv                        = "2.37.1"
 fd                            = "10.5"
 fnox                          = "1.35"
@@ -22,7 +22,7 @@ node                          = "26"
 "npm:@openhands/agent-canvas" = "latest"
 "npm:ccstatusline"            = "2.2.30"
 "npm:ccusage"                 = "latest"
-"npm:likec4" = "1.59.4"
+"npm:likec4"                  = "1.59.4"
 oxfmt                         = "0.70"
 pkl                           = "0.32.1"
 rg                            = "15"
@@ -32,62 +32,62 @@ starship                      = "1.26"
 taplo                         = "0.10"
 uv                            = "0.12.17"
 watchexec                     = "2.7"
-  [bootstrap.services.mise-history]
-  builtin = "history-watch"
+[bootstrap.services.mise-history]
+builtin = "history-watch"
 
-  [bootstrap.packages]
-  "brew-cask:1password"             = "latest"
-  "brew-cask:bartender"             = "latest"
-  "brew-cask:claude"                = "latest"
-  "brew-cask:font-maple-mono"       = "latest"
-  "brew-cask:font-maple-mono-nf"    = "latest"
-  "brew-cask:font-maple-mono-nf-cn" = "latest"
-  "brew-cask:iterm2"                = "latest"
-  "brew-cask:keyclu"                = "latest"
-  "brew-cask:lm-studio"             = "latest"
-  "brew-cask:macshot"               = "latest"
-  "brew-cask:openlogi"              = "latest"
-  "brew-cask:vscodium"              = "latest"
-  "brew-cask:zen"                   = "latest"
-  "brew:anomalyco/tap/opencode-v2"  = "latest"
-  "brew:b2-tools"                   = "latest"
-  "brew:bbrew"                      = "latest"
-  "brew:colima"                     = "latest"
-  "brew:coredns"                    = "latest"
-  "brew:docker"                     = "latest"
-  "brew:docker-buildx"              = "latest"
-  "brew:docker-compose"             = "latest"
-  "brew:gh"                         = "latest"
-  "brew:git"                        = "latest"
-  "brew:helix"                      = "latest"
-  "brew:lazydocker"                 = "latest"
-  "brew:lazygit"                    = "latest"
-  "brew:mas"                        = "latest"
-  "brew:mole"                       = "latest"
-  "brew:ov"                         = "latest"
-  "brew:tea"                        = "latest"
-  "brew:tree"                       = "latest"
-  "mas:1236045954"                  = "latest" # Canary Mail
-  "mas:6468120888"                  = "latest"
-"brew:technitium-dns" = "latest"
+[bootstrap.packages]
+"brew-cask:1password"             = "latest"
+"brew-cask:bartender"             = "latest"
+"brew-cask:claude"                = "latest"
+"brew-cask:font-maple-mono"       = "latest"
+"brew-cask:font-maple-mono-nf"    = "latest"
+"brew-cask:font-maple-mono-nf-cn" = "latest"
+"brew-cask:iterm2"                = "latest"
+"brew-cask:keyclu"                = "latest"
+"brew-cask:lm-studio"             = "latest"
+"brew-cask:macshot"               = "latest"
+"brew-cask:openlogi"              = "latest"
+"brew-cask:vscodium"              = "latest"
+"brew-cask:zen"                   = "latest"
+"brew:anomalyco/tap/opencode-v2"  = "latest"
+"brew:b2-tools"                   = "latest"
+"brew:bbrew"                      = "latest"
+"brew:colima"                     = "latest"
+"brew:coredns"                    = "latest"
+"brew:docker"                     = "latest"
+"brew:docker-buildx"              = "latest"
+"brew:docker-compose"             = "latest"
+"brew:gh"                         = "latest"
+"brew:git"                        = "latest"
+"brew:helix"                      = "latest"
+"brew:lazydocker"                 = "latest"
+"brew:lazygit"                    = "latest"
+"brew:mas"                        = "latest"
+"brew:mole"                       = "latest"
+"brew:ov"                         = "latest"
+"brew:tea"                        = "latest"
+"brew:technitium-dns"             = "latest"
+"brew:tree"                       = "latest"
+"mas:1236045954"                  = "latest" # Canary Mail
+"mas:6468120888"                  = "latest"
 
-  [bootstrap.macos.dock]
-  autohide               = true
-  autohide_delay         = 0
-  autohide_time_modifier = 0.25
-  show_recents           = false
+[bootstrap.macos.dock]
+autohide               = true
+autohide_delay         = 0
+autohide_time_modifier = 0.25
+show_recents           = false
 
-  [bootstrap.macos.finder]
-  preferred_view_style    = "list"
-  show_extensions_warning = false
-  show_pathbar            = true
-  sort_folders_first      = true
+[bootstrap.macos.finder]
+preferred_view_style    = "list"
+show_extensions_warning = false
+show_pathbar            = true
+sort_folders_first      = true
 
-  [bootstrap.macos.keyboard]
-  automatic_capitalization      = false
-  automatic_spelling_correction = false
-  initial_key_repeat            = 15
-  key_repeat                    = 2
+[bootstrap.macos.keyboard]
+automatic_capitalization      = false
+automatic_spelling_correction = false
+initial_key_repeat            = 15
+key_repeat                    = 2
 
 
 [dotfiles]
@@ -99,6 +99,12 @@ watchexec                     = "2.7"
 "~/.config/starship.toml"                             = { mode = "track" }
 "~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
 
+"~/.ssh/config/backrest-tunnel" = { block = '''
+Match tagged backrest
+  LocalForward 9898 127.0.0.1:9898
+  SessionType none
+  ExitOnForwardFailure yes
+''' }
 "~/.zshrc/alias" = { template = "tera", block = '{{ read_file(path=vars.pathMiseZsh ~ "/alias.zsh") }}' }
 "~/.zshrc/direnv" = { block = 'eval "$(direnv hook zsh)"' }
 "~/.zshrc/editors" = { block = '''
