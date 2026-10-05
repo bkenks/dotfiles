@@ -4,6 +4,6 @@
 #USAGE arg "<destination>" help="Destination volume"
 
 docker run --rm \
-    -v old_name:/from:ro \
-    -v new_name:/to \
+    -v "$usage_source":/from:ro \
+    -v "$usage_destination":/to \
     alpine sh -c 'cp -a /from/. /to/'
