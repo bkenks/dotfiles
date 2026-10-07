@@ -32,7 +32,7 @@ starship                      = "1.26"
 taplo                         = "0.10"
 uv                            = "0.12.17"
 watchexec                     = "2.7"
-worktrunk = "0.80.0"
+worktrunk                     = "0.80.0"
 [bootstrap.services.mise-history]
 builtin = "history-watch"
 
@@ -65,13 +65,13 @@ builtin = "history-watch"
 "brew:lazygit"                    = "latest"
 "brew:mas"                        = "latest"
 "brew:mole"                       = "latest"
+"brew:nushell"                    = "latest"
 "brew:ov"                         = "latest"
 "brew:tea"                        = "latest"
 "brew:technitium-dns"             = "latest"
 "brew:tree"                       = "latest"
 "mas:1236045954"                  = "latest" # Canary Mail
 "mas:6468120888"                  = "latest"
-"brew:nushell" = "latest"
 
 [bootstrap.macos.dock]
 autohide               = true
