@@ -22,3 +22,4 @@ alias hosts='SUDO_EDITOR="codium --wait" sudo -e /etc/hosts'
 
 alias wifidnsloopback='sudo networksetup -setdnsservers Wi-Fi 127.0.0.1'
 alias wifidnsempty='sudo networksetup -setdnsservers Wi-Fi Empty'
+alias peck="woodpecker-cli"
