@@ -34,7 +34,6 @@ uv                            = "0.12.17"
 watchexec                     = "2.7"
 worktrunk                     = "0.80.0"
   [tools."github:woodpecker-ci/woodpecker"]
-  platforms.linux-x64   = { asset_pattern = "woodpecker-cli_linux_amd64.tar.gz" }
   platforms.macos-arm64 = { asset_pattern = "woodpecker-cli_darwin_arm64.tar.gz" }
   version               = "3.19.0"
 
