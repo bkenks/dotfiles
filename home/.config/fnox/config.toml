@@ -20,6 +20,9 @@ default_provider = "cache"
 
 # ——————————————————————————————————————————————————————————————————————————————————————————————————
 [secrets]
+  [secrets.GITHUB_USERNAME]
+  default = "bkenks"
+
   [secrets.GITHUB_TOKEN]
   provider = "onepass"
   sync     = { provider = "cache", value = "fnox-age-batch-v1:YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBSL0xVUDk4cjdKdmJrc0MycW1RWUswdWEybXdDYytTOTZnenluNHI0VkRzCmh4dHlUcXhhL0pPKzZjTTg2aTRpQ0VLK3JOS21LRDVUVlVJVkVkc2VPNWcKLT4gPHExLWdyZWFzZSBjQX08Z3YgblVVYkkgVDRnZUIKZXJsOGlEN2RRTUJOL3B4clZVSXp2Z28zb0o1SGtpeEhRZ2plTUQ1RVF3WUVYaFVNWWFpZ216QkRaWVhNYS9GNApnbEdBem9uTURMaVlxQmEzMEpXWk9zZXM2alNuTHBDRHBQdjRHdHFBeWtyMXM3SXdqdCtCYncKLS0tIG0zaGVsYWV3UGJiOGM3NmMzMTZldVdnR3VqSFZhZ2RIY3oyemQrNkppQlkKxToqNn+LbZRiGKAFr2i0deo26l+45tVp+D7+nHrS4s10P+bIH7uHITPnZkLpECkjfQNKEYEIhcszfy1qZubwz5oKg7uGCBu7/NkORw==:S1W5SG7KfSCu/ZwZnJ8K1Ho+kAfcve3IB221t5HOxeSmPq8YLclfxaq/y2eZMvc6CRRtmpfq+u66VvNr0HpZo+28hgw=" }
