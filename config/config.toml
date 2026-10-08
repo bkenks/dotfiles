@@ -2,7 +2,6 @@
 
 [vars]
 pathMiseZsh = "{{config_root}}/.config/mise/zsh"
-file_viewer_bundle_id = "com.binarynights.ForkLift"
 
 [tool_alias]
 gitkeeper = "forgejo:bkenks/gitkeeper"
@@ -92,14 +91,15 @@ show_pathbar            = true
 sort_folders_first      = true
 
 [bootstrap.macos.defaults.NSGlobalDomain]
-NSFileViewer = "{{vars.file_viewer_bundle_id}}"
+NSFileViewer = "com.binarynights.ForkLift"
 
 [bootstrap.hooks.post-defaults]
 run = '''
 ls_domain="com.apple.LaunchServices/com.apple.launchservices.secure"
+file_viewer="$(defaults read NSGlobalDomain NSFileViewer)"
 if ! defaults read "$ls_domain" LSHandlers 2>/dev/null | grep -q '"public.folder"'; then
   defaults write "$ls_domain" LSHandlers -array-add \
-    '{LSHandlerContentType="public.folder";LSHandlerRoleAll="{{vars.file_viewer_bundle_id}}";}'
+    "{LSHandlerContentType=\"public.folder\";LSHandlerRoleAll=\"$file_viewer\";}"
 fi
 '''
 
