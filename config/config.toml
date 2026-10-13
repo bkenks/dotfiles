@@ -129,7 +129,7 @@ key_repeat                    = 2
 "~/.zshrc/fnox"     = { block = 'eval "$(fnox activate zsh)"' }
 "~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
 
-"~/.ssh/config/backrest-tunnel" = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/backrest-tunnel.zsh") }}' }
+"~/.ssh/config/backrest-tunnel" = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/backrest-tunnel") }}' }
 "~/.zshrc/alias"                = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/alias.zsh") }}' }
 "~/.zshrc/editors"              = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/editors.zsh") }}' }
 "~/.zshrc/yazi"                 = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/yazi.zsh") }}' }
