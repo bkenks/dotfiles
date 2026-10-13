@@ -11,6 +11,6 @@ venv_path=$(uv python find --script "$usage_script")
 
 printf "\nScript Virutal Environment Path:\n"
 printf '%s\n' "$venv_path"
-printf "\n\n ...copied to clipboard"
+printf "\n\n ...copied to clipboard\n"
 printf '%s' "$venv_path" | pbcopy
 '''
