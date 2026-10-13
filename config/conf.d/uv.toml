@@ -1,2 +1,2 @@
 [tasks."uv:create-tmp-environment"]
-run = ""
+run = ['uv sync --script compile.py', 'uv python find --script compile.py']
