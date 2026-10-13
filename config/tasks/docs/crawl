@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+#MISE description="Crawl a docs site sitemap into the Claude documentation skill, then have Claude catalog it"
+#MISE raw=true
+#USAGE arg "<name>" help="Library slug, used as the page filename (e.g. likec4)"
+#USAGE arg "<sitemap>" help="Sitemap URL (e.g. https://docs.example.com/sitemap.xml)"
+#USAGE flag "-f --filter <regex>" help="Only crawl URLs matching this regex" default="."
+set -euo pipefail
+
+skill_dir="${HOME}/.claude/skills/documentation"
+page_file="${skill_dir}/pages/${usage_name}.md"
+reader_url="https://r.jina.ai"
+request_delay_seconds=3
+
+if [[ ! "${usage_name}" =~ ^[a-z0-9][a-z0-9-]*$ ]]; then
+  echo "ERRO | name must be a lowercase slug | name=${usage_name}" >&2
+  exit 1
+fi
+
+if [[ ! -f "${skill_dir}/SKILL.md" ]]; then
+  echo "ERRO | documentation skill not found | dir=${skill_dir}" >&2
+  exit 1
+fi
+
+get_sitemap_urls() {
+  local sitemap_url="$1" body locs
+  if ! body="$(curl -fsSL --retry 3 "${sitemap_url}")"; then
+    echo "ERRO | cannot fetch sitemap | url=${sitemap_url}" >&2
+    return 1
+  fi
+  locs="$(rg -o '<loc>\s*([^<\s]+)\s*</loc>' -r '$1' <<<"${body}" | sed 's/&amp;/\&/g' || true)"
+  if rg -q '<sitemapindex' <<<"${body}"; then
+    while IFS= read -r child; do
+      [[ -n "${child}" ]] && get_sitemap_urls "${child}"
+    done <<<"${locs}"
+  else
+    printf '%s\n' "${locs}"
+  fi
+}
+
+urls="$(get_sitemap_urls "${usage_sitemap}" | rg -- "${usage_filter}" | sort -u || true)"
+url_count="$(rg -c . <<<"${urls}" || echo 0)"
+
+if [[ "${url_count}" -eq 0 ]]; then
+  echo "ERRO | no URLs found | sitemap=${usage_sitemap} filter=${usage_filter}" >&2
+  exit 1
+fi
+
+echo "INFO | crawling | urls=${url_count} out=${page_file}"
+
+staged_file="$(mktemp "${page_file}.XXXXXX")"
+trap 'rm -f "${staged_file}"' EXIT
+
+failed_count=0
+page_number=0
+while IFS= read -r url; do
+  page_number=$((page_number + 1))
+  printf 'INFO | %d/%d | %s\n' "${page_number}" "${url_count}" "${url}"
+  if page="$(curl -fsS --retry 3 --retry-all-errors --retry-delay 10 "${reader_url}/${url}")"; then
+    printf '\n\nSource: %s\n\n%s\n' "${url}" "${page}" >>"${staged_file}"
+  else
+    failed_count=$((failed_count + 1))
+    echo "WARN | page fetch failed, skipping | url=${url}" >&2
+  fi
+  sleep "${request_delay_seconds}"
+done <<<"${urls}"
+
+if [[ "${failed_count}" -eq "${url_count}" ]]; then
+  echo "ERRO | every page fetch failed, keeping existing page file" >&2
+  exit 1
+fi
+
+mv "${staged_file}" "${page_file}"
+trap - EXIT
+
+line_count="$(wc -l <"${page_file}" | tr -d ' ')"
+echo "INFO | wrote page file | out=${page_file} lines=${line_count} failed=${failed_count}"
+
+exec claude "A new docs crawl was written to ${page_file} (${line_count} lines, \
+${url_count} pages from ${usage_sitemap}). Each page starts with a 'Source: <url>' line, \
+the same layout as pages/openhands.md. Update ${skill_dir}/SKILL.md following its \
+'To add a library' instructions: add or refresh the catalog row (search the file with \
+rg to write an accurate Covers summary, never read it whole), add the library to the \
+description frontmatter, and note in Retrieval that its TOC is the Source: lines if \
+that is not already covered."
