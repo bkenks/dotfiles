@@ -4,6 +4,6 @@ description = "Create temporary virtual environment for script and return path"
 dir = "{{cwd}}"
 run = '''
 uv sync --script "$usage_script"
-scriptuv python find --script "$usage_script"
+venv_path=$(uv python find --script "$usage_script")
 '''
 usage = 'arg "<script>" help="Filename of script"'
