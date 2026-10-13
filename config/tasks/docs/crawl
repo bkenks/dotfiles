@@ -41,13 +41,13 @@ get_sitemap_urls() {
 
 select_reference_urls() {
   local sitemap_urls="$1" picked
-  picked="$(claude -p --tools "" "Below is the sitemap URL list for the ${usage_name} \
+  picked="$(claude -p "Below is the sitemap URL list for the ${usage_name} \
 documentation. It will be crawled into a local reference that an AI coding agent searches \
 when writing code with ${usage_name}. Keep pages that document the language, APIs, CLI, \
 configuration, concepts, how-to guides and tutorials. Drop blog posts, news, release notes, \
 changelogs, marketing, community and contact pages, tag or category listings, translations \
 and duplicate versions. Reply with only the kept URLs, one per line, exactly as given." \
-    <<<"${sitemap_urls}")"
+    --tools "" <<<"${sitemap_urls}")"
   rg -xF -f <(printf '%s\n' "${sitemap_urls}") <<<"${picked}" | sort -u || true
 }
 
@@ -106,9 +106,9 @@ export work_dir url_count reader_url auth_header_file request_delay_seconds
 
 echo "INFO | crawling | urls=${url_count} parallel=${parallel_count} out=${page_file}"
 
+# shellcheck disable=SC2016 # positional args expand inside the child bash, not here
 awk '{ print NR; print }' <<<"${urls}" |
   tr '\n' '\0' |
-  # shellcheck disable=SC2016 # positional args expand inside the child bash, not here
   xargs -0 -n 2 -P "${parallel_count}" bash -c 'fetch_page "$1" "$2"' _
 
 shopt -s nullglob
