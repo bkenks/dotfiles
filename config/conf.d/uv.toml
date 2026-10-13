@@ -1,5 +1,6 @@
 [tasks."uv:temp-environment"]
 alias = "uv:tmpenv"
+dir = "{{cwd}}"
 run = [
   'uv sync --script "$usage_script"',
   'uv python find --script "$usage_script"',
