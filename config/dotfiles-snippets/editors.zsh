@@ -15,6 +15,13 @@ else
   export EDITOR=$editor_all_fallback
 fi
 
+if commandExists "$visual"; then
+  export VISUAL=$visual
+else
+  echo "$visual not found. falling back to $editor_all_fallback"
+  export VISUAL=$editor_all_fallback
+fi
+
 if commandExists "$pager"; then
   export PAGER=$pager
 else
