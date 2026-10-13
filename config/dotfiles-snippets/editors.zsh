@@ -5,9 +5,6 @@ editor="hx"
 visual="codium"
 editor_all_fallback="vi"
 
-export EDITOR="hx"
-export VISUAL="codium"
-
 if commandExists "$editor"; then
   export EDITOR=$editor
 else
