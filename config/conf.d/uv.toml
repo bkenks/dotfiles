@@ -1,2 +1,3 @@
 [tasks."uv:temp-environment"]
-run = ['uv sync --script compile.py', 'uv python find --script compile.py']
+alias = "uv:tmpenv"
+run   = ['uv sync --script compile.py', 'uv python find --script compile.py']
