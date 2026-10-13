@@ -130,17 +130,9 @@ key_repeat                    = 2
 "~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
 
 "~/.ssh/config/backrest-tunnel" = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/backrest-tunnel.zsh") }}' }
-"~/.zshrc/alias" = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/alias.zsh") }}' }
-"~/.zshrc/editors" = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/editors.zsh") }}' }
-"~/.zshrc/yazi" = { block = '''
-function y() {
-	local tmp cwd; tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-	command yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd" || builtin true
-	command rm -f -- "$tmp"
-}
-''' }
+"~/.zshrc/alias"                = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/alias.zsh") }}' }
+"~/.zshrc/editors"              = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/editors.zsh") }}' }
+"~/.zshrc/yazi"                 = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/yazi.zsh") }}' }
 
 
 [env]
