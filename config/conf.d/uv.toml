@@ -1,1 +1,1 @@
-[tasks.create-tmp-environment]
+[tasks."uv:create-tmp-environment"]
