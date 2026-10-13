@@ -2,8 +2,8 @@
 alias = "uv:tmpenv"
 description = "Create temporary virtual environment for script and return path"
 dir = "{{cwd}}"
-run = [
-  'uv sync --script "$usage_script"',
-  'uv python find --script "$usage_script"',
-]
+run = '''
+uv sync --script "$usage_script"
+uv python find --script "$usage_script"
+'''
 usage = 'arg "<script>" help="Filename of script"'
