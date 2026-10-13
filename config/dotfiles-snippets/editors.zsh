@@ -5,6 +5,10 @@ editor="hx"
 visual="codium"
 editor_all_fallback="vi"
 
+commandExists() {
+  command -v "$1" >/dev/null 2>&1
+}
+
 if commandExists "$editor"; then
   export EDITOR=$editor
 else
