@@ -9,7 +9,6 @@ export EDITOR="hx"
 export VISUAL="codium"
 
 if commandExists "$pager"; then
-  # echo "ov is installed"
   export PAGER=$pager
 else
   echo "$pager not found. falling back to $pager_fallback"
