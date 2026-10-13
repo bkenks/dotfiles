@@ -1,5 +1,6 @@
 [tasks."uv:temp-environment"]
 alias = "uv:tmpenv"
+description = "Create temporary virtual environment for script and return path"
 dir = "{{cwd}}"
 run = [
   'uv sync --script "$usage_script"',
