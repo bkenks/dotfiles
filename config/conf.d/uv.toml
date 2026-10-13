@@ -9,6 +9,7 @@ run = '''
 uv sync --script "$usage_script"
 venv_path=$(uv python find --script "$usage_script")
 
+echo "Script Virutal Environment Path:"
 printf '%s\n' "$venv_path"
 printf '%s' "$venv_path" | pbcopy
 '''
