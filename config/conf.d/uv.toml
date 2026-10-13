@@ -1,4 +1,7 @@
 [tasks."uv:temp-environment"]
 alias = "uv:tmpenv"
-run   = ['uv sync --script compile.py', 'uv python find --script compile.py']
+run = [
+  'uv sync --script "$usage_script"',
+  'uv python find --script "$usage_script"',
+]
 usage = 'arg "<script>" help="Filename of script"'
