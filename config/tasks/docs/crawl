@@ -97,6 +97,8 @@ fi
 
 cat "${fetched_files[@]}" >"${staged_file}"
 mv "${staged_file}" "${page_file}"
+remove_work_files
+trap - EXIT
 
 line_count="$(wc -l <"${page_file}" | tr -d ' ')"
 echo "INFO | wrote page file | out=${page_file} lines=${line_count} failed=${failed_count}"
