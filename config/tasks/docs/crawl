@@ -39,13 +39,37 @@ get_sitemap_urls() {
   fi
 }
 
-urls="$(get_sitemap_urls "${usage_sitemap}" | rg -- "${usage_filter}" | sort -u || true)"
-url_count="$(rg -c . <<<"${urls}" || echo 0)"
+select_reference_urls() {
+  local sitemap_urls="$1" picked
+  picked="$(claude -p --tools "" "Below is the sitemap URL list for the ${usage_name} \
+documentation. It will be crawled into a local reference that an AI coding agent searches \
+when writing code with ${usage_name}. Keep pages that document the language, APIs, CLI, \
+configuration, concepts, how-to guides and tutorials. Drop blog posts, news, release notes, \
+changelogs, marketing, community and contact pages, tag or category listings, translations \
+and duplicate versions. Reply with only the kept URLs, one per line, exactly as given." \
+    <<<"${sitemap_urls}")"
+  rg -xF -f <(printf '%s\n' "${sitemap_urls}") <<<"${picked}" | sort -u || true
+}
 
-if [[ "${url_count}" -eq 0 ]]; then
+sitemap_urls="$(get_sitemap_urls "${usage_sitemap}" | rg -- "${usage_filter}" | sort -u || true)"
+sitemap_url_count="$(rg -c . <<<"${sitemap_urls}" || echo 0)"
+
+if [[ "${sitemap_url_count}" -eq 0 ]]; then
   echo "ERRO | no URLs found | sitemap=${usage_sitemap} filter=${usage_filter}" >&2
   exit 1
 fi
+
+echo "INFO | asking Claude to pick reference pages | candidates=${sitemap_url_count}"
+urls="$(select_reference_urls "${sitemap_urls}")"
+url_count="$(rg -c . <<<"${urls}" || echo 0)"
+
+if [[ "${url_count}" -eq 0 ]]; then
+  echo "ERRO | Claude kept no sitemap URLs | candidates=${sitemap_url_count}" >&2
+  exit 1
+fi
+
+echo "INFO | Claude picked pages | kept=${url_count} dropped=$((sitemap_url_count - url_count))"
+printf '%s\n' "${urls}"
 
 work_dir="$(mktemp -d)"
 staged_file="${page_file}.partial"
@@ -84,6 +108,7 @@ echo "INFO | crawling | urls=${url_count} parallel=${parallel_count} out=${page_
 
 awk '{ print NR; print }' <<<"${urls}" |
   tr '\n' '\0' |
+  # shellcheck disable=SC2016 # positional args expand inside the child bash, not here
   xargs -0 -n 2 -P "${parallel_count}" bash -c 'fetch_page "$1" "$2"' _
 
 shopt -s nullglob
