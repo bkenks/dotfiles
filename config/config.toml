@@ -5,6 +5,7 @@ pathMiseZsh = "{{config_root}}/.config/mise/zsh"
 
 [tool_alias]
 gitkeeper = "forgejo:bkenks/gitkeeper"
+treefmt = "aqua:numtide/treefmt"
 
 [tools]
 1password                     = "2.39"
