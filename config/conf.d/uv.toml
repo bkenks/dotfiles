@@ -5,6 +5,8 @@ dir = "{{cwd}}"
 run = '''
 uv sync --script "$usage_script"
 venv_path=$(uv python find --script "$usage_script")
+
+printf '%s\n' "$venv_path"
 printf '%s' "$venv_path" | pbcopy
 '''
 usage = 'arg "<script>" help="Filename of script"'
