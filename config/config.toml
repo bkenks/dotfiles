@@ -1,7 +1,8 @@
 # :schema https://mise.jdx.dev/schema/mise.json
 
 [vars]
-pathMiseZsh = "{{config_root}}/.config/mise/zsh"
+pathdirDotfilesSnippets = "{{config_root}}/.config/mise/dotfiles-snippets"
+pathdirMiseZsh          = "{{config_root}}/.config/mise/zsh"
 
 [tool_alias]
 caveman        = "npm:@caveman-ai/cli"
@@ -130,7 +131,7 @@ Match tagged backrest
   SessionType none
   ExitOnForwardFailure yes
 ''' }
-"~/.zshrc/alias" = { template = "tera", block = '{{ read_file(path=vars.pathMiseZsh ~ "/alias.zsh") }}' }
+"~/.zshrc/alias" = { template = "tera", block = '{{ read_file(path=vars.pathdirMiseZsh ~ "/alias.zsh") }}' }
 "~/.zshrc/direnv" = { block = 'eval "$(direnv hook zsh)"' }
 "~/.zshrc/editors" = { block = '''
 export EDITOR="hx"
