@@ -4,6 +4,7 @@
 #USAGE arg "<name>" help="Library slug, used as the page filename (e.g. likec4)"
 #USAGE arg "<sitemap>" help="Sitemap URL (e.g. https://docs.example.com/sitemap.xml)"
 #USAGE flag "-f --filter <regex>" help="Only crawl URLs matching this regex" default="."
+# shellcheck disable=SC2154 # usage_* variables are injected by mise from the USAGE spec
 set -euo pipefail
 
 skill_dir="${HOME}/.claude/skills/documentation"
