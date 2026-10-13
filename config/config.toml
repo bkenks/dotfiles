@@ -131,11 +131,12 @@ Match tagged backrest
   SessionType none
   ExitOnForwardFailure yes
 ''' }
+"~/.zshrc/functions" = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/functions.zsh") }}' }
+
 "~/.zshrc/alias" = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/alias.zsh") }}' }
 "~/.zshrc/direnv" = { block = 'eval "$(direnv hook zsh)"' }
 "~/.zshrc/editors" = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/editors.zsh") }}' }
 "~/.zshrc/fnox" = { block = 'eval "$(fnox activate zsh)"' }
-"~/.zshrc/functions" = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/functions.zsh") }}' }
 "~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
 "~/.zshrc/yazi" = { block = '''
 function y() {
