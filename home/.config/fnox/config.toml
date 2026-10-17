@@ -20,7 +20,7 @@ default_provider = "cache"
 
 # ——————————————————————————————————————————————————————————————————————————————————————————————————
 [secrets]
-CAVEMAN_DEFAULT_MODE= { provider = "cache", value = "YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBobHJFUitiT0k1SURNdWowdFpaS3FKZ0Z0SlBEYkw0WngvVjI3V2ZEOVhvCkVGMm83cHMyUTQ0bzY5NEZadldjSGhPQ1JycFhVVHZZN2xTeUpIaXhjME0KLT4gJGgtZ3JlYXNlIHB0YiAoNU1zSycKajBQb0trMmJmVCtNOGFJTUhVQ1grMlVDYjJNcCtsMGJpd3pPNE51UmduMVhZQmhLZnVvCi0tLSBIdVQzSXgrcDRoU2ZtM2FWQmhZMUtOc1U4N2pvd0k1V1ZKY1VGVTFBbTlFCqUYlVbGPc5405q+qchrnUwnoT68jkj7CP0NPyvyPYLY6cgtu2I=" }
+CAVEMAN_DEFAULT_MODE = { provider = "cache", value = "YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBobHJFUitiT0k1SURNdWowdFpaS3FKZ0Z0SlBEYkw0WngvVjI3V2ZEOVhvCkVGMm83cHMyUTQ0bzY5NEZadldjSGhPQ1JycFhVVHZZN2xTeUpIaXhjME0KLT4gJGgtZ3JlYXNlIHB0YiAoNU1zSycKajBQb0trMmJmVCtNOGFJTUhVQ1grMlVDYjJNcCtsMGJpd3pPNE51UmduMVhZQmhLZnVvCi0tLSBIdVQzSXgrcDRoU2ZtM2FWQmhZMUtOc1U4N2pvd0k1V1ZKY1VGVTFBbTlFCqUYlVbGPc5405q+qchrnUwnoT68jkj7CP0NPyvyPYLY6cgtu2I=" }
   [secrets.GITHUB_USERNAME]
   default = "bkenks"
 
