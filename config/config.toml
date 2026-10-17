@@ -49,7 +49,6 @@ builtin = "history-watch"
 [bootstrap.packages]
 "brew-cask:1password"             = "latest"
 "brew-cask:bartender"             = "latest"
-"brew-cask:claude"                = "latest"
 "brew-cask:font-maple-mono"       = "latest"
 "brew-cask:font-maple-mono-nf"    = "latest"
 "brew-cask:font-maple-mono-nf-cn" = "latest"
