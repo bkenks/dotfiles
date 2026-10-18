@@ -5,7 +5,6 @@ pathdirDotfilesSnippets = "{{config_root}}/.config/mise/dotfiles-snippets"
 pathdirMiseZsh          = "{{config_root}}/.config/mise/zsh"
 
 [tool_alias]
-caveman        = "npm:@caveman-ai/cli"
 ccstatusline   = "npm:ccstatusline"
 ccusage        = "npm:ccusage"
 gitkeeper      = "forgejo:bkenks/gitkeeper"
@@ -15,7 +14,6 @@ woodpecker-cli = "github:woodpecker-ci/woodpecker"
 
 [tools]
 1password = "2.39"
-# caveman        = "latest"
 # ccstatusline   = "2.2.30"
 # ccusage        = "latest"
 copier                = "9.18"
@@ -29,7 +27,6 @@ gofumpt               = "0.12"
 java                  = "temurin-25"
 likec4                = "1.59.4"
 node                  = "latest"
-"npm:@caveman-ai/cli" = "latest"
 oxfmt                 = "0.70"
 pkl                   = "0.32.1"
 prettier              = "3.9.10"
@@ -124,7 +121,6 @@ key_repeat                    = 2
 "~/.config/starship.toml"                             = { mode = "track" }
 "~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
 
-"~/.zshrc/caveman"  = { block = 'export CAVEMAN_DEFAULT_MODE=ultracave' }
 "~/.zshrc/direnv"   = { block = 'eval "$(direnv hook zsh)"' }
 "~/.zshrc/fnox"     = { block = 'eval "$(fnox activate zsh)"' }
 "~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
