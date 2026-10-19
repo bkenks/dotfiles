@@ -138,7 +138,7 @@
   "powerline": {
     "enabled": false,
     "separators": [
-      ""
+      "\ue0b0"
     ],
     "separatorInvertBackground": [
       false
