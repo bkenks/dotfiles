@@ -9,16 +9,6 @@
         "bold": true
       },
       {
-        "id": "2133a671-44f5-49c2-86cf-2b4bd258099e",
-        "type": "separator"
-      },
-      {
-        "id": "f00b4058-0f8e-4396-920f-4d830ae7f9ab",
-        "type": "custom-command",
-        "commandPath": "~/.claude/statusline/caveman-custom.sh",
-        "bold": true
-      },
-      {
         "id": "30e22c0f-e8c9-4ebd-b0db-24d021485eda",
         "type": "flex-separator"
       },
