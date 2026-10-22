@@ -41,6 +41,7 @@ treefmt    = "2.6"
 uv         = "0.12.17"
 watchexec  = "2.7"
 worktrunk  = "0.80.0"
+
   [tools.gitkeeper]
   api_url             = "https://fj.ktbcloud.com/api/v1"
   bin                 = "gitkeeper"
