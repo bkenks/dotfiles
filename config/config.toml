@@ -121,7 +121,7 @@ worktrunk  = "0.80.0"
 
 # ┌────────────────────────────────────────────────────────────
 # │
-# │  BOOTSTRAP
+# │  OS
 # │
 # └────────────────────────────────────────────────────────────
 [bootstrap.services.mise-history]
@@ -159,7 +159,7 @@ if ! defaults read "$ls_domain" LSHandlers 2>/dev/null | grep -q '"public.folder
 fi
 '''
 # │
-# └── end BOOTSTRAP ─────────────────────────────────────────
+# └── end OS ─────────────────────────────────────────
 
 [dotfiles]
 "~/.config/ccstatusline"                              = { mode = "track" }
