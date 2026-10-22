@@ -115,6 +115,12 @@ builtin = "history-watch"
   [bootstrap.macos.defaults.NSGlobalDomain]
   NSFileViewer = "com.binarynights.ForkLift"
 
+  [bootstrap.macos.keyboard]
+  automatic_capitalization      = false
+  automatic_spelling_correction = false
+  initial_key_repeat            = 15
+  key_repeat                    = 2
+
 [bootstrap.hooks.post-defaults]
 run = '''
 ls_domain="com.apple.LaunchServices/com.apple.launchservices.secure"
@@ -124,12 +130,6 @@ if ! defaults read "$ls_domain" LSHandlers 2>/dev/null | grep -q '"public.folder
     "{LSHandlerContentType=\"public.folder\";LSHandlerRoleAll=\"$file_viewer\";}"
 fi
 '''
-
-  [bootstrap.macos.keyboard]
-  automatic_capitalization      = false
-  automatic_spelling_correction = false
-  initial_key_repeat            = 15
-  key_repeat                    = 2
 
 
 [dotfiles]
