@@ -127,16 +127,6 @@ builtin = "history-watch"
 "mas:1236045954"                  = "latest" # Canary Mail
 "mas:6468120888"                  = "latest"
 
-[bootstrap.hooks.post-defaults]
-run = '''
-ls_domain="com.apple.LaunchServices/com.apple.launchservices.secure"
-file_viewer="$(defaults read NSGlobalDomain NSFileViewer)"
-if ! defaults read "$ls_domain" LSHandlers 2>/dev/null | grep -q '"public.folder"'; then
-  defaults write "$ls_domain" LSHandlers -array-add \
-    "{LSHandlerContentType=\"public.folder\";LSHandlerRoleAll=\"$file_viewer\";}"
-fi
-'''
-
 [bootstrap.macos]
   [bootstrap.macos.dock]
   autohide               = true
@@ -158,8 +148,18 @@ fi
   automatic_spelling_correction = false
   initial_key_repeat            = 15
   key_repeat                    = 2
-  # │
-  # └── end BOOTSTRAP ─────────────────────────────────────────
+
+[bootstrap.hooks.post-defaults]
+run = '''
+ls_domain="com.apple.LaunchServices/com.apple.launchservices.secure"
+file_viewer="$(defaults read NSGlobalDomain NSFileViewer)"
+if ! defaults read "$ls_domain" LSHandlers 2>/dev/null | grep -q '"public.folder"'; then
+  defaults write "$ls_domain" LSHandlers -array-add \
+    "{LSHandlerContentType=\"public.folder\";LSHandlerRoleAll=\"$file_viewer\";}"
+fi
+'''
+# │
+# └── end BOOTSTRAP ─────────────────────────────────────────
 
 [dotfiles]
 "~/.config/ccstatusline"                              = { mode = "track" }
