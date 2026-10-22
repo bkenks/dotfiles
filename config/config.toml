@@ -5,6 +5,9 @@
 # │  SETUP
 # │
 # └────────────────────────────────────────────────────────────
+[bootstrap.mise_shell_activate]
+zsh = true
+
 [vars]
 pathdirDotfilesSnippets = "{{config_root}}/.config/mise/dotfiles-snippets"
 pathdirMiseZsh          = "{{config_root}}/.config/mise/zsh"
