@@ -15,8 +15,6 @@
   type    = "1password"
 
 
-  # ——————————————————————————————————————————————————————————————————————————————————————————————————
-
 [profiles.default.secrets]
   [profiles.default.secrets.GITHUB_USERNAME]
   default = "bkenks"
