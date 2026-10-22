@@ -119,11 +119,6 @@ worktrunk  = "0.80.0"
 # ────────────────────────────────────────
 #  CONFIGURATION
 # ────────────────────────────────────────
-
-
-# ────────────────────────────────────────
-#  end CONFIGURATION
-# ────────────────────────────────────────
 [dotfiles]
 "~/.config/ccstatusline"                              = { mode = "track" }
 "~/.config/fnox"                                      = { mode = "track", exclude = ["age.txt"] }
@@ -142,7 +137,9 @@ worktrunk  = "0.80.0"
 "~/.zshrc/alias"                = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/alias.zsh") }}' }
 "~/.zshrc/editors"              = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/editors.zsh") }}' }
 "~/.zshrc/yazi"                 = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/yazi.zsh") }}' }
-
+# ────────────────────────────────────────
+#  end CONFIGURATION
+# ────────────────────────────────────────
 # │
 # └── end SOFTWARE ─────────────────────────────────────────
 
