@@ -7,6 +7,11 @@ pathdirMiseZsh          = "{{config_root}}/.config/mise/zsh"
 [settings]
 disable_update_warning = false
 
+# ┌────────────────────────────────────────────────────────────
+# │
+# │  TOOLS
+# │
+# └────────────────────────────────────────────────────────────
 [tool_alias]
 ccstatusline   = "npm:ccstatusline"
 ccusage        = "npm:ccusage"
@@ -51,7 +56,8 @@ worktrunk  = "0.80.0"
   [tools.woodpecker-cli]
   platforms.macos-arm64 = { asset_pattern = "woodpecker-cli_darwin_arm64.tar.gz" }
   version               = "3.19.0"
-
+  # │
+  # └── end TOOLS ─────────────────────────────────────────
 
 [bootstrap.services.mise-history]
 builtin = "history-watch"
