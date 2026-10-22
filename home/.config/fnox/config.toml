@@ -30,7 +30,7 @@
     [profiles.github.secrets.GITHUB_TOKEN]
     description = "Github PAT"
     provider    = "op:personal:credential"
-    sync        = { provider = "cache", value = "fnox-age-batch-v1:YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBSL0xVUDk4cjdKdmJrc0MycW1RWUswdWEybXdDYytTOTZnenluNHI0VkRzCmh4dHlUcXhhL0pPKzZjTTg2aTRpQ0VLK3JOS21LRDVUVlVJVkVkc2VPNWcKLT4gPHExLWdyZWFzZSBjQX08Z3YgblVVYkkgVDRnZUIKZXJsOGlEN2RRTUJOL3B4clZVSXp2Z28zb0o1SGtpeEhRZ2plTUQ1RVF3WUVYaFVNWWFpZ216QkRaWVhNYS9GNApnbEdBem9uTURMaVlxQmEzMEpXWk9zZXM2alNuTHBDRHBQdjRHdHFBeWtyMXM3SXdqdCtCYncKLS0tIG0zaGVsYWV3UGJiOGM3NmMzMTZldVdnR3VqSFZhZ2RIY3oyemQrNkppQlkKxToqNn+LbZRiGKAFr2i0deo26l+45tVp+D7+nHrS4s10P+bIH7uHITPnZkLpECkjfQNKEYEIhcszfy1qZubwz5oKg7uGCBu7/NkORw==:S1W5SG7KfSCu/ZwZnJ8K1Ho+kAfcve3IB221t5HOxeSmPq8YLclfxaq/y2eZMvc6CRRtmpfq+u66VvNr0HpZo+28hgw=" }
+    sync        = { provider = "sync", value = "fnox-age-batch-v1:YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBraG44ck1VRHR0eVNtNDNLZmpQaEV3K2VuT1M2Tk1GSDlybDJVcGNWR2dNCkd5Rld4bTZIakJLVlhQWnFld2hZVlA2MWozdkxVLzd4WWVTTlR1d21pTzQKLT4gV3o/JSU3Oy1ncmVhc2UgQ18yIHxePVUgNz5tCmFrdXFWQ2RCZyttdTJ4a1ZJM2RVQUxhdndyU05XZlpMYWE1N3ZaZzN6TlV3NkZ2NGJzaXA4TzZFaDl3NHFtS3YKZmF2L3BMS0J3UzRsYzRIemo4c2d3S0pNL3gwCi0tLSBNQnhMTTdBTmF5R252a0REWmZtMlBTSG51NGhhc0FhNm93M3Q4NGJsRDZJCg7ZiIRV71YnSUQNXApSzITbinqQ99rnfyCZdCvRYr51X0LDFzYhM0cfih14CFso58qgZPvFmf4VVXd4ulytRrge9ASPffwg/bxh+OQ=:pZH+MpxTzOiIT1dmhraw2vy6q+OPDWRonPI34kZzJcbttFJ5b3s2f9ZeLmEpP1ekIsbilAGCf8EOY8zth9tYPsBxDqI=" }
     value       = "github.pat/token"
 
 [profiles.backblaze]
