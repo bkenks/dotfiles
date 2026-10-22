@@ -12,6 +12,16 @@ GOBIN = "{{env.HOME}}/.local/bin"
 [settings]
 disable_update_warning = false
 
+[history]
+exclude = [
+  "**/*.local*",
+  "**/*.env*",
+  "**/*secret*",
+  "**/.vscode/**",
+  "**/*age.txt",
+  "**/*fnox.local.toml",
+]
+
 # ┌────────────────────────────────────────────────────────────
 # │
 # │  TOOLS
@@ -155,14 +165,3 @@ fi
 "~/.zshrc/alias"                = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/alias.zsh") }}' }
 "~/.zshrc/editors"              = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/editors.zsh") }}' }
 "~/.zshrc/yazi"                 = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/yazi.zsh") }}' }
-
-
-[history]
-exclude = [
-  "**/*.local*",
-  "**/*.env*",
-  "**/*secret*",
-  "**/.vscode/**",
-  "**/*age.txt",
-  "**/*fnox.local.toml",
-]
