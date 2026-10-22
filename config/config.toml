@@ -114,7 +114,7 @@ worktrunk  = "0.80"
 "brew:technitium-dns"             = "latest"
 "brew:tree"                       = "latest"
 "mas:1236045954"                  = "latest" # Canary Mail
-"mas:6468120888"                  = "latest"
+"mas:6468120888"                  = "latest" # CleanMyKeyboard
 
 # ────────────────────────────────────────
 #  CONFIGURATION
