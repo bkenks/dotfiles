@@ -17,7 +17,8 @@
 
 [profiles.personal.secrets]
   [profiles.personal.secrets.GITHUB_USERNAME]
-  default = "bkenks"
+  default     = "bkenks"
+  description = "Github Username"
 
   [profiles.personal.secrets.GITHUB_TOKEN]
   provider = "onepass"
