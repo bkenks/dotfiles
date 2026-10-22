@@ -156,6 +156,7 @@ builtin = "history-watch"
 run = '''
 ls_domain="com.apple.LaunchServices/com.apple.launchservices.secure"
 file_viewer="$(defaults read NSGlobalDomain NSFileViewer)"
+
 if ! defaults read "$ls_domain" LSHandlers 2>/dev/null | grep -q '"public.folder"'; then
   defaults write "$ls_domain" LSHandlers -array-add \
     "{LSHandlerContentType=\"public.folder\";LSHandlerRoleAll=\"$file_viewer\";}"
