@@ -19,6 +19,11 @@
   type    = "1password"
   vault   = "credential"
 
+  [providers."op:personal:credential"]
+  account = "my.1password.com"
+  type    = "1password"
+  vault   = "credential"
+
 
 [profiles.personal.secrets]
   [profiles.personal.secrets.GITHUB_USERNAME]
