@@ -118,30 +118,6 @@ worktrunk  = "0.80"
 "brew:tree"                       = "latest"
 "mas:1236045954"                  = "latest" # Canary Mail
 "mas:6468120888"                  = "latest" # CleanMyKeyboard
-
-# ────────────────────────────────────────
-#  CONFIGURATION
-# ────────────────────────────────────────
-[dotfiles]
-"~/.config/ccstatusline"                              = { mode = "track" }
-"~/.config/fnox"                                      = { mode = "track", exclude = ["age.txt"] }
-"~/.config/git"                                       = { mode = "track" }
-"~/.config/karabiner/karabiner.json"                  = { mode = "track" }
-"~/.config/mise"                                      = { mode = "track" }
-"~/.config/starship.toml"                             = { mode = "track" }
-"~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
-
-"~/.zshrc/direnv"   = { block = 'eval "$(direnv hook zsh)"' }
-"~/.zshrc/fnox"     = { block = 'eval "$(fnox activate zsh)"' }
-"~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
-
-"~/.ssh/config/backrest-tunnel" = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/backrest-tunnel") }}' }
-"~/.zshrc/alias"                = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/alias.zsh") }}' }
-"~/.zshrc/editors"              = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/editors.zsh") }}' }
-"~/.zshrc/yazi"                 = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/yazi.zsh") }}' }
-# ────────────────────────────────────────
-#  end CONFIGURATION
-# ────────────────────────────────────────
 # │
 # └── end SOFTWARE ─────────────────────────────────────────
 
@@ -185,5 +161,23 @@ if ! defaults read "$ls_domain" LSHandlers 2>/dev/null | grep -q '"public.folder
     "{LSHandlerContentType=\"public.folder\";LSHandlerRoleAll=\"$file_viewer\";}"
 fi
 '''
+
+[dotfiles]
+"~/.config/ccstatusline"                              = { mode = "track" }
+"~/.config/fnox"                                      = { mode = "track", exclude = ["age.txt"] }
+"~/.config/git"                                       = { mode = "track" }
+"~/.config/karabiner/karabiner.json"                  = { mode = "track" }
+"~/.config/mise"                                      = { mode = "track" }
+"~/.config/starship.toml"                             = { mode = "track" }
+"~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
+
+"~/.zshrc/direnv"   = { block = 'eval "$(direnv hook zsh)"' }
+"~/.zshrc/fnox"     = { block = 'eval "$(fnox activate zsh)"' }
+"~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
+
+"~/.ssh/config/backrest-tunnel" = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/backrest-tunnel") }}' }
+"~/.zshrc/alias"                = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/alias.zsh") }}' }
+"~/.zshrc/editors"              = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/editors.zsh") }}' }
+"~/.zshrc/yazi"                 = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/yazi.zsh") }}' }
 # │
 # └── end OS ─────────────────────────────────────────
