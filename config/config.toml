@@ -83,6 +83,11 @@ worktrunk  = "0.80.0"
   # └── end TOOLS ─────────────────────────────────────────
 
 
+# ┌────────────────────────────────────────────────────────────
+# │
+# │  BOOTSTRAP
+# │
+# └────────────────────────────────────────────────────────────
 [bootstrap.services.mise-history]
 builtin = "history-watch"
 
@@ -153,7 +158,8 @@ fi
   automatic_spelling_correction = false
   initial_key_repeat            = 15
   key_repeat                    = 2
-
+  # │
+  # └── end BOOTSTRAP ─────────────────────────────────────────
 
 [dotfiles]
 "~/.config/ccstatusline"                              = { mode = "track" }
