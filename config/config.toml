@@ -116,6 +116,9 @@ worktrunk  = "0.80"
 "mas:1236045954"                  = "latest" # Canary Mail
 "mas:6468120888"                  = "latest" # CleanMyKeyboard
 
+[bootstrap.brew]
+
+
 # ────────────────────────────────────────
 #  CONFIGURATION
 # ────────────────────────────────────────
