@@ -3,7 +3,6 @@
 [providers]
   [providers.sync]
   type = "age"
-
   # private key
   key_file = "~/.config/fnox/age.txt"
   # public key
