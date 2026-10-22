@@ -33,7 +33,6 @@
 
 [profiles.backblaze]
   [profiles.backblaze.secrets]
-    # ── Backblaze B2 ──────────────────────
     [profiles.backblaze.secrets.B2_APPLICATION_KEY_ID]
     description = "Backblaze ID"
     provider    = "op:personal:credential"
