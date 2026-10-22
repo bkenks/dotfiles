@@ -46,6 +46,7 @@ worktrunk  = "0.80.0"
   bin                 = "gitkeeper"
   minimum_release_age = "0h"
   version             = "latest"
+
   [tools.woodpecker-cli]
   platforms.macos-arm64 = { asset_pattern = "woodpecker-cli_darwin_arm64.tar.gz" }
   version               = "3.19.0"
