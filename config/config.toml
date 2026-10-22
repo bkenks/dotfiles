@@ -56,6 +56,7 @@ worktrunk  = "0.80.0"
   [tools.woodpecker-cli]
   platforms.macos-arm64 = { asset_pattern = "woodpecker-cli_darwin_arm64.tar.gz" }
   version               = "3.19.0"
+
   # │
   # └── end TOOLS ─────────────────────────────────────────
 
