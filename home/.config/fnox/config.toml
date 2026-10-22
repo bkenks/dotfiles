@@ -1,7 +1,7 @@
 #:schema https://fnox.jdx.dev/schema.json
 
 [providers]
-  [providers.cache]
+  [providers.sync]
   type = "age"
 
   key_file = "~/.config/fnox/age.txt" # private key
