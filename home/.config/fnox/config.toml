@@ -9,7 +9,6 @@
     "age1w8xkpnudhum95ethf94jkqkslgmk544pn0mh87egcnqwp37ztc3qrj6kcs",
   ]
 
-
   [providers."op:ktbs:credential"]
   account = "ktbsoft.1password.com"
   type    = "1password"
