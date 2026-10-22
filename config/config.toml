@@ -1,5 +1,10 @@
 # :schema https://mise.jdx.dev/schema/mise.json
 
+# ┌────────────────────────────────────────────────────────────
+# │
+# │  SETUP
+# │
+# └────────────────────────────────────────────────────────────
 [vars]
 pathdirDotfilesSnippets = "{{config_root}}/.config/mise/dotfiles-snippets"
 pathdirMiseZsh          = "{{config_root}}/.config/mise/zsh"
@@ -21,6 +26,9 @@ exclude = [
   "**/*age.txt",
   "**/*fnox.local.toml",
 ]
+# │
+# └── end SETUP ─────────────────────────────────────────
+# 
 
 # ┌────────────────────────────────────────────────────────────
 # │
