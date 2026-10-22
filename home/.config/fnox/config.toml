@@ -14,6 +14,11 @@
   account = "ktbsoft.1password.com"
   type    = "1password"
 
+  [providers."op:ktbs:credential"]
+  account = "ktbsoft.1password.com"
+  type    = "1password"
+  vault   = "credential"
+
 
 [profiles.personal.secrets]
   [profiles.personal.secrets.GITHUB_USERNAME]
