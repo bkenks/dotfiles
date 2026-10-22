@@ -91,6 +91,38 @@ worktrunk  = "0.80.0"
 [bootstrap.services.mise-history]
 builtin = "history-watch"
 
+[bootstrap.macos]
+  [bootstrap.macos.dock]
+  autohide               = true
+  autohide_delay         = 0
+  autohide_time_modifier = 0.25
+  show_recents           = false
+
+  [bootstrap.macos.finder]
+  preferred_view_style    = "list"
+  show_extensions_warning = false
+  show_pathbar            = true
+  sort_folders_first      = true
+
+  [bootstrap.macos.defaults.NSGlobalDomain]
+  NSFileViewer = "com.binarynights.ForkLift"
+
+  [bootstrap.macos.keyboard]
+  automatic_capitalization      = false
+  automatic_spelling_correction = false
+  initial_key_repeat            = 15
+  key_repeat                    = 2
+
+[bootstrap.hooks.post-defaults]
+run = '''
+ls_domain="com.apple.LaunchServices/com.apple.launchservices.secure"
+file_viewer="$(defaults read NSGlobalDomain NSFileViewer)"
+if ! defaults read "$ls_domain" LSHandlers 2>/dev/null | grep -q '"public.folder"'; then
+  defaults write "$ls_domain" LSHandlers -array-add \
+    "{LSHandlerContentType=\"public.folder\";LSHandlerRoleAll=\"$file_viewer\";}"
+fi
+'''
+
 [bootstrap.packages]
 "brew-cask:1password"             = "latest"
 "brew-cask:bartender"             = "latest"
@@ -126,38 +158,6 @@ builtin = "history-watch"
 "brew:tree"                       = "latest"
 "mas:1236045954"                  = "latest" # Canary Mail
 "mas:6468120888"                  = "latest"
-
-[bootstrap.macos]
-  [bootstrap.macos.dock]
-  autohide               = true
-  autohide_delay         = 0
-  autohide_time_modifier = 0.25
-  show_recents           = false
-
-  [bootstrap.macos.finder]
-  preferred_view_style    = "list"
-  show_extensions_warning = false
-  show_pathbar            = true
-  sort_folders_first      = true
-
-  [bootstrap.macos.defaults.NSGlobalDomain]
-  NSFileViewer = "com.binarynights.ForkLift"
-
-  [bootstrap.macos.keyboard]
-  automatic_capitalization      = false
-  automatic_spelling_correction = false
-  initial_key_repeat            = 15
-  key_repeat                    = 2
-
-[bootstrap.hooks.post-defaults]
-run = '''
-ls_domain="com.apple.LaunchServices/com.apple.launchservices.secure"
-file_viewer="$(defaults read NSGlobalDomain NSFileViewer)"
-if ! defaults read "$ls_domain" LSHandlers 2>/dev/null | grep -q '"public.folder"'; then
-  defaults write "$ls_domain" LSHandlers -array-add \
-    "{LSHandlerContentType=\"public.folder\";LSHandlerRoleAll=\"$file_viewer\";}"
-fi
-'''
 # │
 # └── end BOOTSTRAP ─────────────────────────────────────────
 
