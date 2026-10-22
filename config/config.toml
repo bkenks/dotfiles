@@ -93,7 +93,6 @@ worktrunk  = "0.80"
 "brew-cask:openlogi"              = "latest"
 "brew-cask:vscodium"              = "latest"
 "brew-cask:zen"                   = "latest"
-"brew:b2-tools"                   = "latest"
 "brew:bbrew"                      = "latest"
 "brew:colima"                     = "latest"
 "brew:coredns"                    = "latest"
@@ -117,7 +116,7 @@ worktrunk  = "0.80"
 "mas:6468120888"                  = "latest" # CleanMyKeyboard
 
 [bootstrap.brew]
-
+b2-tools = "latest"
 
 # ────────────────────────────────────────
 #  CONFIGURATION
