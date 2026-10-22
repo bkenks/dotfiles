@@ -17,31 +17,31 @@ woodpecker-cli = "github:woodpecker-ci/woodpecker"
 1password = "2.39"
 # ccstatusline   = "2.2.30"
 # ccusage        = "latest"
-copier                = "9.18"
-cue                   = "0.17.1"
-direnv                = "2.37.1"
-fd                    = "10.5"
-fnox                  = "1.35"
-gitkeeper             = { version = "latest", api_url = "https://fj.ktbcloud.com/api/v1", bin = "gitkeeper", minimum_release_age = "0h" }
-go                    = "1.27"
-gofumpt               = "0.12"
-java                  = "temurin-25"
-likec4                = "1.59.4"
-lychee = "latest"
-node                  = "latest"
-oxfmt                 = "0.70"
-pkl                   = "0.32.1"
-prettier              = "3.9.10"
-rg                    = "15"
-shellcheck            = "0.11"
-shfmt                 = "3.14"
-starship              = "1.26"
-taplo                 = "0.10"
-treefmt               = "2.6"
-uv                    = "0.12.17"
-watchexec             = "2.7"
-woodpecker-cli        = { platforms.macos-arm64 = { asset_pattern = "woodpecker-cli_darwin_arm64.tar.gz" }, version = "3.19.0" }
-worktrunk             = "0.80.0"
+copier         = "9.18"
+cue            = "0.17.1"
+direnv         = "2.37.1"
+fd             = "10.5"
+fnox           = "1.35"
+gitkeeper      = { version = "latest", api_url = "https://fj.ktbcloud.com/api/v1", bin = "gitkeeper", minimum_release_age = "0h" }
+go             = "1.27"
+gofumpt        = "0.12"
+java           = "temurin-25"
+likec4         = "1.59.4"
+lychee         = "latest"
+node           = "latest"
+oxfmt          = "0.70"
+pkl            = "0.32.1"
+prettier       = "3.9.10"
+rg             = "15"
+shellcheck     = "0.11"
+shfmt          = "3.14"
+starship       = "1.26"
+taplo          = "0.10"
+treefmt        = "2.6"
+uv             = "0.12.17"
+watchexec      = "2.7"
+woodpecker-cli = { platforms.macos-arm64 = { asset_pattern = "woodpecker-cli_darwin_arm64.tar.gz" }, version = "3.19.0" }
+worktrunk      = "0.80.0"
 
 [bootstrap.services.mise-history]
 builtin = "history-watch"
@@ -118,6 +118,7 @@ key_repeat                    = 2
 "~/.config/ccstatusline"                              = { mode = "track" }
 "~/.config/fnox"                                      = { mode = "track", exclude = ["age.txt"] }
 "~/.config/git"                                       = { mode = "track" }
+"~/.config/git/ignore"                                = { mode = "track" }
 "~/.config/karabiner/karabiner.json"                  = { mode = "track" }
 "~/.config/mise"                                      = { mode = "track" }
 "~/.config/starship.toml"                             = { mode = "track" }
