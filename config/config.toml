@@ -59,6 +59,7 @@ worktrunk  = "0.80.0"
   # │
   # └── end TOOLS ─────────────────────────────────────────
 
+
 [bootstrap.services.mise-history]
 builtin = "history-watch"
 
@@ -98,20 +99,21 @@ builtin = "history-watch"
 "mas:1236045954"                  = "latest" # Canary Mail
 "mas:6468120888"                  = "latest"
 
-[bootstrap.macos.dock]
-autohide               = true
-autohide_delay         = 0
-autohide_time_modifier = 0.25
-show_recents           = false
+[bootstrap.macos]
+  [bootstrap.macos.dock]
+  autohide               = true
+  autohide_delay         = 0
+  autohide_time_modifier = 0.25
+  show_recents           = false
 
-[bootstrap.macos.finder]
-preferred_view_style    = "list"
-show_extensions_warning = false
-show_pathbar            = true
-sort_folders_first      = true
+  [bootstrap.macos.finder]
+  preferred_view_style    = "list"
+  show_extensions_warning = false
+  show_pathbar            = true
+  sort_folders_first      = true
 
-[bootstrap.macos.defaults.NSGlobalDomain]
-NSFileViewer = "com.binarynights.ForkLift"
+  [bootstrap.macos.defaults.NSGlobalDomain]
+  NSFileViewer = "com.binarynights.ForkLift"
 
 [bootstrap.hooks.post-defaults]
 run = '''
@@ -123,11 +125,11 @@ if ! defaults read "$ls_domain" LSHandlers 2>/dev/null | grep -q '"public.folder
 fi
 '''
 
-[bootstrap.macos.keyboard]
-automatic_capitalization      = false
-automatic_spelling_correction = false
-initial_key_repeat            = 15
-key_repeat                    = 2
+  [bootstrap.macos.keyboard]
+  automatic_capitalization      = false
+  automatic_spelling_correction = false
+  initial_key_repeat            = 15
+  key_repeat                    = 2
 
 
 [dotfiles]
