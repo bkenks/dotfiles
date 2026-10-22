@@ -123,7 +123,6 @@ worktrunk  = "0.80.0"
 "~/.config/ccstatusline"                              = { mode = "track" }
 "~/.config/fnox"                                      = { mode = "track", exclude = ["age.txt"] }
 "~/.config/git"                                       = { mode = "track" }
-"~/.config/git/ignore"                                = { mode = "track" }
 "~/.config/karabiner/karabiner.json"                  = { mode = "track" }
 "~/.config/mise"                                      = { mode = "track" }
 "~/.config/starship.toml"                             = { mode = "track" }
