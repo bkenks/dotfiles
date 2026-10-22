@@ -4,6 +4,9 @@
 pathdirDotfilesSnippets = "{{config_root}}/.config/mise/dotfiles-snippets"
 pathdirMiseZsh          = "{{config_root}}/.config/mise/zsh"
 
+[settings]
+disable_update_warning = false
+
 [tool_alias]
 ccstatusline   = "npm:ccstatusline"
 ccusage        = "npm:ccusage"
@@ -149,6 +152,3 @@ exclude = [
   "**/*age.txt",
   "**/*fnox.local.toml",
 ]
-
-[settings]
-disable_update_warning = false
