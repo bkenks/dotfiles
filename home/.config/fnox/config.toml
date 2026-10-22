@@ -10,10 +10,6 @@
   ]
 
 
-  [providers.onepass]
-  account = "ktbsoft.1password.com"
-  type    = "1password"
-
   [providers."op:ktbs:credential"]
   account = "ktbsoft.1password.com"
   type    = "1password"
@@ -32,20 +28,20 @@
 
   [profiles.personal.secrets.GITHUB_TOKEN]
   description = "Github PAT"
-  provider    = "onepass"
+  provider    = "op:ktbs:credential"
   sync        = { provider = "cache", value = "fnox-age-batch-v1:YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBSL0xVUDk4cjdKdmJrc0MycW1RWUswdWEybXdDYytTOTZnenluNHI0VkRzCmh4dHlUcXhhL0pPKzZjTTg2aTRpQ0VLK3JOS21LRDVUVlVJVkVkc2VPNWcKLT4gPHExLWdyZWFzZSBjQX08Z3YgblVVYkkgVDRnZUIKZXJsOGlEN2RRTUJOL3B4clZVSXp2Z28zb0o1SGtpeEhRZ2plTUQ1RVF3WUVYaFVNWWFpZ216QkRaWVhNYS9GNApnbEdBem9uTURMaVlxQmEzMEpXWk9zZXM2alNuTHBDRHBQdjRHdHFBeWtyMXM3SXdqdCtCYncKLS0tIG0zaGVsYWV3UGJiOGM3NmMzMTZldVdnR3VqSFZhZ2RIY3oyemQrNkppQlkKxToqNn+LbZRiGKAFr2i0deo26l+45tVp+D7+nHrS4s10P+bIH7uHITPnZkLpECkjfQNKEYEIhcszfy1qZubwz5oKg7uGCBu7/NkORw==:S1W5SG7KfSCu/ZwZnJ8K1Ho+kAfcve3IB221t5HOxeSmPq8YLclfxaq/y2eZMvc6CRRtmpfq+u66VvNr0HpZo+28hgw=" }
   value       = "op://credentials/github.pat.personal/token"
 
   # ── Backblaze B2 ──────────────────────
   [profiles.personal.secrets.B2_APPLICATION_KEY_ID]
   description = "Backblaze ID"
-  provider    = "onepass"
+  provider    = "op:ktbs:credential"
   sync        = { provider = "cache", value = "fnox-age-batch-v1:YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBSL0xVUDk4cjdKdmJrc0MycW1RWUswdWEybXdDYytTOTZnenluNHI0VkRzCmh4dHlUcXhhL0pPKzZjTTg2aTRpQ0VLK3JOS21LRDVUVlVJVkVkc2VPNWcKLT4gPHExLWdyZWFzZSBjQX08Z3YgblVVYkkgVDRnZUIKZXJsOGlEN2RRTUJOL3B4clZVSXp2Z28zb0o1SGtpeEhRZ2plTUQ1RVF3WUVYaFVNWWFpZ216QkRaWVhNYS9GNApnbEdBem9uTURMaVlxQmEzMEpXWk9zZXM2alNuTHBDRHBQdjRHdHFBeWtyMXM3SXdqdCtCYncKLS0tIG0zaGVsYWV3UGJiOGM3NmMzMTZldVdnR3VqSFZhZ2RIY3oyemQrNkppQlkKxToqNn+LbZRiGKAFr2i0deo26l+45tVp+D7+nHrS4s10P+bIH7uHITPnZkLpECkjfQNKEYEIhcszfy1qZubwz5oKg7uGCBu7/NkORw==:tjLlM4MwMXYqcVVq3radtqNoNn5RAdYvMP9HgYXi1M20oynS3M0mUw==" }
   value       = "op://credentials/backblaze.b2.masterappkey/key_id"
 
   [profiles.personal.secrets.B2_APPLICATION_KEY]
   description = "Backblaze PAT"
-  provider    = "onepass"
+  provider    = "op:ktbs:credential"
   sync        = { provider = "cache", value = "fnox-age-batch-v1:YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBSL0xVUDk4cjdKdmJrc0MycW1RWUswdWEybXdDYytTOTZnenluNHI0VkRzCmh4dHlUcXhhL0pPKzZjTTg2aTRpQ0VLK3JOS21LRDVUVlVJVkVkc2VPNWcKLT4gPHExLWdyZWFzZSBjQX08Z3YgblVVYkkgVDRnZUIKZXJsOGlEN2RRTUJOL3B4clZVSXp2Z28zb0o1SGtpeEhRZ2plTUQ1RVF3WUVYaFVNWWFpZ216QkRaWVhNYS9GNApnbEdBem9uTURMaVlxQmEzMEpXWk9zZXM2alNuTHBDRHBQdjRHdHFBeWtyMXM3SXdqdCtCYncKLS0tIG0zaGVsYWV3UGJiOGM3NmMzMTZldVdnR3VqSFZhZ2RIY3oyemQrNkppQlkKxToqNn+LbZRiGKAFr2i0deo26l+45tVp+D7+nHrS4s10P+bIH7uHITPnZkLpECkjfQNKEYEIhcszfy1qZubwz5oKg7uGCBu7/NkORw==:HxBTGV6dtuEojMMRLiA6U51Mae01Bb/qAU7uP7hR3huQnS2+GZGW96hBxDyuDu0j7kw35hGJd7jQKQXEyySEDeVk9ZWgnw==" }
   value       = "op://credentials/backblaze.b2.masterappkey/credential"
   # ── end Backblaze B2 ──────────────────
