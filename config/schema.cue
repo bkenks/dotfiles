@@ -1,5 +1,5 @@
 name: string
-flags: format: prefix: {
+flags:format: prefix: {
 	short: "-"
 	long:  "--"
 }
