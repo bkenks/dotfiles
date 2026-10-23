@@ -1,15 +1,29 @@
+// cue eval schema.cue -c=false
+// cue export schema.cue -o schema --out=yaml
+package vault
+
 name: string
 flags: {
 	format: {
-		prefix: p={
+		#Prefix: {
 			short: string
 			long:  string
+		}
 
-			#default: p & {
+		prefix: #Prefix & {
+			#Default: #Prefix & {
 				short: "-"
 				long:  "--"
 			}
 		}
+	}
+}
+
+#Command: {
+	action: string
+	usage:  {
+		input: _
+		example: [...string]
 	}
 }
 
