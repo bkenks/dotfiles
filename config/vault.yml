@@ -2,15 +2,45 @@ app:
   name: vault
   subcommands:
     - name: add
-      description: Adds all files in the current working directory to vault.
+      description: Adds files to vault.
+      noarg:
+        - 
+      args:
+        - name: file
+          required: false
+          description: File name
+
     - name: find
-      description: Searches for files with matching names
+      description: Searches for files with matching names.
+      args:
+        - name: file
+          description: File name
+
     - name: list
-      alias: ls
-      description: Lists all tables
+      description: Lists all items. No args = list of tables.
       args:
         - name: table
           required: false
-          description: Name of table to display items for
-    - 
+          description: Table name
+
+    - name: open
+      description: Open file in default viewer.
+
+    - name: get
+      description: Return path on disk
+      args:
+        - name: file
+          required: true
+          description: File name
+
+    - name: release
+      description: Release file/table from vault
+      args:
+        - name: file
+          required: false
+          description: File name
+        - name: table
+          required: false
+          description: Table name
+
   flags:
