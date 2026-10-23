@@ -1,9 +1,10 @@
 name: string
 flags: {
 	format: prefix: {
-	short: "-"
-	long:  "--"
-}}
+		short: "-"
+		long:  "--"
+	}
+}
 subcommands: [{
 	name:   "add"
 	action: "Adds files to vault."
