@@ -1,9 +1,10 @@
-
-
 name: string
 flags: {
 	format: {
 		prefix: {
+			#Default: {
+				
+			}
 			short: string
 			long:  string
 		}
