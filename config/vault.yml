@@ -4,37 +4,38 @@ app:
     - name: add
       description: Adds files to vault.
       noarg:
-        - 
+        allow: true
+        action: Add all
       args:
         - name: file
           required: false
           description: File name
 
     - name: find
-      description: Searches for files with matching names.
+      action: Searches for files with matching names.
       args:
         - name: file
           description: File name
 
     - name: list
-      description: Lists all items. No args = list of tables.
+      action: Lists all items. No args = list of tables.
       args:
         - name: table
           required: false
           description: Table name
 
     - name: open
-      description: Open file in default viewer.
+      action: Open file in default viewer.
 
     - name: get
-      description: Return path on disk
+      action: Return path on disk
       args:
         - name: file
           required: true
           description: File name
 
     - name: release
-      description: Release file/table from vault
+      action: Release file/table from vault
       args:
         - name: file
           required: false
