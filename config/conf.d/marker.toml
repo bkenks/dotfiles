@@ -1,7 +1,9 @@
 [tasks."marker:mark"]
-vars.baseName  = ".marker"
+usage = '''
+arg "<path>" help="Directory path"
+'''
+vars.baseName = ".marker"
 vars.randBytes = "8"
 
 run = '''
-
 '''
