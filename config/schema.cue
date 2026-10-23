@@ -6,7 +6,6 @@ flags: {
 		prefix: {
 			short: string
 			long:  string
-
 		}
 	}
 }
