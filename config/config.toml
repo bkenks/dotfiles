@@ -51,7 +51,7 @@ woodpecker-cli = "github:woodpecker-ci/woodpecker"
 [tools]
 1password  = "2.39"
 copier     = "9.18"
-cue        = "0.17"
+cue        = "0.17.1"
 direnv     = "2.37"
 fd         = "10.5"
 fnox       = "1.35"

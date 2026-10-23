@@ -1,14 +1,32 @@
 name: vault
+
+flags:
+  format:
+    prefix:
+      short: "-"
+      long: "--"
+
 subcommands:
   - name: add
     action: Adds files to vault.
-    noarg:
-      allow: true
-      action: Add all files from current working directory, non-recursive, ignoring directories.
-    args:
-      - name: file
-        required: false
-        description: File name
+    usage:
+      input:
+      example:
+        - "add -a"
+        - "add --all"
+        - "add <file>"
+    arg:
+      min: 1
+      max: 1
+      def:
+        - name: file
+          required: false
+          description: File name
+    flags:
+      - name: all
+        short: a
+        value:
+          allow: false
 
   - name: find
     action: Searches for files with matching names.
