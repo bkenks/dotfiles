@@ -5,7 +5,7 @@ flags: {
 			short: string
 			long:  string
 
-			_default: p & {
+			#default: p & {
 				short: "-"
 				long:  "--"
 			}
