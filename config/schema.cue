@@ -8,73 +8,86 @@ flags: {
 
 		prefix: #Prefix & {
 			_default: #Prefix & {
-				
+				short: "-"
+				long:  "--"
 			}
 		}
 	}
 }
 
-subcommands: [{
-	name:   "add"
-	action: "Adds files to vault."
-	usage: {
-		input: null
-		example: [
-			"add -a",
-			"add --all",
-			"add <file>",
+subcommand: {
+	add: {
+		action!: string
+		usage?: {
+			input: null
+			example: [
+				"add -a",
+				"add --all",
+				"add <file>",
+			]
+		}
+		arg: {
+			min: 1
+			max: 1
+			def: [{
+				name:        "file"
+				required:    false
+				description: "File name"
+			}]
+		}
+		flags: [
+			{
+				name:  "all"
+				short: "a"
+				value: allow: false
+			}
 		]
 	}
-	arg: {
-		min: 1
-		max: 1
-		def: [{
-			name:        "file"
-			required:    false
-			description: "File name"
-		}]
+
+	find: {
+		action: "Searches for files with matching names."
+		arg: {
+			file: {
+				description: "File name"
+			}
+		}
 	}
-	flags: [{
-		name:  "all"
-		short: "a"
-		value: allow: false
-	}]
-}, {
-	name:   "find"
-	action: "Searches for files with matching names."
-	args: [{
-		name:        "file"
-		description: "File name"
-	}]
-}, {
-	name:   "list"
-	action: "Lists all items. No args = list of tables."
-	args: [{
-		name:        "table"
-		required:    false
-		description: "Table name"
-	}]
-}, {
-	name:   "open"
-	action: "Open file in default viewer."
-}, {
-	name:   "get"
-	action: "Return path on disk"
-	args: [{
-		name:        "file"
-		required:    true
-		description: "File name"
-	}]
-}, {
-	name:   "release"
-	action: "Release file/table from vault"
-	args: [{
-		name:        "file"
-		required:    false
-		description: "File name"
-	}, {
-		name:        "table"
-		required:    false
-		description: "Table name"
-	}]
-}]
+
+	list: {
+		action: "Lists all items. No args = list of tables."
+		arg: {
+			table: {
+				required:    false
+				description: "Table name"
+			}
+		}
+	}
+
+	open: {
+		action: "Open file in default viewer."
+	}
+
+	get: {
+		action: "Return path on disk"
+		arg: {
+			file: {
+				required:    true
+				description: "File name"
+			}
+		}
+	}
+
+	release: {
+		action: "Release file/table from vault"
+		arg: {
+			file: {
+				required:    false
+				description: "File name"
+			}
+			table: {
+				required:    false
+				description: "Table name"
+			}
+		}
+	}
+}
