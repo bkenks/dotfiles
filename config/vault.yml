@@ -1,47 +1,44 @@
-app:
-  name: vault
-  subcommands:
-    - name: add
-      description: Adds files to vault.
-      noarg:
-        allow: true
-        action: Add all
-      args:
-        - name: file
-          required: false
-          description: File name
+name: vault
+subcommands:
+  - name: add
+    action: Adds files to vault.
+    noarg:
+      allow: true
+      action: Add all files from current working directory, non-recursive, ignoring directories.
+    args:
+      - name: file
+        required: false
+        description: File name
 
-    - name: find
-      action: Searches for files with matching names.
-      args:
-        - name: file
-          description: File name
+  - name: find
+    action: Searches for files with matching names.
+    args:
+      - name: file
+        description: File name
 
-    - name: list
-      action: Lists all items. No args = list of tables.
-      args:
-        - name: table
-          required: false
-          description: Table name
+  - name: list
+    action: Lists all items. No args = list of tables.
+    args:
+      - name: table
+        required: false
+        description: Table name
 
-    - name: open
-      action: Open file in default viewer.
+  - name: open
+    action: Open file in default viewer.
 
-    - name: get
-      action: Return path on disk
-      args:
-        - name: file
-          required: true
-          description: File name
+  - name: get
+    action: Return path on disk
+    args:
+      - name: file
+        required: true
+        description: File name
 
-    - name: release
-      action: Release file/table from vault
-      args:
-        - name: file
-          required: false
-          description: File name
-        - name: table
-          required: false
-          description: Table name
-
-  flags:
+  - name: release
+    action: Release file/table from vault
+    args:
+      - name: file
+        required: false
+        description: File name
+      - name: table
+        required: false
+        description: Table name
