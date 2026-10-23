@@ -1,12 +1,15 @@
 name: string
 flags: {
 	format: {
-		prefix: {
-			#Default: {
-				
-			}
+		#Prefix: {
 			short: string
 			long:  string
+		}
+
+		prefix: #Prefix & {
+			_default: #Prefix & {
+				
+			}
 		}
 	}
 }
