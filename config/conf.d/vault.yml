@@ -1,5 +1,7 @@
 app:
     name: vault
     subcommands:
-    
+        - name: add
+            action:
+    flags:
     
