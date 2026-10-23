@@ -1,9 +1,11 @@
 name: string
 flags: {
-	format: {prefix: {
-		short: "-"
-		long:  "--"
-	}}
+	format: {
+		prefix: {
+			short: "-"
+			long:  "--"
+		}
+	}
 }
 subcommands: [{
 	name:   "add"
