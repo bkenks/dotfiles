@@ -2,5 +2,6 @@ app:
   name: vault
   subcommands:
     - name: add
-      description: Adds all files in 
+      description: Adds all files in the current working directory to vault.
+      
   flags:
