@@ -4,8 +4,9 @@ name: string
 flags: {
 	format: {
 		prefix: {
-			short: "-"
-			long:  "--"
+			short: string
+			long:  string
+
 		}
 	}
 }
