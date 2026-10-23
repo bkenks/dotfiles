@@ -1,13 +1,11 @@
 name: string
 flags: {
 	format: {
-		#Prefix: {
+		prefix: p={
 			short: string
 			long:  string
-		}
 
-		prefix: #Prefix & {
-			_default: #Prefix & {
+			_default: p & {
 				short: "-"
 				long:  "--"
 			}
@@ -17,8 +15,8 @@ flags: {
 
 subcommand: {
 	add: {
-		action!: string
-		usage?: {
+		action: string
+		usage: {
 			input: null
 			example: [
 				"add -a",
