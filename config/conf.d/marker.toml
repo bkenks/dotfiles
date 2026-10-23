@@ -1,5 +1,6 @@
 [tasks."marker:mark"]
+vars.baseName = ".marker"
+
 run = '''
 
 '''
-vars.baseName = ".marker"
