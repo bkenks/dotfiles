@@ -7,6 +7,7 @@ flags: {
 		}
 	}
 }
+
 subcommands: [{
 	name:   "add"
 	action: "Adds files to vault."
