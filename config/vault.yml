@@ -1,6 +1,5 @@
 app:
-    name: vault
-    subcommands:
-        - name: add
-    flags:
-    
+  name: vault
+  subcommands:
+    - name: add
+  flags:
