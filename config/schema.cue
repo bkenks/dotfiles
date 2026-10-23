@@ -1,4 +1,4 @@
-name: "vault"
+name: string
 flags: format: prefix: {
 	short: "-"
 	long:  "--"
