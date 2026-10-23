@@ -5,4 +5,11 @@ app:
       description: Adds all files in the current working directory to vault.
     - name: find
       description: Searches for files with matching names
+    - name: list
+      alias: ls
+      description: Lists all tables
+      args:
+        - name: table
+          required: false
+          description: Name of table to display items for
   flags:
