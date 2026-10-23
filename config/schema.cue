@@ -1,7 +1,4 @@
-#Prefix: {
-	short: string
-	long: string
-}
+
 
 name: string
 flags: {
