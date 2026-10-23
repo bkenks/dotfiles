@@ -1,4 +1,6 @@
-#Prefix:
+#Prefix: {
+	
+}
 
 name: string
 flags: {
