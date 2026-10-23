@@ -3,5 +3,4 @@ app:
   subcommands:
     - name: add
       subcommands:
-
   flags:
