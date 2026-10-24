@@ -3,10 +3,10 @@
 _commit: v0.6.0
 _src_path: https://github.com/bkenks/tmpl.configs
 file_types:
-- toml
+  - toml
 formatters:
-- taplo
-- prettier
+  - taplo
+  - prettier
 languages:
-- bash
+  - bash
 mise_presets: []
