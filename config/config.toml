@@ -66,9 +66,6 @@ worktrunk        = "0.80"
   # Bootstrap: machine setup (shell, packages, macOS defaults, services)
   # ==============================================================================
 
-[bootstrap.mise_shell_activate]
-zsh = true
-
 # --- Packages (Homebrew casks, formulae, Mac App Store) ------------------------
 
 [bootstrap.packages]
