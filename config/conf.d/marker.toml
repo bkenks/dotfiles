@@ -8,6 +8,10 @@ vars.randBytes = "8"
 run = '''
 
 file=""
-if [ -n "$usage_directory" ];
+if [ -n "$usage_directory" ]; then
+
+else
+
+fi
 
 '''
