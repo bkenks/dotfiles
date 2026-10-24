@@ -5,7 +5,7 @@ arg "[pid]" help="Process id"
 
 run = '''
 
-[ -n "${usage_pid:-}" ] && { kill -KILL "$usage_pid" }
+[ -n "${usage_pid:-}" ] && { kill -KILL "$usage_pid"; }
 
 pgrep -af claude
 
