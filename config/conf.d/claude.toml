@@ -1,4 +1,4 @@
 [tasks."claude:kill"]
 usage = '''
-
+arg "<name>" help="Argument description"
 '''
