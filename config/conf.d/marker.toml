@@ -9,7 +9,7 @@ run = '''
 URI="$usage_path/{{vars.baseName}}"
 
 if [ -e "$URI" ]; then
-  echo "marker exists" && ex
+  echo "marker exists" 
 fi
 
 '''
