@@ -12,13 +12,13 @@ alias wifidnsloopback='sudo networksetup -setdnsservers Wi-Fi 127.0.0.1'
 alias wifidnsempty='sudo networksetup -setdnsservers Wi-Fi Empty'
 
 # ────────────────────────────────────────
-#  Section
+#  CLI Tools
 # ────────────────────────────────────────
 
 
 
 # ────────────────────────────────────────
-#  end Section
+#  end CLI Tools
 # ────────────────────────────────────────
 alias peck="woodpecker-cli"
 
