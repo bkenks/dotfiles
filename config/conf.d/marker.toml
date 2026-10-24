@@ -8,6 +8,6 @@ vars.randBytes = "8"
 run = '''
 path="$usage_path/{{vars.baseName}}"
 
-[ -e "$PATH" ] && { echo "marker exists" >&2; exit 1; }
+[ -e "$path" ] && { echo "marker exists" >&2; exit 1; }
 
 '''
