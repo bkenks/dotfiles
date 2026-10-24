@@ -20,3 +20,10 @@ include = [
 [[rule]]
 name = "mise-task"
 
+include = [
+  "**/mise/config.toml",
+  "**/mise/conf.d/*.toml",
+  "**/mise.toml",
+  "**/.mise.toml",
+  "**/mise.*.toml",        # mise.local.toml, mise.dev.toml, etc.
+]
