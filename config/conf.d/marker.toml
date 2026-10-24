@@ -23,6 +23,7 @@ printf '%s\n' "$id" > "$path_file"                            # write id to file
 '''
 
 [tasks."marker:get"]
+extends = ""
 dir = "{{cwd}}"
 env.OPTS = "lFuu"
 usage = '''
