@@ -6,6 +6,7 @@ alias md='mise dotfiles'
 
 alias mb='mise bootstrap'
 alias mbp='mise bootstrap packages'
+
 alias mlov='mise list | ov --alternate-rows'
 
 alias apply='mise dotfiles apply && echo "applied. reloading terminal..." && exec "$SHELL" -l'
