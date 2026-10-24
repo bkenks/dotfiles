@@ -1,5 +1,5 @@
 [vars]
-path = ".marker"
+path_ = ".marker"
 
 [tasks."marker:mark"]
 extends = "marker"
