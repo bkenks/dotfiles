@@ -5,6 +5,7 @@ vars.randBytes = "8"
 usage = '''
 arg "[directory]" default="." help="Directory path (no trailing slash)"
 '''
+
 run = '''
 pathMarker="$usage_directory/{{vars.baseName}}"
 
