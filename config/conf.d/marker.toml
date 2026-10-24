@@ -7,7 +7,6 @@ namefile_marker = ".marker"
 extends = "marker"
 
 vars.randBytes = "8"
-dir = "{{cwd}}"
 
 usage = '''
 arg "[directory]" default="." help="Directory path (no trailing slash)"
