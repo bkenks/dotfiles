@@ -170,11 +170,11 @@ exclude = [
 "~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
 
 # --- ~/.zshrc: blocks from dotfiles-snippets/ ----------------------------------
-"~/.zshrc/alias_mise"   = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/alias_mise.sh") }}' }
-"~/.zshrc/alias"   = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/alias.zsh") }}' }
-"~/.zshrc/db"      = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/db.sh") }}' }
-"~/.zshrc/editors" = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/editors.zsh") }}' }
-"~/.zshrc/yazi"    = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/yazi.zsh") }}' }
+"~/.zshrc/alias_mise" = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/alias_mise.sh") }}' }
+"~/.zshrc/alias"      = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/alias.zsh") }}' }
+"~/.zshrc/db"         = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/db.sh") }}' }
+"~/.zshrc/editors"    = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/editors.zsh") }}' }
+"~/.zshrc/yazi"       = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/yazi.zsh") }}' }
 
 # --- ~/.ssh/config: blocks from dotfiles-snippets/ -----------------------------
 "~/.ssh/config/backrest-tunnel" = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/backrest-tunnel") }}' }
