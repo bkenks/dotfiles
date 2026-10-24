@@ -14,13 +14,10 @@ alias wifidnsempty='sudo networksetup -setdnsservers Wi-Fi Empty'
 # ────────────────────────────────────────
 #  CLI Tools
 # ────────────────────────────────────────
-
-
-
+alias peck="woodpecker-cli"
+alias ghostty=/Applications/Ghostty.app/Contents/MacOS/ghostty
 # ────────────────────────────────────────
 #  end CLI Tools
 # ────────────────────────────────────────
-alias peck="woodpecker-cli"
-alias ghostty=/Applications/Ghostty.app/Contents/MacOS/ghostty
 
 alias apply='mise dotfiles apply && echo "applied. reloading terminal..." && exec "$SHELL" -l'
