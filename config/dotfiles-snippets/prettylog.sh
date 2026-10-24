@@ -57,3 +57,4 @@ if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
   set -euo pipefail
   log "$@"
 fi
+
