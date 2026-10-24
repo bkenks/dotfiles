@@ -1,10 +1,5 @@
 #:schema https://mise.jdx.dev/schema/mise.json
 
-# ┌────────────────────────────────────────────────────────────
-# │
-# │  SETUP
-# │
-# └────────────────────────────────────────────────────────────
 [bootstrap.mise_shell_activate]
 zsh = true
 
