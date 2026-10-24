@@ -17,4 +17,6 @@ alias mdar='mise dotfiles apply && exec "$SHELL" -l'
 # ── Bootstrap ──────────────────────
 alias mb='mise bootstrap'
 alias mbp='mise bootstrap packages'
+
+alias mbpug='mise bootstrap packages use -g'
 # ── end Bootstrap ──────────────────
