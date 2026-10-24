@@ -2,7 +2,7 @@
 BASE_NAME = ".marker"
 
 [task_templates.marker]
-
+env.BASE_NAME = ""
 
 [tasks."marker:mark"]
 vars.randBytes = "8"
