@@ -4,9 +4,6 @@
 # Core: mise settings, variables, environment
 # ==============================================================================
 
-[settings]
-disable_update_warning = false
-
 [vars]
 pathdir_dotfiles_snippets = "{{config_root}}/.config/mise/dotfiles-snippets"
 
