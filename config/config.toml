@@ -170,7 +170,7 @@ exclude = [
 "~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
 
 # --- ~/.zshrc: blocks from dotfiles-snippets/ ----------------------------------
-"~/.zshrc/alias:"   = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/alias_mise.sh") }}' }
+"~/.zshrc/alias:mise"   = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/alias_mise.sh") }}' }
 "~/.zshrc/alias"   = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/alias.zsh") }}' }
 "~/.zshrc/db"      = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/db.sh") }}' }
 "~/.zshrc/editors" = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/editors.zsh") }}' }
