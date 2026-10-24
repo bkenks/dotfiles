@@ -4,7 +4,7 @@
 zsh = true
 
 [vars]
-pathdirDotfilesSnippets = "{{config_root}}/.config/mise/dotfiles-snippets"
+pathdir_dotfiles_snippets = "{{config_root}}/.config/mise/dotfiles-snippets"
 pathdirMiseZsh          = "{{config_root}}/.config/mise/zsh"
 
 [env]
@@ -151,8 +151,8 @@ fi
 "~/.zshrc/fnox"     = { block = 'eval "$(fnox activate zsh)"' }
 "~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
 
-"~/.ssh/config/backrest-tunnel" = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/backrest-tunnel") }}' }
-"~/.zshrc/alias"                = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/alias.zsh") }}' }
-"~/.zshrc/editors"              = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/editors.zsh") }}' }
-"~/.zshrc/yazi"                 = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/yazi.zsh") }}' }
-"~/.zshrc/db"                   = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/db.sh") }}' }
+"~/.ssh/config/backrest-tunnel" = { template = "tera", block = '{{ read_file(path=vars.pathdir_dotfiles_snippets ~ "/backrest-tunnel") }}' }
+"~/.zshrc/alias"                = { template = "tera", block = '{{ read_file(path=vars.pathdir_dotfiles_snippets ~ "/alias.zsh") }}' }
+"~/.zshrc/editors"              = { template = "tera", block = '{{ read_file(path=vars.pathdir_dotfiles_snippets ~ "/editors.zsh") }}' }
+"~/.zshrc/yazi"                 = { template = "tera", block = '{{ read_file(path=vars.pathdir_dotfiles_snippets ~ "/yazi.zsh") }}' }
+"~/.zshrc/db"                   = { template = "tera", block = '{{ read_file(path=vars.pathdir_dotfiles_snippets ~ "/db.sh") }}' }
