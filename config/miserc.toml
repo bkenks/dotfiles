@@ -1,2 +1,2 @@
-auto_env   = true  # early
+auto_env   = true  # early-feat
 env_conf_d = true
