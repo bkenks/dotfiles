@@ -19,3 +19,4 @@ include = [
 
 [[rule]]
 name = "mise-task"
+
