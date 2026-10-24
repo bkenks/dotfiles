@@ -15,19 +15,3 @@ include = [
 
   [rule.schema]
   url = "https://mise.jdx.dev/schema/mise.json"
-
-[[rule]]
-name = "mise-task"
-
-include = [
-  "**/mise/config.toml",
-  "**/mise/conf.d/*.toml",
-  "**/mise.toml",
-  "**/.mise.toml",
-  "**/mise.*.toml",        # mise.local.toml, mise.dev.toml, etc.
-]
-
-keys = ["tasks", "tasks.*"]
-
-  [rule.formatting]
-  reorder_keys = false
