@@ -106,7 +106,6 @@ version               = "3.19.0"
 
 # --- macOS defaults ------------------------------------------------------------
 
-[bootstrap.macos]
 [bootstrap.macos.dock]
 autohide               = true
 autohide_delay         = 0
