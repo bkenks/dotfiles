@@ -2,6 +2,7 @@
 vars.baseName = ".marker"
 vars.randBytes = "8"
 
+
 usage = '''
 arg "[directory]" default="." help="Directory path (no trailing slash)"
 '''
