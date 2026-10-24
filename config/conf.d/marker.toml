@@ -20,3 +20,4 @@ printf '%s\n' "$id" > "$pathFile"  # write id to file
 
 [tasks."marker:get"]
 dir = "{{cwd}}"
+
