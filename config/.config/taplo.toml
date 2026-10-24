@@ -13,6 +13,7 @@ include = [
   "**/.mise.toml",
   "**/mise.*.toml",        # mise.local.toml, mise.dev.toml, etc.
 ]
+keys = ["tasks", "tasks.*"]
 
   [rule.schema]
   url = "https://mise.jdx.dev/schema/mise.json"
