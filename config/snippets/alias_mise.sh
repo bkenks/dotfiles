@@ -19,4 +19,5 @@ alias mb='mise bootstrap'
 alias mbp='mise bootstrap packages'
 
 alias mbpug='mise bootstrap packages use -g'
+alias mbpp='mise bootstrap packages prune'
 # ── end Bootstrap ──────────────────
