@@ -1,4 +1,4 @@
-[task_templates.marker]
+
 env.BASE_NAME = ".marker"
 
 [tasks."marker:mark"]
