@@ -26,4 +26,4 @@ alias peck="woodpecker-cli"
 
 alias ghostty=/Applications/Ghostty.app/Contents/MacOS/ghostty
 
-alias db='/Users/briankenkel/synology-drive/database'
+alias db='sqlite3 /Users/briankenkel/synology-drive/database'
