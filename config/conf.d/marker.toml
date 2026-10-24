@@ -8,7 +8,7 @@ arg "[directory]" default="." help="Directory path (no trailing slash)"
 '''
 
 run = '''
-pathMarker="$usage_directory/{{vars.baseName}}"  # 
+pathMarker="$usage_directory/{{vars.baseName}}"  # path
 
 [ -e "$pathMarker" ] && { echo "marker exists" >&2; exit 1; }  # Fail if marker already exists
 
