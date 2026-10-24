@@ -3,6 +3,7 @@ BASE_NAME = ".marker"
 
 [task_templates.marker]
 
+
 [tasks."marker:mark"]
 vars.randBytes = "8"
 dir = "{{cwd}}"
