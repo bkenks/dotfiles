@@ -6,8 +6,8 @@ vars.baseName = ".marker"
 vars.randBytes = "8"
 
 run = '''
+file="$usage_path/{{vars.baseName}}"
 
 if [-e ]
 
-file="$usage_path/{{vars.baseName}}"
 '''
