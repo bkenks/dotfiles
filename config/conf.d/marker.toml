@@ -1,7 +1,7 @@
 [vars]
 BASE_NAME = ".marker"
 
-[task_templates.""]
+[task_templates.marker]
 
 [tasks."marker:mark"]
 vars.randBytes = "8"
