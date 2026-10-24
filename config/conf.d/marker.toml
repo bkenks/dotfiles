@@ -12,6 +12,6 @@ pathMarker="$usage_directory/{{vars.baseName}}"
 
 [ -e "$pathMarker" ] && { echo "marker exists" >&2; exit 1; }  # Fail if marker already exists
 
-printf '' > "$pathMarker"
+printf '%s' > "$pathMarker"
 
 '''
