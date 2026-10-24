@@ -1,5 +1,4 @@
 [tasks."marker:mark"]
-vars.baseName = ".marker"
 vars.randBytes = "8"
 dir = "{{cwd}}"
 
