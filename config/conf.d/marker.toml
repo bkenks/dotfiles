@@ -1,5 +1,5 @@
 
-vars.baseName = ".marker"
+baseName = ".marker"
 
 [tasks."marker:mark"]
 vars.randBytes = "8"
