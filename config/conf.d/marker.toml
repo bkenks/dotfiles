@@ -14,5 +14,4 @@ pathMarker="$usage_directory/{{vars.baseName}}"
 
 id=$(openssl rand -hex 8)
 printf '%s\n' "$id" > "$pathMarker"
-
 '''
