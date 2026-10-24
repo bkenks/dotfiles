@@ -11,6 +11,15 @@ alias hosts='SUDO_EDITOR="codium --wait" sudo -e /etc/hosts'
 alias wifidnsloopback='sudo networksetup -setdnsservers Wi-Fi 127.0.0.1'
 alias wifidnsempty='sudo networksetup -setdnsservers Wi-Fi Empty'
 
+# ────────────────────────────────────────
+#  Section
+# ────────────────────────────────────────
+
+
+
+# ────────────────────────────────────────
+#  end Section
+# ────────────────────────────────────────
 alias peck="woodpecker-cli"
 
 alias ghostty=/Applications/Ghostty.app/Contents/MacOS/ghostty
