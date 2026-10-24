@@ -1,7 +1,11 @@
 #:schema https://mise.jdx.dev/schema/mise.json
 
-[bootstrap.mise_shell_activate]
-zsh = true
+# ==============================================================================
+# Core: mise settings, variables, environment
+# ==============================================================================
+
+[settings]
+disable_update_warning = false
 
 [vars]
 pathdir_dotfiles_snippets = "{{config_root}}/.config/mise/dotfiles-snippets"
@@ -9,19 +13,11 @@ pathdir_dotfiles_snippets = "{{config_root}}/.config/mise/dotfiles-snippets"
 [env]
 _.path = ["/Applications/Inkscape.app/Contents/MacOS"]
 
-[settings]
-disable_update_warning = false
+# ==============================================================================
+# Tools: CLI tools managed by mise
+# ==============================================================================
 
-[history]
-exclude = [
-  "**/*.local*",
-  "**/*.env*",
-  "**/*secret*",
-  "**/.vscode/**",
-  "**/*age.txt",
-  "**/*fnox.local.toml",
-]
-
+# Short names for tools pulled from non-default backends
 [tool_alias]
 ccstatusline   = "npm:ccstatusline"
 ccusage        = "npm:ccusage"
@@ -58,6 +54,7 @@ watchexec        = "2.7"
 worktrunk        = "0.80"
 "pipx:harlequin" = "latest"
 
+  # Tools needing extra options
   [tools.gitkeeper]
   api_url             = "https://fj.ktbcloud.com/api/v1"
   bin                 = "gitkeeper"
@@ -68,7 +65,17 @@ worktrunk        = "0.80"
   platforms.macos-arm64 = { asset_pattern = "woodpecker-cli_darwin_arm64.tar.gz" }
   version               = "3.19.0"
 
+# ==============================================================================
+# Bootstrap: machine setup (shell, packages, macOS defaults, services)
+# ==============================================================================
+
+[bootstrap.mise_shell_activate]
+zsh = true
+
+# --- Packages (Homebrew casks, formulae, Mac App Store) ------------------------
+
 [bootstrap.packages]
+# Casks
 "brew-cask:1password"             = "latest"
 "brew-cask:bartender"             = "latest"
 "brew-cask:font-maple-mono"       = "latest"
@@ -81,6 +88,7 @@ worktrunk        = "0.80"
 "brew-cask:openlogi"              = "latest"
 "brew-cask:vscodium"              = "latest"
 "brew-cask:zen"                   = "latest"
+# Formulae
 "brew:b2-tools"                   = "latest"
 "brew:bbrew"                      = "latest"
 "brew:colima"                     = "latest"
@@ -98,11 +106,11 @@ worktrunk        = "0.80"
 "brew:ov"                         = "latest"
 "brew:technitium-dns"             = "latest"
 "brew:tree"                       = "latest"
+# Mac App Store
 "mas:1236045954"                  = "latest" # Canary Mail
 "mas:6468120888"                  = "latest" # CleanMyKeyboard
 
-[bootstrap.services.mise-history]
-builtin = "history-watch"
+# --- macOS defaults ------------------------------------------------------------
 
 [bootstrap.macos]
   [bootstrap.macos.dock]
@@ -117,15 +125,16 @@ builtin = "history-watch"
   show_pathbar            = true
   sort_folders_first      = true
 
-  [bootstrap.macos.defaults.NSGlobalDomain]
-  NSFileViewer = "com.binarynights.ForkLift"
-
   [bootstrap.macos.keyboard]
   automatic_capitalization      = false
   automatic_spelling_correction = false
   initial_key_repeat            = 15
   key_repeat                    = 2
 
+  [bootstrap.macos.defaults.NSGlobalDomain]
+  NSFileViewer = "com.binarynights.ForkLift"
+
+# Register NSFileViewer (above) as the default handler for folders
 [bootstrap.hooks.post-defaults]
 run = '''
 ls_domain="com.apple.LaunchServices/com.apple.launchservices.secure"
@@ -137,7 +146,28 @@ if ! defaults read "$ls_domain" LSHandlers 2>/dev/null | grep -q '"public.folder
 fi
 '''
 
+# --- Services ------------------------------------------------------------------
+
+# Watches files for [history] below
+[bootstrap.services.mise-history]
+builtin = "history-watch"
+
+[history]
+exclude = [
+  "**/*.local*",
+  "**/*.env*",
+  "**/*secret*",
+  "**/.vscode/**",
+  "**/*age.txt",
+  "**/*fnox.local.toml",
+]
+
+# ==============================================================================
+# Dotfiles
+# ==============================================================================
+
 [dotfiles]
+# --- Tracked files/directories -------------------------------------------------
 "~/.config/ccstatusline"                              = { mode = "track" }
 "~/.config/fnox"                                      = { mode = "track", exclude = ["age.txt"] }
 "~/.config/git"                                       = { mode = "track" }
@@ -146,12 +176,16 @@ fi
 "~/.config/starship.toml"                             = { mode = "track" }
 "~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
 
+# --- ~/.zshrc: inline blocks ---------------------------------------------------
 "~/.zshrc/direnv"   = { block = 'eval "$(direnv hook zsh)"' }
 "~/.zshrc/fnox"     = { block = 'eval "$(fnox activate zsh)"' }
 "~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
 
+# --- ~/.zshrc: blocks from dotfiles-snippets/ ----------------------------------
+"~/.zshrc/alias"   = { template = "tera", block = '{{ read_file(path=vars.pathdir_dotfiles_snippets ~ "/alias.zsh") }}' }
+"~/.zshrc/db"      = { template = "tera", block = '{{ read_file(path=vars.pathdir_dotfiles_snippets ~ "/db.sh") }}' }
+"~/.zshrc/editors" = { template = "tera", block = '{{ read_file(path=vars.pathdir_dotfiles_snippets ~ "/editors.zsh") }}' }
+"~/.zshrc/yazi"    = { template = "tera", block = '{{ read_file(path=vars.pathdir_dotfiles_snippets ~ "/yazi.zsh") }}' }
+
+# --- ~/.ssh/config: blocks from dotfiles-snippets/ -----------------------------
 "~/.ssh/config/backrest-tunnel" = { template = "tera", block = '{{ read_file(path=vars.pathdir_dotfiles_snippets ~ "/backrest-tunnel") }}' }
-"~/.zshrc/alias"                = { template = "tera", block = '{{ read_file(path=vars.pathdir_dotfiles_snippets ~ "/alias.zsh") }}' }
-"~/.zshrc/editors"              = { template = "tera", block = '{{ read_file(path=vars.pathdir_dotfiles_snippets ~ "/editors.zsh") }}' }
-"~/.zshrc/yazi"                 = { template = "tera", block = '{{ read_file(path=vars.pathdir_dotfiles_snippets ~ "/yazi.zsh") }}' }
-"~/.zshrc/db"                   = { template = "tera", block = '{{ read_file(path=vars.pathdir_dotfiles_snippets ~ "/db.sh") }}' }
