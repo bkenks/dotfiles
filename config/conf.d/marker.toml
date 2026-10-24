@@ -10,6 +10,6 @@ path="$usage_directory/{{vars.baseName}}"
 
 [ -e "$path" ] && { echo "marker exists" >&2; exit 1; }  # Fail if marker already exists
 
-echo "id" > 
+echo "id" > "
 
 '''
