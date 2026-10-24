@@ -10,6 +10,6 @@ URI="$usage_path/{{vars.baseName}}"
 
 if [ -e "$URI" ]; then
 
-
+fi
 
 '''
