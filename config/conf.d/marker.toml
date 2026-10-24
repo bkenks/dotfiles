@@ -1,4 +1,4 @@
-
+[vars]
 baseName = ".marker"
 
 [tasks."marker:mark"]
