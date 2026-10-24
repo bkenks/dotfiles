@@ -16,7 +16,7 @@ run = '''
 path_file="$usage_directory/$BASE_NAME"                       # path to file
 
 [ -e "$path_file" ] && { echo "marker exists" >&2; exit 1; }  # fail if marker exists
-P
+
 id=$(openssl rand -hex 8)                                     # generate unique id
 printf '%s\n' "$id" > "$path_file"                            # write id to file
 '''
