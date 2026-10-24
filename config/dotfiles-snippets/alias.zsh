@@ -26,4 +26,4 @@ alias peck="woodpecker-cli"
 
 alias ghostty=/Applications/Ghostty.app/Contents/MacOS/ghostty
 
-alias apply='mise dotfiles apply && exec $SHELL -l'
+alias apply='mise dotfiles apply && exec "$SHELL" -l'
