@@ -1,5 +1,5 @@
-[vars]
-baseName = ".marker"
+[env]
+BASE_NAME = ".marker"
 
 [tasks."marker:mark"]
 vars.randBytes = "8"
@@ -10,18 +10,17 @@ arg "[directory]" default="." help="Directory path (no trailing slash)"
 '''
 
 run = '''
-pathFile="$usage_directory/{{vars.baseName}}"  # path to file
+path_file="$usage_directory/$BASE_NAME"                       # path to file
 
-[ -e "$pathFile" ] && { echo "marker exists" >&2; exit 1; }  # Fail if marker already exists
+[ -e "$path_file" ] && { echo "marker exists" >&2; exit 1; }  # fail if marker exists
 
-id=$(openssl rand -hex 8)  # generate unique id
-printf '%s\n' "$id" > "$pathFile"  # write id to file
+id=$(openssl rand -hex 8)                                     # generate unique id
+printf '%s\n' "$id" > "$path_file"                            # write id to file
 '''
 
 [tasks."marker:get"]
 dir = "{{cwd}}"
 env.OPTS = "lFuu"
-
 
 usage = '''
 arg "<id>" help="Directory id (e.g. 373f94134cd8c581, b4b575a227b9950e)"
