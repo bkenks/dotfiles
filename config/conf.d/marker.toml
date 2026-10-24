@@ -2,6 +2,7 @@
 namefile_marker = ".marker"
 
 [task_templates.marker]
+dir = "{{cwd}}"
 
 [tasks."marker:mark"]
 extends = "marker"
