@@ -18,3 +18,4 @@ include = [
   url = "https://mise.jdx.dev/schema/mise.json"
 
 [[rule]]
+name = "mise"
