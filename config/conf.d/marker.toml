@@ -7,7 +7,7 @@ dir = "{{cwd}}"
 [tasks."marker:mark"]
 extends = "marker"
 
-vars.randBytes = "8"
+vars = {randBytes = "8"}
 
 usage = '''
 arg "[directory]" default="." help="Directory path (no trailing slash)"
