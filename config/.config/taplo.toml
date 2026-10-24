@@ -28,7 +28,7 @@ include = [
   "**/mise.*.toml",        # mise.local.toml, mise.dev.toml, etc.
 ]
 
-
+keys = ["tasks", "tasks.*"]
 
   [rule.formatting]
   reorder_keys = false
