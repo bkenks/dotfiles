@@ -1,6 +1,6 @@
 [tasks."marker:mark"]
 usage = '''
-arg "[directory]" default="." help="Directory (no trailing slash)"
+arg "[directory]" default="." help="Directory path (no trailing slash)"
 '''
 vars.baseName = ".marker"
 vars.randBytes = "8"
