@@ -73,6 +73,7 @@ treefmt    = "2.6"
 uv         = "0.12"
 watchexec  = "2.7"
 worktrunk  = "0.80"
+"pipx:harlequin" = "latest"
 
   [tools.gitkeeper]
   api_url             = "https://fj.ktbcloud.com/api/v1"
