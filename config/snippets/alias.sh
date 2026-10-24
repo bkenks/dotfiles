@@ -1,6 +1,6 @@
 alias reload='exec "$SHELL" -l'
 
-alias c="clear"
+alias c='clear'
 alias cpt='pbcopy'
 alias cpd='pwd | pbcopy'
 
@@ -9,8 +9,8 @@ alias gk='gitkeeper'
 alias hosts='SUDO_EDITOR="codium --wait" sudo -e /etc/hosts'
 
 
-alias set-dns-loopback='sudo networksetup -setdnsservers Wi-Fi 127.0.0.1'
-alias wifidnsempty='sudo networksetup -setdnsservers Wi-Fi Empty'
+alias set-dns-wifi-2loopback='sudo networksetup -setdnsservers Wi-Fi 127.0.0.1'
+alias set-dns-wifi-empty='sudo networksetup -setdnsservers Wi-Fi Empty'
 
 # ────────────────────────────────────────
 #  CLI Tools
@@ -20,5 +20,3 @@ alias ghostty=/Applications/Ghostty.app/Contents/MacOS/ghostty
 # ────────────────────────────────────────
 #  end CLI Tools
 # ────────────────────────────────────────
-
-alias apply='mise dotfiles apply && echo "applied. reloading terminal..." && exec "$SHELL" -l'
