@@ -14,4 +14,4 @@ alias mb='mise bootstrap'
 alias mbp='mise bootstrap packages'
 
 
-alias apply='mise dotfiles apply && echo "applied. reloading terminal..." && exec "$SHELL" -l'
+alias apply='mise dotfiles apply && echo "applied. reloading terminal..." '
