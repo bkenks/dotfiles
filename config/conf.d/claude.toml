@@ -5,6 +5,6 @@ arg "[pid]" help="Process id"
 
 run = '''
 
-[]
+[ -n "]
 
 '''
