@@ -1,5 +1,5 @@
 [vars]
-name = ".marker"
+namefile_ = ".marker"
 
 [tasks."marker:mark"]
 extends = "marker"
