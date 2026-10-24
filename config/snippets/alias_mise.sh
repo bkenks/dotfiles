@@ -1,6 +1,6 @@
 alias m='mise'
 
-alias mlov='mise list | ov --alternate-rows'
+alias ml='mise list | ov --alternate-rows'
 
 alias mu='mise use'
 alias mr='mise run'
