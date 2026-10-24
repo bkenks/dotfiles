@@ -29,5 +29,5 @@ usage = '''
 arg "<id>" help="Directory id (e.g. 373f94134cd8c581, b4b575a227b9950e)"
 '''
 run = '''
-rg -"$opts $usage_id -g $namefile_marker
+rg -"$opts" $usage_id -g $namefile_marker
 '''
