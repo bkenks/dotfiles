@@ -8,7 +8,7 @@ alias mi='mise install'
 
 alias md='mise dotfiles'
 alias mda='mise dotfiles apply'
-alias mdar='mise dotfiles apply'
+alias mdar='mise dotfiles apply && exec "$SHELL" -l'
 
 alias mb='mise bootstrap'
 alias mbp='mise bootstrap packages'
