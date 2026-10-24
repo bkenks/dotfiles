@@ -22,8 +22,8 @@ printf '%s\n' "$id" > "$path_file"                            # write id to file
 '''
 
 [tasks."marker:get"]
-extends = "marker"
 
+extends = "marker"
 env     = { opts = "lFuu" }
 
 usage = '''
