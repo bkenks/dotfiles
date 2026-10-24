@@ -6,6 +6,7 @@ dir = "{{cwd}}"
 
 [tasks."marker:mark"]
 extends = "marker"
+
 vars.randBytes = "8"
 
 usage = '''
