@@ -22,8 +22,9 @@ printf '%s\n' "$id" > "$path_file"                            # write id to file
 '''
 
 [tasks."marker:get"]
-env     = { opts = "lFuu" }
 extends = "marker"
+
+env     = { opts = "lFuu" }
 
 usage = '''
 arg "<id>" help="Directory id (e.g. 373f94134cd8c581, b4b575a227b9950e)"
