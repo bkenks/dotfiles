@@ -16,4 +16,4 @@ id=$(openssl rand -hex 8)  # generate unique id
 printf '%s\n' "$id" > "$pathFile"  # write id to file
 '''
 
-[tasks.""]
+[tasks."marker:"]
