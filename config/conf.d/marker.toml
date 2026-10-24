@@ -10,8 +10,4 @@ PATH="$usage_path/{{vars.baseName}}"
 
 [ -e "$PATH" ] && { }
 
-if [ -e "$PATH" ]; then
-  
-fi
-
 '''
