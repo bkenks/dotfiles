@@ -4,8 +4,6 @@ alias c="clear"
 alias cpt='pbcopy'
 alias cpd='pwd | pbcopy'
 
-
-
 alias gk='gitkeeper'
 
 alias hosts='SUDO_EDITOR="codium --wait" sudo -e /etc/hosts'
