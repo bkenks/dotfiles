@@ -1,6 +1,5 @@
 [formatting]
 align_entries = true
-indent_tables = true
 
 [[rule]]
 name = "mise"
