@@ -1,6 +1,6 @@
 [tasks."marker:mark"]
 usage = '''
-flag
+flag "--name" help="Flag description"
 '''
 vars.baseName = ".marker"
 vars.randBytes = "8"
