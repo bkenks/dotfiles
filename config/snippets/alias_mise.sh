@@ -12,6 +12,3 @@ alias mdar='mise dotfiles apply && exec "$SHELL" -l'
 
 alias mb='mise bootstrap'
 alias mbp='mise bootstrap packages'
-
-
-alias apply='mise dotfiles apply && echo "applied. reloading terminal..." '
