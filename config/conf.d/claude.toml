@@ -1,4 +1,4 @@
 [tasks."claude:kill"]
 usage = '''
-arg "<PID]" help="Argument description"
+arg "[PID]" help="Argument description"
 '''
