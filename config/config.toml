@@ -181,5 +181,6 @@ fi
 "~/.zshrc/alias"                = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/alias.zsh") }}' }
 "~/.zshrc/editors"              = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/editors.zsh") }}' }
 "~/.zshrc/yazi"                 = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/yazi.zsh") }}' }
+"~/.zshrc/db"                 = { template = "tera", block = '{{ read_file(path=vars.pathdirDotfilesSnippets ~ "/yazi.zsh") }}' }
 # │
 # └── end OS ─────────────────────────────────────────
