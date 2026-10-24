@@ -13,5 +13,5 @@ pathFile="$usage_directory/{{vars.baseName}}"  # path to file
 [ -e "$pathFile" ] && { echo "marker exists" >&2; exit 1; }  # Fail if marker already exists
 
 id=$(openssl rand -hex 8)  # generate unique id
-printf '%s\n' "$id" > "$pathMarker"  # write id to file
+printf '%s\n' "$id" > "$pathFile"  # write id to file
 '''
