@@ -21,7 +21,7 @@ pgrep -af claude
 
 read -r -p "Run force kill? [y/N] " ans
 case "$ans" in
-  [yY]|[yY][eE][sS]) pkill -TERM -f 'claude' ;;
+  [yY]|[yY][eE][sS]) pkill -KILL -f 'claude' ;;
   *) echo "aborted"; exit 1 ;;
 esac
 
