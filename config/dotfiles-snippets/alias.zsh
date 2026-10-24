@@ -25,5 +25,3 @@ alias wifidnsempty='sudo networksetup -setdnsservers Wi-Fi Empty'
 alias peck="woodpecker-cli"
 
 alias ghostty=/Applications/Ghostty.app/Contents/MacOS/ghostty
-
-alias db='sqlite3/Users/briankenkel/synology-drive/database'
