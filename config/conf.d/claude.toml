@@ -17,6 +17,8 @@ esac
 
 sleep 5
 
+pgrep -af claude
+
 
 
 '''
