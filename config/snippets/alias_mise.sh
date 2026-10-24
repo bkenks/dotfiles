@@ -7,7 +7,7 @@ alias mr='mise run'
 alias mi='mise install'
 
 alias md='mise dotfiles'
-
+alias mda=
 
 alias mb='mise bootstrap'
 alias mbp='mise bootstrap packages'
