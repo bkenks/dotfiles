@@ -8,7 +8,7 @@ run = '''
 [ -n "${usage_pid:-}" ] && { kill -KILL "$usage_pid" }
 
 pgrep -af claude
-read -r -p "Kill $usage_pid? [y/N] " ans
+read -r -p "Kill all? [y/N] " ans
 case "$ans" in
   [yY]|[yY][eE][sS]) ;;
   *) echo "aborted"; exit 1 ;;
