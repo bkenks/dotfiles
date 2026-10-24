@@ -1,12 +1,12 @@
 function db() {
   local arg_db="$1"
   shift
-  
+
   local pathdir_db="/Users/briankenkel/synology-drive/database"
 
   [[ -z "$arg_db" ]] && { echo "no db provided" >&2; return 1; }  # validate args
 
   pathdir_db="$pathdir_db/$arg_db"
 
-  sqlite3 "$pathdir_db" "$@"
+  sqlite3 "$pathdir_db.db" "$@"
 }
