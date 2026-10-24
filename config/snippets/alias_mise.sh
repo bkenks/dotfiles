@@ -1,9 +1,11 @@
 alias m='mise'
+
 alias mu='mise use'
 alias mr='mise run'
 alias mi='mise install'
-alias ml-ov='mise list | ov --alternate-rows'
+alias ml='mise list'
 
+alias ml-ov='mise list | ov --alternate-rows'
 
 # ── Dotfiles ──────────────────────
 alias md='mise dotfiles'
