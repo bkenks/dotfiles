@@ -12,5 +12,6 @@ alias mda='mise dotfiles apply'
 alias mdar='mise dotfiles apply && exec "$SHELL" -l'
 # ── end Dotfiles ──────────────────
 
+sec
 alias mb='mise bootstrap'
 alias mbp='mise bootstrap packages'
