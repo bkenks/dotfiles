@@ -8,7 +8,7 @@ vars.randBytes = "8"
 run = '''
 pathMarker="$usage_directory/{{vars.baseName}}"
 
-[ -e "$path" ] && { echo "marker exists" >&2; exit 1; }  # Fail if marker already exists
+[ -e "$pathMarker" ] && { echo "marker exists" >&2; exit 1; }  # Fail if marker already exists
 
 echo "id" > "$path"
 
