@@ -1,1 +1,1 @@
-env_conf_d = true  # early feature: <string>.
+env_conf_d = true  # early feature: foo.
