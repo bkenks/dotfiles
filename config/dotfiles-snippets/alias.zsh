@@ -26,3 +26,4 @@ alias peck="woodpecker-cli"
 
 alias ghostty=/Applications/Ghostty.app/Contents/MacOS/ghostty
 
+alias apply
