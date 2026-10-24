@@ -1,6 +1,6 @@
 [tasks."marker:mark"]
 usage = '''
-arg "<path>" help="Directory path"
+flag "--name" help="Flag description"
 '''
 vars.baseName = ".marker"
 vars.randBytes = "8"
