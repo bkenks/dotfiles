@@ -7,7 +7,7 @@ vars.randBytes = "8"
 
 run = '''
 
-
+if [-e ]
 
 file="$usage_path/{{vars.baseName}}"
 '''
