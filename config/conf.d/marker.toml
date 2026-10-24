@@ -5,6 +5,7 @@ BASE_NAME = ".marker"
 env.BASE_NAME = ".marker"
 
 [tasks."marker:mark"]
+extends = ""
 vars.randBytes = "8"
 dir = "{{cwd}}"
 
