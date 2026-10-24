@@ -22,7 +22,7 @@ printf '%s\n' "$id" > "$pathFile"  # write id to file
 dir = "{{cwd}}"
 
 usage = '''
-arg "<id>" help="Directory id"
+arg "<id>" help="Directory id (e.g. "
 '''
 
 
