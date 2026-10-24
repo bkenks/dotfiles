@@ -8,7 +8,7 @@ vars.randBytes = "8"
 run = '''
 PATH="$usage_path/{{vars.baseName}}"
 
-if [ -e "$URI" ]; then
+if [ -e "$PATH" ]; then
   echo "marker exists" >&2; exit 1
 fi
 
