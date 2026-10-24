@@ -1,5 +1,5 @@
-
-env.BASE_NAME = ".marker"
+[vars]
+path = ".marker"
 
 [tasks."marker:mark"]
 extends = "marker"
