@@ -4,7 +4,7 @@ function db() {
 
   [[ -z "$arg_db" ]] && { echo "no db provided" >&2; return 1; }  # validate args
 
-  local pathfile_db=
+  pathdir_db=
 
   sqlite3 
 }
