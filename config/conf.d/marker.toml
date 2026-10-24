@@ -1,6 +1,8 @@
 [vars]
 namefile_marker = ".marker"
 
+
+
 [tasks."marker:mark"]
 vars.randBytes = "8"
 dir = "{{cwd}}"
