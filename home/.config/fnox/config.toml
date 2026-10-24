@@ -20,25 +20,25 @@
   type    = "1password"
   vault   = "credential"
 
+[secrets]
+  [secrets.GITHUB_USERNAME]
+  default     = "bkenks"
+  description = "Github Username"
 
-    [secrets.GITHUB_USERNAME]
-    default     = "bkenks"
-    description = "Github Username"
+  [secrets.GITHUB_TOKEN]
+  description = "Github PAT"
+  provider    = "op:personal:credential"
+  sync        = { provider = "sync", value = "fnox-age-batch-v1:YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBraG44ck1VRHR0eVNtNDNLZmpQaEV3K2VuT1M2Tk1GSDlybDJVcGNWR2dNCkd5Rld4bTZIakJLVlhQWnFld2hZVlA2MWozdkxVLzd4WWVTTlR1d21pTzQKLT4gV3o/JSU3Oy1ncmVhc2UgQ18yIHxePVUgNz5tCmFrdXFWQ2RCZyttdTJ4a1ZJM2RVQUxhdndyU05XZlpMYWE1N3ZaZzN6TlV3NkZ2NGJzaXA4TzZFaDl3NHFtS3YKZmF2L3BMS0J3UzRsYzRIemo4c2d3S0pNL3gwCi0tLSBNQnhMTTdBTmF5R252a0REWmZtMlBTSG51NGhhc0FhNm93M3Q4NGJsRDZJCg7ZiIRV71YnSUQNXApSzITbinqQ99rnfyCZdCvRYr51X0LDFzYhM0cfih14CFso58qgZPvFmf4VVXd4ulytRrge9ASPffwg/bxh+OQ=:pZH+MpxTzOiIT1dmhraw2vy6q+OPDWRonPI34kZzJcbttFJ5b3s2f9ZeLmEpP1ekIsbilAGCf8EOY8zth9tYPsBxDqI=" }
+  value       = "github.pat/token"
 
-    [secrets.GITHUB_TOKEN]
-    description = "Github PAT"
-    provider    = "op:personal:credential"
-    sync        = { provider = "sync", value = "fnox-age-batch-v1:YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBraG44ck1VRHR0eVNtNDNLZmpQaEV3K2VuT1M2Tk1GSDlybDJVcGNWR2dNCkd5Rld4bTZIakJLVlhQWnFld2hZVlA2MWozdkxVLzd4WWVTTlR1d21pTzQKLT4gV3o/JSU3Oy1ncmVhc2UgQ18yIHxePVUgNz5tCmFrdXFWQ2RCZyttdTJ4a1ZJM2RVQUxhdndyU05XZlpMYWE1N3ZaZzN6TlV3NkZ2NGJzaXA4TzZFaDl3NHFtS3YKZmF2L3BMS0J3UzRsYzRIemo4c2d3S0pNL3gwCi0tLSBNQnhMTTdBTmF5R252a0REWmZtMlBTSG51NGhhc0FhNm93M3Q4NGJsRDZJCg7ZiIRV71YnSUQNXApSzITbinqQ99rnfyCZdCvRYr51X0LDFzYhM0cfih14CFso58qgZPvFmf4VVXd4ulytRrge9ASPffwg/bxh+OQ=:pZH+MpxTzOiIT1dmhraw2vy6q+OPDWRonPI34kZzJcbttFJ5b3s2f9ZeLmEpP1ekIsbilAGCf8EOY8zth9tYPsBxDqI=" }
-    value       = "github.pat/token"
+[profiles.backblaze.secrets.B2_APPLICATION_KEY_ID]
+description = "Backblaze ID"
+provider    = "op:personal:credential"
+sync        = { provider = "sync", value = "fnox-age-batch-v1:YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA3U3NLUklEZGZSeWhNcDVzMnR1V3hSRlpCZ1BqL0UrVmpOVGpucmZyUW5JCkJ3Z0lpbko0UktOY2thRWZJSStTK3NqYU82SnY1NU9sbU82bGx1b2lxeUUKLT4gVS1ncmVhc2UgOExyQzRjaGYgOCA4czooaQpoOWlUb2ZkUlRJc2tzTXErK3FsTDZFMllrQVgvZG1DdERPTW9EcVJOQjNNM2ZsY2dQaGphd0tDbjFFRVUraWdHCnBMVDY4d0MvV2liWE5WVGowRHZJRUUrSHBEVVVCb3phME81bGFxeUtGRDYyYkRPSHc4TGI4M0Fxc3hjCi0tLSBTempaQWNCK2g0R3VGVXdHT0N6MVBRandqbjRXSjdPYjg2KzNOdE8vQ3ZZCp+Va4tfMKffK1Z21lhxi/M/s/46qdQNFndXBRffwgeSqqTETGPIclcF92C186fV/RAuzKv31OgVOp56+PawF1R9hPUqyq2nlfL4I7A=:hSsn2gfvf/0Zvg9nGNxNAJiurEBM65dhcEZHEkBf5Fad8djf/CZ+gQ==" }
+value       = "backblaze-b2.master-app-key/key_id"
 
-    [profiles.backblaze.secrets.B2_APPLICATION_KEY_ID]
-    description = "Backblaze ID"
-    provider    = "op:personal:credential"
-    sync        = { provider = "sync", value = "fnox-age-batch-v1:YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA3U3NLUklEZGZSeWhNcDVzMnR1V3hSRlpCZ1BqL0UrVmpOVGpucmZyUW5JCkJ3Z0lpbko0UktOY2thRWZJSStTK3NqYU82SnY1NU9sbU82bGx1b2lxeUUKLT4gVS1ncmVhc2UgOExyQzRjaGYgOCA4czooaQpoOWlUb2ZkUlRJc2tzTXErK3FsTDZFMllrQVgvZG1DdERPTW9EcVJOQjNNM2ZsY2dQaGphd0tDbjFFRVUraWdHCnBMVDY4d0MvV2liWE5WVGowRHZJRUUrSHBEVVVCb3phME81bGFxeUtGRDYyYkRPSHc4TGI4M0Fxc3hjCi0tLSBTempaQWNCK2g0R3VGVXdHT0N6MVBRandqbjRXSjdPYjg2KzNOdE8vQ3ZZCp+Va4tfMKffK1Z21lhxi/M/s/46qdQNFndXBRffwgeSqqTETGPIclcF92C186fV/RAuzKv31OgVOp56+PawF1R9hPUqyq2nlfL4I7A=:hSsn2gfvf/0Zvg9nGNxNAJiurEBM65dhcEZHEkBf5Fad8djf/CZ+gQ==" }
-    value       = "backblaze-b2.master-app-key/key_id"
-
-    [profiles.backblaze.secrets.B2_APPLICATION_KEY]
-    description = "Backblaze PAT"
-    provider    = "op:personal:credential"
-    sync        = { provider = "sync", value = "fnox-age-batch-v1:YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA3U3NLUklEZGZSeWhNcDVzMnR1V3hSRlpCZ1BqL0UrVmpOVGpucmZyUW5JCkJ3Z0lpbko0UktOY2thRWZJSStTK3NqYU82SnY1NU9sbU82bGx1b2lxeUUKLT4gVS1ncmVhc2UgOExyQzRjaGYgOCA4czooaQpoOWlUb2ZkUlRJc2tzTXErK3FsTDZFMllrQVgvZG1DdERPTW9EcVJOQjNNM2ZsY2dQaGphd0tDbjFFRVUraWdHCnBMVDY4d0MvV2liWE5WVGowRHZJRUUrSHBEVVVCb3phME81bGFxeUtGRDYyYkRPSHc4TGI4M0Fxc3hjCi0tLSBTempaQWNCK2g0R3VGVXdHT0N6MVBRandqbjRXSjdPYjg2KzNOdE8vQ3ZZCp+Va4tfMKffK1Z21lhxi/M/s/46qdQNFndXBRffwgeSqqTETGPIclcF92C186fV/RAuzKv31OgVOp56+PawF1R9hPUqyq2nlfL4I7A=:t9s5hKE4IK2a1G/jRuHz2HA0ttbmnkQ/4UiAyw09YJt41lo4uO3ovVDSPUXWPLvaLekptT5WHIDbkcr1aYojC4tjO0Xzcw==" }
-    value       = "backblaze-b2.master-app-key/credential"
+[profiles.backblaze.secrets.B2_APPLICATION_KEY]
+description = "Backblaze PAT"
+provider    = "op:personal:credential"
+sync        = { provider = "sync", value = "fnox-age-batch-v1:YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA3U3NLUklEZGZSeWhNcDVzMnR1V3hSRlpCZ1BqL0UrVmpOVGpucmZyUW5JCkJ3Z0lpbko0UktOY2thRWZJSStTK3NqYU82SnY1NU9sbU82bGx1b2lxeUUKLT4gVS1ncmVhc2UgOExyQzRjaGYgOCA4czooaQpoOWlUb2ZkUlRJc2tzTXErK3FsTDZFMllrQVgvZG1DdERPTW9EcVJOQjNNM2ZsY2dQaGphd0tDbjFFRVUraWdHCnBMVDY4d0MvV2liWE5WVGowRHZJRUUrSHBEVVVCb3phME81bGFxeUtGRDYyYkRPSHc4TGI4M0Fxc3hjCi0tLSBTempaQWNCK2g0R3VGVXdHT0N6MVBRandqbjRXSjdPYjg2KzNOdE8vQ3ZZCp+Va4tfMKffK1Z21lhxi/M/s/46qdQNFndXBRffwgeSqqTETGPIclcF92C186fV/RAuzKv31OgVOp56+PawF1R9hPUqyq2nlfL4I7A=:t9s5hKE4IK2a1G/jRuHz2HA0ttbmnkQ/4UiAyw09YJt41lo4uO3ovVDSPUXWPLvaLekptT5WHIDbkcr1aYojC4tjO0Xzcw==" }
+value       = "backblaze-b2.master-app-key/credential"
