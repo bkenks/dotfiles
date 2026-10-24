@@ -1,4 +1,4 @@
-[env]
+[vars]
 BASE_NAME = ".marker"
 
 [tasks."marker:mark"]
