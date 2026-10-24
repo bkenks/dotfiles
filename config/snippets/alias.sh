@@ -9,7 +9,7 @@ alias gk='gitkeeper'
 alias hosts='SUDO_EDITOR="codium --wait" sudo -e /etc/hosts'
 
 
-alias point-wifi-dns-loopback='sudo networksetup -setdnsservers Wi-Fi 127.0.0.1'
+alias set-dns-loopback='sudo networksetup -setdnsservers Wi-Fi 127.0.0.1'
 alias wifidnsempty='sudo networksetup -setdnsservers Wi-Fi Empty'
 
 # ────────────────────────────────────────
