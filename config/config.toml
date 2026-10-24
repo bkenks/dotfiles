@@ -113,7 +113,6 @@ worktrunk        = "0.80"
 "brew:mas"                        = "latest"
 "brew:mole"                       = "latest"
 "brew:ov"                         = "latest"
-"brew:tea"                        = "latest"
 "brew:technitium-dns"             = "latest"
 "brew:tree"                       = "latest"
 "mas:1236045954"                  = "latest" # Canary Mail
