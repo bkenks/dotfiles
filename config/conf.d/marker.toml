@@ -12,7 +12,7 @@ pathMarker="$usage_directory/{{vars.baseName}}"
 
 [ -e "$pathMarker" ] && { echo "marker exists" >&2; exit 1; }  # Fail if marker already exists
 
-id=$(openssl rand -hex 
+id=$(openssl rand -hex 8)
 printf '%s\n' "" > "$pathMarker"
 
 '''
