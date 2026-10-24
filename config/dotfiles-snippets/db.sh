@@ -6,5 +6,5 @@ function db() {
 
   pathdir_db="$pathdir_db/$arg_db"
 
-  sqlite3 
+  sqlite3 "$pathdir_db" "$@"
 }
