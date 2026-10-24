@@ -3,6 +3,6 @@ function db() {
   local dir="/Users/briankenkel/synology-drive/database"
 
   if [[ -z "$arg_db" ]]; then
-
+    echo "no db provided"
   fi
 }
