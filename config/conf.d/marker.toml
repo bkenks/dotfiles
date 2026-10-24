@@ -29,5 +29,5 @@ usage = '''
 arg "<id>" help="Directory id (e.g. 373f94134cd8c581, b4b575a227b9950e)"
 '''
 run = '''
-rg -{{env.opts}} $usage_id -g {{env.namefile_marker}}
+rg -{{env.opts}} $usage_id -g namefile_marker}}
 '''
