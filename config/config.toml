@@ -71,7 +71,6 @@ version               = "3.19.0"
 [bootstrap.packages]
 # Casks
 "brew-cask:1password"             = "latest"
-"brew-cask:bartender"             = "latest"
 "brew-cask:font-maple-mono"       = "latest"
 "brew-cask:font-maple-mono-nf"    = "latest"
 "brew-cask:font-maple-mono-nf-cn" = "latest"
