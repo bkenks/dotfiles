@@ -5,7 +5,7 @@
 # ==============================================================================
 
 [vars]
-pathdir_snippets = "{{config_root}}/.config/mise/dotfiles-snippets"
+pathdir_snippets = "{{config_root}}/.config/mise/snippets"
 
 [env]
 _.path = ["/Applications/Inkscape.app/Contents/MacOS"]
