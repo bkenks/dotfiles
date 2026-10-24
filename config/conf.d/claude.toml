@@ -19,6 +19,10 @@ sleep 5
 
 pgrep -af claude
 
-
+read -r -p "Kill all? [y/N] " ans
+case "$ans" in
+  [yY]|[yY][eE][sS]) pkill -TERM -f 'claude' ;;
+  *) echo "aborted"; exit 1 ;;
+esac
 
 '''
