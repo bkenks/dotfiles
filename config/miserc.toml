@@ -1,2 +1,2 @@
-auto_env   = true  # 
+auto_env   = true  # early
 env_conf_d = true
