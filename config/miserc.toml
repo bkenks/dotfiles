@@ -1,7 +1,11 @@
-# Opt in early to a future default (becomes `true` in mise 2027.8.10).
+# env_conf_d
 #
-# Makes environment-specific filenames in `conf.d` directories meaningful:
-# a fragment named with an environment, e.g. `conf.d/tools.development.toml`,
-# loads only when that environment is active (via `MISE_ENV` or `-E`).
-# When disabled, every non-hidden TOML file in `conf.d` loads regardless of name.
+# Status:   Early opt-in to a future default
+# Default:  false (becomes true in mise 2027.8.10)
+#
+# Behavior:
+#   - On:  `conf.d` fragments named with an environment load only when that
+#          environment is active (via `MISE_ENV` or `-E`).
+#          e.g. `conf.d/tools.development.toml` loads only with `development`.
+#   - Off: every non-hidden TOML file in `conf.d` loads, regardless of name.
 env_conf_d = true
