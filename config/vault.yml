@@ -6,57 +6,49 @@ flags:
       short: "-"
       long: "--"
 
-subcommands:
-  - name: add
-    action: Adds files to vault.
-    usage:
-      input:
-      example:
-        - "add -a"
-        - "add --all"
-        - "add <file>"
+command:
+  add:
+    description: Adds files to vault
     arg:
-      min: 1
-      max: 1
-      def:
-        - name: file
-          required: false
-          description: File name
-    flags:
-      - name: all
-        short: a
-        value:
-          allow: false
-
-  - name: find
-    action: Searches for files with matching names.
-    args:
-      - name: file
+      file:
+        required: false
         description: File name
+    flags:
+      all:
+        acceptValue: false
 
-  - name: list
+  find:
+    description: Searches for files with matching names.
+    defaultAction: print usage
+    arg:
+      term:
+        required: false
+        description: Search term
+    flag:
+
+  list:
     action: Lists all items. No args = list of tables.
-    args:
-      - name: table
+    arg:
+      table:
         required: false
         description: Table name
 
-  - name: open
+  open:
     action: Open file in default viewer.
 
-  - name: get
+  get:
     action: Return path on disk
-    args:
-      - name: file
+    arg:
+      file:
         required: true
         description: File name
 
-  - name: release
+  release:
     action: Release file/table from vault
-    args:
-      - name: file
+    arg:
+      file:
         required: false
         description: File name
-      - name: table
+      table:
         required: false
         description: Table name
