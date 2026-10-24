@@ -9,7 +9,7 @@ alias ml-ov='mise list | ov --alternate-rows'
 
 # ── Dotfiles ──────────────────────
 alias md='mise dotfiles'
-
+alias mda='mise dotfiles apply'
 alias mdar='mise dotfiles apply && exec "$SHELL" -l'
 # ── end Dotfiles ──────────────────
 
