@@ -27,7 +27,6 @@ include = [
   "**/.mise.toml",
   "**/mise.*.toml",        # mise.local.toml, mise.dev.toml, etc.
 ]
-
 keys = ["tasks"]
 
   [rule.formatting]
