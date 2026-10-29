@@ -50,6 +50,7 @@ uv               = "0.12"
 watchexec        = "2.7"
 worktrunk        = "0.80"
 "pipx:harlequin" = "latest"
+tmux = "latest"
 
 # Tools needing extra options
 [tools.gitkeeper]
