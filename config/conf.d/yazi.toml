@@ -21,3 +21,4 @@ yazi = { version = "26", depends = [
   "zoxide",
 ] }
 zoxide = "0.10"
+
