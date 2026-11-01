@@ -24,7 +24,7 @@ zoxide = "0.10"
 
 [dotfiles]
 "~/.zshrc/yazi" = { template = "tera", block = '''
-
+# 
 function y() {
 	local tmp cwd; tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	command yazi "$@" --cwd-file="$tmp"
