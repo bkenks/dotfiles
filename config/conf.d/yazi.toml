@@ -23,4 +23,4 @@ yazi = { version = "26", depends = [
 zoxide = "0.10"
 
 [dotfiles]
-"~/.zshrc/yazi"       = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/yazi.zsh") }}' }
+"~/.zshrc/yazi" = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/yazi.zsh") }}' }
