@@ -22,3 +22,4 @@ yazi = { version = "26", depends = [
 ] }
 zoxide = "0.10"
 
+[dotfiles]
