@@ -52,6 +52,7 @@ worktrunk        = "0.80"
 "pipx:harlequin" = "latest"
 tmux = "latest"
 "npm:repomix" = "latest"
+neovim = "latest"
 
 # Tools needing extra options
 [tools.gitkeeper]
