@@ -4,9 +4,6 @@
 # Git
 **/*worktree*
 
-# VSCode
-**/.vscode
-
 # AI
 **/skills-lock.json
 **/CLAUDE.md
