@@ -17,5 +17,5 @@ alias set-dns-wifi-empty='sudo networksetup -setdnsservers Wi-Fi Empty'
 alias gk='gitkeeper'
 alias peck="woodpecker-cli"
 alias ghostty=/Applications/Ghostty.app/Contents/MacOS/ghostty
-alias ap
+alias ap='ansible-playbook'
 # ── end CLI Tools ──────────────────
