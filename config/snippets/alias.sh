@@ -3,7 +3,7 @@ alias reload='exec "$SHELL" -l'
 alias c='clear'
 alias cpt='pbcopy'
 alias cpd='pwd | pbcopy'
-alias lssh=""
+alias lssh="lazyssh"
 # ── end Quick Actions ──────────────────
 
 
