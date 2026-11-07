@@ -181,4 +181,4 @@ exclude = [
 
 # --- ~/.ssh/config: blocks from dotfiles-snippets/ -----------------------------
 "~/.ssh/config/backrest-tunnel" = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/backrest-tunnel") }}' }
-"~/.ssh/config/op-hosts" = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "~/.ssh/1password-hosts") }}' }
+"~/.ssh/config/op-hosts" = { template = "tera", block = '{{ read_file(path="~/.ssh/1password-hosts") }}' }
