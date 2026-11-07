@@ -178,7 +178,6 @@ exclude = [
 "~/.zshrc/alias"      = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/alias.sh") }}' }
 "~/.zshrc/db"         = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/db.sh") }}' }
 "~/.zshrc/editors"    = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/editors.zsh") }}' }
-"~/.ssh/editors"    = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/editors.zsh") }}' }
 
 # --- ~/.ssh/config: blocks from dotfiles-snippets/ -----------------------------
 "~/.ssh/config/backrest-tunnel" = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/backrest-tunnel") }}' }
