@@ -41,7 +41,16 @@
                         "product_id": 12871,
                         "vendor_id": 6645
                     },
-                    "ignore": false
+                    "ignore": false,
+                    "ignore_vendor_events": true
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 12871,
+                        "vendor_id": 6645
+                    },
+                    "ignore_vendor_events": true
                 }
             ],
             "name": "Default profile",
