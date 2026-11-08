@@ -9,8 +9,6 @@ alias lssh="lazyssh"
 
 # ── DNS ──────────────────────
 alias hosts='SUDO_EDITOR="codium --wait" sudo -e /etc/hosts'
-alias set-dns-wifi-2loopback='sudo networksetup -setdnsservers Wi-Fi 127.0.0.1'
-alias set-dns-wifi-empty='sudo networksetup -setdnsservers Wi-Fi Empty'
 # ── end DNS ──────────────────
 
 
