@@ -53,13 +53,7 @@ worktrunk        = "0.80"
 tmux = "latest"
 "npm:repomix" = "latest"
 neovim = "latest"
-
-# Tools needing extra options
-[tools.gitkeeper]
-api_url             = "https://fj.ktbcloud.com/api/v1"
-bin                 = "gitkeeper"
-minimum_release_age = "0h"
-version             = "latest"
+"github:bkenks/gitkeeper" = { version = "latest", bin = "gitkeeper", minimum_release_age = "0h" }
 
 [tools.woodpecker-cli]
 platforms.macos-arm64 = { asset_pattern = "woodpecker-cli_darwin_arm64.tar.gz" }
