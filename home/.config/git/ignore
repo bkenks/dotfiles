@@ -1,9 +1,0 @@
-# Mac
-**/.DS_Store
-
-# Git
-**/*worktree*
-
-# AI
-**/skills-lock.json
-**/.agents
