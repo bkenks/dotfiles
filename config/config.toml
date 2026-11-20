@@ -160,6 +160,7 @@ exclude = [
 "~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
 
 # --- ~/.zshrc: inline blocks ---------------------------------------------------
+"~/.zshrc/direnv"   = { block = 'eval "$(direnv hook zsh)"' }
 "~/.zshrc/fnox"     = { block = 'eval "$(fnox activate zsh)"' }
 "~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
 
