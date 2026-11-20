@@ -160,7 +160,7 @@ exclude = [
 "~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
 
 # --- ~/.zshrc: inline blocks ---------------------------------------------------
-"~/.zshrc/brew:settings" = { block = 'HOMEBREW_NO_ENV_HINTS=1' }
+"~/.zshrc/brew.settings" = { block = 'HOMEBREW_NO_ENV_HINTS=1' }
 "~/.zshrc/fnox"          = { block = 'eval "$(fnox activate zsh)"' }
 "~/.zshrc/starship"      = { block = 'eval "$(starship init zsh)"' }
 
