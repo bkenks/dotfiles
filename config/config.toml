@@ -53,7 +53,7 @@ neovim                    = "latest"
 
 [tools.woodpecker-cli]
 platforms = { macos-arm64 = { asset_pattern = "woodpecker-cli_darwin_arm64.tar.gz" } }
-version               = "3.20.1"
+version   = "3.20.1"
 
 # ==============================================================================
 # Bootstrap: machine setup (shell, packages, macOS defaults, services)
@@ -160,9 +160,9 @@ exclude = [
 "~/Library/Application Support/VSCodium/product.json" = { mode = "track" }
 
 # --- ~/.zshrc: inline blocks ---------------------------------------------------
-"~/.zshrc/brew:settings"     = { block = 'HOMEBREW_NO_ENV_HINTS=1' }
-"~/.zshrc/fnox"     = { block = 'eval "$(fnox activate zsh)"' }
-"~/.zshrc/starship" = { block = 'eval "$(starship init zsh)"' }
+"~/.zshrc/brew:settings" = { block = 'HOMEBREW_NO_ENV_HINTS=1' }
+"~/.zshrc/fnox"          = { block = 'eval "$(fnox activate zsh)"' }
+"~/.zshrc/starship"      = { block = 'eval "$(starship init zsh)"' }
 
 # --- ~/.zshrc: blocks from dotfiles-snippets/ ----------------------------------
 "~/.zshrc/alias_mise" = { template = "tera", block = '{{ read_file(path=vars.pathdir_snippets ~ "/alias_mise.sh") }}' }
