@@ -25,26 +25,26 @@ treefmt        = "aqua:numtide/treefmt"
 woodpecker-cli = "github:woodpecker-ci/woodpecker"
 
 [tools]
-1password                 = "2.39"
-copier                    = "9.18"
+1password                 = "2.42"
+copier                    = "9.19"
 cue                       = "0.17.1"
 fd                        = "10.5"
-fnox                      = "1.35"
+fnox                      = "1.50"
 go                        = "1.27"
 gofumpt                   = "0.12"
 java                      = "temurin-25"
-likec4                    = "1.59"
+likec4                    = "1.61"
 lychee                    = "0.24"
-node                      = "26.10"
+node                      = "26.13"
 rg                        = "15.2"
 shellcheck                = "0.11"
 shfmt                     = "3.14"
-starship                  = "1.26"
+starship                  = "1.27"
 taplo                     = "0.10"
 treefmt                   = "2.6"
-uv                        = "0.12"
-watchexec                 = "2.7"
-worktrunk                 = "0.80"
+uv                        = "0.13"
+watchexec                 = "2.8"
+worktrunk                 = "0.82"
 "pipx:harlequin"          = "latest"
 tmux                      = "latest"
 "npm:repomix"             = "latest"
@@ -52,8 +52,8 @@ neovim                    = "latest"
 "github:bkenks/gitkeeper" = { version = "latest", bin = "gitkeeper", minimum_release_age = "0h" }
 
 [tools.woodpecker-cli]
-platforms.macos-arm64 = { asset_pattern = "woodpecker-cli_darwin_arm64.tar.gz" }
-version               = "3.19.0"
+platforms = { macos-arm64 = { asset_pattern = "woodpecker-cli_darwin_arm64.tar.gz" } }
+version               = "3.20.1"
 
 # ==============================================================================
 # Bootstrap: machine setup (shell, packages, macOS defaults, services)
