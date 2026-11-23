@@ -46,7 +46,6 @@ uv                        = "0.13"
 watchexec                 = "2.8"
 worktrunk                 = "0.82"
 "pipx:harlequin"          = "latest"
-tmux                      = "latest"
 "npm:repomix"             = "latest"
 neovim                    = "latest"
 "github:bkenks/gitkeeper" = { version = "latest", bin = "gitkeeper", minimum_release_age = "0h" }
