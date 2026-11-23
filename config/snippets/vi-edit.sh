@@ -1,4 +1,4 @@
-alias vmise='vi ~/.config/mise/config.toml'
-alias vfnox='vi ~/.config/fnox/config.toml'
-alias vstarship='vi ~/.config/starship.toml'
-alias vssh='vi ~/.ssh/config'
+alias vimise='vi ~/.config/mise/config.toml'
+alias vifnox='vi ~/.config/fnox/config.toml'
+alias vistarship='vi ~/.config/starship.toml'
+alias vissh='vi ~/.ssh/config'
