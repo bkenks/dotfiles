@@ -52,6 +52,7 @@ neovim                        = "latest"
 "go:github.com/bkenks/macfig" = { version = "latest", minimum_release_age = "0h" }
 "go:github.com/bkenks/cellar" = { version = "latest", minimum_release_age = "0h" }
 "github:bkenks/cellar" = "latest"
+"github:bkenks/gitdeck" = { version = "latest", bin = "gitdeck", minimum_release_age = "0h" }
 
 [tools.woodpecker-cli]
 platforms = { macos-arm64 = { asset_pattern = "woodpecker-cli_darwin_arm64.tar.gz" } }
