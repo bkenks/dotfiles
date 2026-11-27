@@ -42,7 +42,7 @@ shfmt                         = "3.14"
 starship                      = "1.27"
 taplo                         = "0.10"
 treefmt                       = "2.6"
-uv                            = "0.13"
+uv                            = "latest"
 watchexec                     = "2.8"
 worktrunk                     = "0.82"
 "npm:repomix"                 = "latest"
@@ -53,6 +53,7 @@ neovim                        = "latest"
 "github:bkenks/cellar" = "latest"
 "github:bkenks/gitdeck" = { version = "latest", bin = "gitdeck", minimum_release_age = "0h" }
 "pypi:trafilatura" = "2.4.0"
+python = "3.14"
 
 # ==============================================================================
 # Bootstrap: machine setup (shell, packages, macOS defaults, services)
