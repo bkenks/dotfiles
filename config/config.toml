@@ -51,6 +51,7 @@ neovim                        = "latest"
 "go:github.com/bkenks/cellar" = { version = "latest", minimum_release_age = "0h" }
 "github:bkenks/cellar" = "latest"
 "github:bkenks/gitdeck" = { version = "latest", bin = "gitdeck", minimum_release_age = "0h" }
+uv = "0.13.0"
 
 # ==============================================================================
 # Bootstrap: machine setup (shell, packages, macOS defaults, services)
