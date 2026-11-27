@@ -53,10 +53,6 @@ neovim                        = "latest"
 "github:bkenks/cellar" = "latest"
 "github:bkenks/gitdeck" = { version = "latest", bin = "gitdeck", minimum_release_age = "0h" }
 
-[tools.woodpecker-cli]
-platforms = { macos-arm64 = { asset_pattern = "woodpecker-cli_darwin_arm64.tar.gz" } }
-version   = "3.20.1"
-
 # ==============================================================================
 # Bootstrap: machine setup (shell, packages, macOS defaults, services)
 # ==============================================================================
